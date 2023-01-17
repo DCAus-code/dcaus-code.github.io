@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+&lt;?php <br/>
+$your_email =&#39;yourname@your&ndash;website.com&#39;;// &lt;&lt;=== update to your email address<br/>
+<br/>
+session_start();<br/>
+$errors = &#39;&#39;;<br/>
+$name = &#39;&#39;;<br/>
+$visitor_email = &#39;&#39;;<br/>
+$user_message = &#39;&#39;;<br/>
+<br/>
+if(isset($_POST[&#39;submit&#39;]))<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;$name = $_POST[&#39;name&#39;];<br/>
+&nbsp;&nbsp;&nbsp;$visitor_email = $_POST[&#39;email&#39;];<br/>
+&nbsp;&nbsp;&nbsp;$user_message = $_POST[&#39;message&#39;];<br/>
+&nbsp;&nbsp;&nbsp;///&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;Do Validations&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;<br/>
+&nbsp;&nbsp;&nbsp;if(empty($name)||empty($visitor_email))<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$errors .= &quot;\n Name and Email are required fields. &quot;;	<br/>
+&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;if(IsInjected($visitor_email))<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$errors .= &quot;\n Bad email value!&quot;;<br/>
+&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;if(empty($_SESSION[&#39;6_letters_code&#39;] ) ||<br/>
+&nbsp;&nbsp;&nbsp;  strcasecmp($_SESSION[&#39;6_letters_code&#39;], $_POST[&#39;6_letters_code&#39;]) != 0)<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;//Note: the captcha code is compared case insensitively.<br/>
+&nbsp;&nbsp;&nbsp;//if you want case sensitive match, update the check above to<br/>
+&nbsp;&nbsp;&nbsp;// strcmp()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$errors .= &quot;\n The captcha code does not match!&quot;;<br/>
+&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;if(empty($errors))<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//send the email<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$to = $your_email;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$subject=&quot;New form submission&quot;;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$from = $your_email;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ip = isset($_SERVER[&#39;REMOTE_ADDR&#39;]) ? $_SERVER[&#39;REMOTE_ADDR&#39;] : &#39;&#39;;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$body = &quot;A user  $name submitted the contact form:\n&quot;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Name: $name\n&quot;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Email: $visitor_email \n&quot;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Message: \n &quot;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;$user_message\n&quot;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;IP: $ip\n&quot;;	<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$headers = &quot;From: $from \r\n&quot;;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$headers .= &quot;Reply&ndash;To: $visitor_email \r\n&quot;;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mail($to, $subject, $body,$headers);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;header(&#39;Location: thank&ndash;you.html&#39;);<br/>
+&nbsp;&nbsp;&nbsp;}<br/>
+}<br/>
+<br/>
+// Function to validate against any email injection attempts<br/>
+function IsInjected($str)<br/>
+{<br/>
+  $injections = array(&#39;(\n+)&#39;,<br/>
+              &#39;(\r+)&#39;,<br/>
+              &#39;(\t+)&#39;,<br/>
+              &#39;(%0A+)&#39;,<br/>
+              &#39;(%0D+)&#39;,<br/>
+              &#39;(%08+)&#39;,<br/>
+              &#39;(%09+)&#39;<br/>
+              );<br/>
+  $inject = join(&#39;|&#39;, $injections);<br/>
+  $inject = &quot;/$inject/i&quot;;<br/>
+  if(preg_match($inject,$str))<br/>
+    {<br/>
+    return true;<br/>
+  }<br/>
+  else<br/>
+    {<br/>
+    return false;<br/>
+  }<br/>
+}<br/>
+?&gt;<br/>
+&lt;!DOCTYPE HTML PUBLIC &quot;&ndash;//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt; <br/>
+&lt;html&gt;<br/>
+&lt;head&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;title&gt;Contact Us&lt;/title&gt;<br/>
+&lt;!&ndash;&ndash; define some style elements&ndash;&ndash;&gt;<br/>
+&lt;style&gt;<br/>
+label,a, body <br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;font&ndash;family : Arial, Helvetica, sans&ndash;serif;<br/>
+&nbsp;&nbsp;&nbsp;font&ndash;size : 12px; <br/>
+}<br/>
+.err<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;font&ndash;family : Verdana, Helvetica, sans&ndash;serif;<br/>
+&nbsp;&nbsp;&nbsp;font&ndash;size : 12px;<br/>
+&nbsp;&nbsp;&nbsp;color: red;<br/>
+}<br/>
+&lt;/style&gt;	<br/>
+&lt;!&ndash;&ndash; a helper script for vaidating the form&ndash;&ndash;&gt;<br/>
+&lt;script language=&quot;JavaScript&quot; src=&quot;scripts/gen_validatorv31.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;	<br/>
+&lt;/head&gt;<br/>
+<br/>
+&lt;body&gt;<br/>
+&lt;?php<br/>
+if(!empty($errors)){<br/>
+echo &quot;&lt;p class=&#39;err&#39;&gt;&quot;.nl2br($errors).&quot;&lt;/p&gt;&quot;;<br/>
+}<br/>
+?&gt;<br/>
+&lt;div id=&#39;contact_form_errorloc&#39; class=&#39;err&#39;&gt;&lt;/div&gt;<br/>
+&lt;form method=&quot;POST&quot; name=&quot;contact_form&quot; <br/>
+action=&quot;&lt;?php echo htmlentities($_SERVER[&#39;PHP_SELF&#39;]); ?&gt;&quot;&gt; <br/>
+&lt;p&gt;<br/>
+&lt;label for=&#39;name&#39;&gt;Name: &lt;/label&gt;&lt;br&gt;<br/>
+&lt;input type=&quot;text&quot; name=&quot;name&quot; value=&#39;&lt;?php echo htmlentities($name) ?&gt;&#39;&gt;<br/>
+&lt;/p&gt;<br/>
+&lt;p&gt;<br/>
+&lt;label for=&#39;email&#39;&gt;Email: &lt;/label&gt;&lt;br&gt;<br/>
+&lt;input type=&quot;text&quot; name=&quot;email&quot; value=&#39;&lt;?php echo htmlentities($visitor_email) ?&gt;&#39;&gt;<br/>
+&lt;/p&gt;<br/>
+&lt;p&gt;<br/>
+&lt;label for=&#39;message&#39;&gt;Message:&lt;/label&gt; &lt;br&gt;<br/>
+&lt;textarea name=&quot;message&quot; rows=8 cols=30&gt;&lt;?php echo htmlentities($user_message) ?&gt;&lt;/textarea&gt;<br/>
+&lt;/p&gt;<br/>
+&lt;p&gt;<br/>
+&lt;img src=&quot;captcha_code_file.php?rand=&lt;?php echo rand(); ?&gt;&quot; id=&#39;captchaimg&#39; &gt;&lt;br&gt;<br/>
+&lt;label for=&#39;message&#39;&gt;Enter the code above here :&lt;/label&gt;&lt;br&gt;<br/>
+&lt;input id=&quot;6_letters_code&quot; name=&quot;6_letters_code&quot; type=&quot;text&quot;&gt;&lt;br&gt;<br/>
+&lt;small&gt;Can&#39;t read the image? click &lt;a href=&#39;javascript: refreshCaptcha();&#39;&gt;here&lt;/a&gt; to refresh&lt;/small&gt;<br/>
+&lt;/p&gt;<br/>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&#39;submit&#39;&gt;<br/>
+&lt;/form&gt;<br/>
+&lt;script language=&quot;JavaScript&quot;&gt;<br/>
+// Code for validating the form<br/>
+// Visit http://www.javascript&ndash;coder.com/html&ndash;form/javascript&ndash;form&ndash;validation.phtml<br/>
+// for details<br/>
+var frmvalidator  = new Validator(&quot;contact_form&quot;);<br/>
+//remove the following two lines if you like error message box popups<br/>
+frmvalidator.EnableOnPageErrorDisplaySingleBox();<br/>
+frmvalidator.EnableMsgsTogether();<br/>
+<br/>
+frmvalidator.addValidation(&quot;name&quot;,&quot;req&quot;,&quot;Please provide your name&quot;); <br/>
+frmvalidator.addValidation(&quot;email&quot;,&quot;req&quot;,&quot;Please provide your email&quot;); <br/>
+frmvalidator.addValidation(&quot;email&quot;,&quot;email&quot;,&quot;Please enter a valid email address&quot;); <br/>
+&lt;/script&gt;<br/>
+&lt;script language=&#39;JavaScript&#39; type=&#39;text/javascript&#39;&gt;<br/>
+function refreshCaptcha()<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;var img = document.images[&#39;captchaimg&#39;];<br/>
+&nbsp;&nbsp;&nbsp;img.src = img.src.substring(0,img.src.lastIndexOf(&quot;?&quot;))+&quot;?rand=&quot;+Math.random()*1000;<br/>
+}<br/>
+&lt;/script&gt;<br/>
+&lt;/body&gt;<br/>
+&lt;/html&gt;</body></html>
