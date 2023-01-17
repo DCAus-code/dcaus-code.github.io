@@ -1,1 +1,132 @@
-<h1>hi<h1>
+<html lang="en"><head>
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="./def-font.css"><meta charset="UTF-8">
+<style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style></head>
+  
+<body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="">
+    <div class="main-body">
+        <nav id="navbar">
+            <header>Documentation Menu</header>
+            <a href="#install" class="nav-link">Introduction: Installation</a> <a href="#Features" class="nav-link"> What we offer</a><a href="#e.g" class="nav-link">Templates</a>
+            
+            
+            
+            
+            
+        <a href="#help" class="nav-link">Contributeing.</a><a href="#license" class="nav-link">License</a></nav>
+  
+        <main id="main-doc">
+            <section class="main-section" id="Intro">
+               <h2 id="install">Introduction: Installation</h2> <strong>
+
+To install thecord.py, use the package manager pip:
+
+</strong>
+<code>
+pip install thecord</code><strong>
+Usage
+To use thecord.py in your project, you first need to import the library:</strong>
+
+<code>
+import thecord
+</code> <strong>You can then create a bot using the Client class:</strong>
+
+<code>
+bot = thecord.Client()</code><strong>
+You can also use the Client class to define the bot's command prefix and token:</strong>
+
+
+<code>bot = thecord.Client(command_prefix='!', token='YOUR_TOKEN_HERE')</code>
+<h2 id="Features">Features</h2><strong>
+Slash command support: thecord.py allows users to interact with your bot through text commands, which can be defined using the @slash-command decorator.
+"Only You can see this message" support: thecord.py enables users to send private messages to the bot.
+Button Support: thecord.py allows users to interact with your bot through buttons.
+And more features are under development</strong>
+<h2 id="e.g"> Examples</h2>
+
+<code>import thecord
+
+bot = thecord.Client(command_prefix='!', token='YOUR_TOKEN_HERE')
+
+@bot.slash_command(name='test', description='test')
+def test(ctx):
+    ctx.send("Hello from the mother ship.")
+
+bot.run()
+</code> <strong>
+For more information and examples, please refer to the documentation in the GitHub repository.</strong>
+
+<h2 id="help">Contributing</h2>
+<strong>
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</strong>
+
+<h2 id="license">License</h2>
+<strong>
+MIT
+
+Please note that thecord.py is under development and is not yet available for production use.</strong>
+                   
+  
+     
+
+                
+                
+                
+                
+            </section>
+  
+            
+  
+            
+  
+            
+  
+            
+  
+            
+        </main>
+    </div>
+<style>div.main-body {
+    display: grid;
+    grid-template-columns: minmax(300px , auto)1fr;   
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 20px;
+}
+   
+nav#navbar {
+    grid-area: navbar;
+    position: fixed;   
+}
+   
+nav#navbar a {
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+   
+main#main-doc {
+    grid-area: mainContent;
+}
+   
+header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+   
+code {
+    background-color: #CCC;
+    display: block;
+    padding: 20px;
+}</style>
+
+  
+
+<div id="pt-ext-root"></div>
+<div id="pt-ext-root"></div>
+<div id="pt-ext-root"></div>
+<div id="pt-ext-root"></div>
+<div id="pt-ext-root"></div>
+<div id="pt-ext-root"></div>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
