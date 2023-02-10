@@ -52,7 +52,8 @@ h1 {
   margin-top: 50px;
   font-size: 20px;
 }
-</style><script>const questions = [
+</style><script>
+const questions = [
   {
     question: "What is the capital of California?",
     options: [
@@ -155,5 +156,10 @@ function loadQuestion() {
   option4El.textContent = currentQuestionObject.options[3];
 }
 
-submitBtn
+loadQuestion();
+
+submitBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  const selectedOption = document.
 </script><div id="voicemod-shadow-root-container" style="position: fixed; z-index: 2147483647; top: 32px; right: 32px;"></div></body><style id="stylus-1" type="text/css" class="stylus"></style></html>
