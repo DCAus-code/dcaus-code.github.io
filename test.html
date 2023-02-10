@@ -1,6 +1,159 @@
-<p>
-		<i class="fab fa-discord"></i>
-		<i class="fab fa-discord fa-2x" style="color:red"></i>
-		<i class="fab fa-discord fa-3x" style="color:blue"></i>
-		<i class="fab fa-discord fa-4x" style="color:green"></i>
-	</p>
+<html><head>
+    <meta charset="UTF-8">
+    <title>911 Dispatcher Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>911 Dispatcher Test</h1>
+    <form id="test-form">
+      <div id="question"></div>
+      <div id="options">
+        <input type="radio" id="option1" name="answer" value="1">
+        <label for="option1" id="option1-label"></label>
+        <br>
+        <input type="radio" id="option2" name="answer" value="2">
+        <label for="option2" id="option2-label"></label>
+        <br>
+        <input type="radio" id="option3" name="answer" value="3">
+        <label for="option3" id="option3-label"></label>
+        <br>
+        <input type="radio" id="option4" name="answer" value="4">
+        <label for="option4" id="option4-label"></label>
+      </div>
+      <button id="submit-button">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script type="text/javascript" src="script.js"></script>
+  
+
+<style>body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+#options {
+  margin-top: 20px;
+}
+
+#submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 50px;
+  font-size: 20px;
+}
+</style><script>const questions = [
+  {
+    question: "What is the capital of California?",
+    options: [
+      "San Francisco",
+      "Los Angeles",
+      "Sacramento",
+      "San Diego"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the capital of Texas?",
+    options: [
+      "Austin",
+      "Dallas",
+      "Houston",
+      "San Antonio"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the capital of New York?",
+    options: [
+      "New York City",
+      "Buffalo",
+      "Albany",
+      "Rochester"
+    ],
+    answer: 2
+  },
+  {
+    question: "What type of call would you dispatch for a gas leak?",
+    options: [
+      "Police",
+      "EMS",
+      "Fire",
+      "Utilities"
+    ],
+    answer: 3
+  },
+  {
+    question: "What type of call would you dispatch for a heart attack?",
+    options: [
+      "Police",
+      "EMS",
+      "Fire",
+      "Utilities"
+    ],
+    answer: 1
+  },
+  {
+    question: "What type of call would you dispatch for a fire?",
+    options: [
+      "Police",
+      "EMS",
+      "Fire",
+      "Utilities"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the correct map reading skill to locate a building on a map?",
+    options: [
+      "Latitude and Longitude",
+      "Grid coordinates",
+      "Plotting Scale",
+      "None of the above"
+    ],
+    answer: 1
+  }
+];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(questions);
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const option1El = document.getElementById("option1-label");
+const option2El = document.getElementById("option2-label");
+const option3El = document.getElementById("option3-label");
+const option4El = document.getElementById("option4-label");
+const submitBtn = document.getElementById("submit-button");
+const resultsEl = document.getElementById("results");
+
+function loadQuestion() {
+  const currentQuestionObject = questions[currentQuestion];
+
+  questionEl.textContent = currentQuestionObject.question;
+  option1El.textContent = currentQuestionObject.options[0];
+  option2El.textContent = currentQuestionObject.options[1];
+  option3El.textContent = currentQuestionObject.options[2];
+  option4El.textContent = currentQuestionObject.options[3];
+}
+
+submitBtn
+</script><div id="voicemod-shadow-root-container" style="position: fixed; z-index: 2147483647; top: 32px; right: 32px;"></div></body><style id="stylus-1" type="text/css" class="stylus"></style></html>
