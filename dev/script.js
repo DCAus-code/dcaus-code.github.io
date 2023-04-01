@@ -1,52 +1,28 @@
-function login() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var spreadsheetID = "1PE-KgoRlJ739BS8sxF8l00NBQcqTdkGodT3UXmnJAXg";
-  var range = "A:B";
-  var url = "https://sheets.googleapis.com/v4/spreadsheets/" + spreadsheetID + "/values/" + range + "?key=AIzaSyAyhcpssMAxhuWXteTTPZsGWj-zx4PPNis";
+// Load the Stytch SDK
+const stytch = new Stytch(STYTCH_PUBLIC_API_KEY, STYTCH_SECRET_API_KEY);
+
+// Get the login form elements
+const emailInput = document.getElementById("email-input");
+const passwordInput = document.getElementById("password-input");
+const loginButton = document.getElementById("login-button");
+
+// Add event listener to the login button
+loginButton.addEventListener("click", async (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
   
-  $.getJSON(url, function(data) {
-    var values = data.values;
-    var valid = false;
-    for (var i = 0; i < values.length; i++) {
-      if (values[i][0] == username && values[i][1] == password) {
-        valid = true;
-        break;
-      }
-    }
-    if (valid) {
-      var id = generateID();
-      window.location.href = "nextpage/#id=" + id + "/yes";
-      setTimeout(function() {
-        removeID(id);
-      }, 3600000); // Remove ID after 1 hour (3600 seconds)
-    } else {
-      alert("Invalid username or password.");
-      document.getElementById("username").value = "test";
-      document.getElementById("password").value = "test";
-    }
-  });
-}
-
-function generateID() {
-  var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  var id = "";
-  for (var i = 0; i < 10; i++) {
-    id += characters.charAt(Math.floor(Math.random() * characters.length));
+  // Get the email and password values from the form
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  
+  // Call the Stytch login API with the email and password
+  const response = await stytch.magicLink.loginOrCreate(email, password);
+  
+  // Check if the response was successful
+  if (response.success) {
+    // Redirect the user to the dashboard page
+    window.location.href = "/dashboard.html";
+  } else {
+    // Display an error message
+    alert(response.error.message);
   }
-  localStorage.setItem(id, Date.now());
-  return id;
-}
-
-function removeID(id) {
-  localStorage.removeItem(id);
-}
-
-function checkID() {
-  var id = window.location.hash.substring(4, 14);
-  var timestamp = localStorage.getItem(id);
-  if (timestamp == null || Date.now() - timestamp > 3600000) {
-    alert("Session expired. Please login again.");
-    window.location.href = "login.html";
-  }
-}
+});
