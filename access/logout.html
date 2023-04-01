@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logout</title>
+  </head>
+  <body>
+    <div style="border: 1px solid #ccc; padding: 20px;">
+      <h2>Logout</h2>
+      <p>Are you sure you want to logout?</p>
+      <button id="logout-button">Logout</button>
+    </div>
+    
+    <script>
+      // Get the logout button and add an event listener to handle clicks
+      var logoutButton = document.querySelector('#logout-button');
+      logoutButton.addEventListener('click', function() {
+        // Redirect to the specified URL
+        window.location.href = 'https://lostinfinite.github.io';
+      });
+    </script>
+  </body>
+</html>
