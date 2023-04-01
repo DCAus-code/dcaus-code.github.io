@@ -1,16 +1,15 @@
-<html lang="en-US"><head><script>window.addEventListener('beforeunload', function (event) {
+<html lang="en-US"><head><script>window.addEventListener("beforeunload", function (event) {
+  // Check if the user is coming from the admin panel
+  var referrer = document.referrer;
+  if (referrer && referrer.indexOf("https://lostinfinite.github.io/access/idk") !== -1) {
+    return;
+  }
+  // Redirect to /access/idk
   event.preventDefault();
-  event.returnValue = '';
-});window.addEventListener('beforeunload', function () {
-  localStorage.setItem('leftPage', 'true');
+  event.returnValue = "";
+  window.location.href = "/access/idk";
 });
 
-window.addEventListener('load', function () {
-  if (localStorage.getItem('leftPage')) {
-    localStorage.removeItem('leftPage');
-    window.location.href = '/access/idk';
-  }
-});
 
 </script></head><body><btroblox><style type="text/css">btroblox {display:none!important;}</style><link href="chrome-extension://hbkpclpemjeibhioopcebchdmohaieln/css/main.css" rel="stylesheet"><link href="chrome-extension://hbkpclpemjeibhioopcebchdmohaieln/css/simblk/main.css" rel="stylesheet"></btroblox><meta charset="utf-8"><title>Creator Dashboard</title><link rel="icon" type="image/png" href="/dashboard/assets/favicon.ico"><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"><meta name="zd-site-verification" content="8ou4bshfpgbc1pk5x0qqt"><meta property="og:url" content="https://create.roblox.com"><meta property="og:title" content="Creator Dashboard"><meta property="og:description" content="Manage your experiences, avatar items, and other creations on the Creator Dashboard"><meta property="og:image" content="https://create.roblox.com/dashboard/assets/opengraph/global_og_image.png"><meta property="og:type" content="website"><meta property="og:locale" content="en-US"><meta name="next-head-count" content="11"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-486632-27&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BK4ZY0C59K&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-486632-27"></script><script>window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
