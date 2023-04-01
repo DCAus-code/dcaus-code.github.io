@@ -1,5 +1,5 @@
 // Load the Stytch SDK
-const stytch = new Stytch(STYTCH_PUBLIC_API_KEY, STYTCH_SECRET_API_KEY);
+const stytch = new Stytch(public-token-test-1d352d09-92da-456d-95d4-c28da91df2ce, secret-test-0LhZp71-Dxs5nVrBnJXkYFRIrjYjBGOacl8=);
 
 // Get the login form elements
 const emailInput = document.getElementById("email-input");
