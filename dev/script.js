@@ -22,8 +22,8 @@ function login() {
       }, 3600000); // Remove ID after 1 hour (3600 seconds)
     } else {
       alert("Invalid username or password.");
-      document.getElementById("username").value = "";
-      document.getElementById("password").value = "";
+      document.getElementById("username").value = "test";
+      document.getElementById("password").value = "test";
     }
   });
 }
