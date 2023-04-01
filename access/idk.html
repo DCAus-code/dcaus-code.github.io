@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+	<form action="/admin" method="POST">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+		function hashPassword(password) {
+			// Hashing algorithm goes here
+			return btoa(password);
+		}
+
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			const passwordInput = document.getElementById('password');
+			const hashedPassword = hashPassword(passwordInput.value);
+
+			if (hashedPassword === 'dGVzdA==') {
+				window.location.href = '/admin-panel';
+			} else {
+				alert('Incorrect password');
+			}
+		});
+	</script>
+</body>
+</html>
