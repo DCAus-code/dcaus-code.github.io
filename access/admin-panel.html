@@ -1,13 +1,22 @@
-<html lang="en-US"><head><script>window.addEventListener("beforeunload", function (event) {
+<html lang="en-US"><head><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script>window.addEventListener('beforeunload', function(event) {
   // Check if the user is coming from the admin panel
   var referrer = document.referrer;
   if (referrer && referrer.indexOf("https://lostinfinite.github.io/access/idk") !== -1) {
     return;
   }
-  // Redirect to /access/idk
+
   event.preventDefault();
-  event.returnValue = "";
-  window.location.href = "/access/idk";
+  event.returnValue = '';
+
+  localStorage.setItem('leftPage', 'true');
+});
+
+window.addEventListener('load', function() {
+  if (localStorage.getItem('leftPage')) {
+    localStorage.removeItem('leftPage');
+
+    window.location.href = '/access/idk';
+  }
 });
 
 
@@ -10274,6 +10283,10 @@ label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::
 		
     
     </div></div></section></div></main><footer class="jss4"><footer class="MuiGrid-root-18 jss17 jss9 MuiGrid-container-19 MuiGrid-justify-content-xs-center-36"><div class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-item-20 MuiGrid-justify-content-xs-center-36"><div class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-sm-12-78 MuiGrid-grid-md-auto-79"><div class="MuiGrid-root-18 jss16 MuiGrid-container-19 MuiGrid-direction-xs-column-22"><div class="MuiGrid-root-18 MuiGrid-item-20"><p class="MuiTypography-root-161 jss121 jss131">©2023 Sageimatic. All rights reserved.</p></div></div></div></div></footer></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/creations","query":{},"buildId":"3iYn3ZWhV9iJ91IMSke_a","assetPrefix":"/dashboard","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script><next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p></next-route-announcer><div id="voicemod-shadow-root-container" style="position: fixed; z-index: 2147483647; top: 32px; right: 32px;"></div><script src="/dashboard/_next/static/chunks/pages/translator-portal-22fb5abe62de692e.js"></script><script src="/dashboard/_next/static/chunks/119-cd928448d7f6b09f.js"></script><script src="/dashboard/_next/static/chunks/6008-b1303b82b92214f6.js"></script><script src="/dashboard/_next/static/chunks/pages/credentials-b7b08de473378c92.js"></script><script src="/dashboard/_next/static/chunks/2638-099ae6f5b157382d.js"></script><script src="/dashboard/_next/static/chunks/907-bd781296dd18250f.js"></script><script src="/dashboard/_next/static/chunks/pages/creations/experiences/%5Bid%5D/overview-d289fec872930eb3.js"></script><style id="stylus-1" type="text/css" class="stylus">[class^=messageGroupBlocked] {
+
+    height: 0px;
+}</style>
+<div id="voicemod-shadow-root-container"></div><style id="stylus-1" type="text/css" class="stylus">[class^=messageGroupBlocked] {
 
     height: 0px;
 }</style>
