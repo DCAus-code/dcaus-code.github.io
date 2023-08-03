@@ -1,12 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIB Los Santos</title>
   <style>
-    /* Add your custom CSS styles here */
+    /* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+
+    /* Navigation bar styles */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: navy;
+      padding: 10px;
+    }
+
+    nav img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    /* Sections styles */
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    section img {
+      max-width: 100%;
+    }
   </style>
 </head>
 
@@ -14,78 +61,242 @@
   <!-- Navigation bar -->
   <nav>
     <!-- Add your logo or image here -->
-    <img src="fib_logo.png" alt="FIB Logo">
+    <img src="data:image/jpeg;base64,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" alt="FIB Logo">
     <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#about-director">About the Director</a></li>
-      <li><a href="#divisions">Divisions</a></li>
-      <li><a href="#criminal-investigations">Criminal Investigations</a></li>
-      <li><a href="#hr">HR</a></li>
-      <li><a href="#joint-terrorism-task-force">Joint Terrorism Task Force</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#how-to-apply">How to Apply / Why to Apply</a></li>
-      <li><a href="#chain-of-command">Chain of Command</a></li>
+      <!-- Add your navigation links here -->
     </ul>
   </nav>
 
   <!-- Introduction section -->
   <section id="introduction">
-    <h1>Introduction</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/a5661a8a82550f7c6bd13901adc3d4c7.png" alt="Introduction Image">
+    <p>Welcome to the Federal Investigation Bureau (FIB) of Los Santos!</p>
+
+<p>At the FIB, we are dedicated to safeguarding the well-being and security of the citizens of Los Santos, ensuring law and order prevail in the face of ever-evolving challenges. Our mission is to combat crime, investigate complex cases, and maintain a safer environment for all.</p>
+
+<p>As one of the leading law enforcement agencies in San Andreas, we take pride in our skilled and highly-trained agents who operate with the utmost integrity and professionalism. Our commitment to excellence is unwavering, and we constantly strive to stay ahead in the fight against criminal activities.</p>
+
+<p>With a robust division structure and specialized units, including the Criminal Investigations Division and Joint Terrorism Task Force, we are equipped to tackle a wide range of threats, from organized crime to acts of terrorism. Our highly-trained personnel work tirelessly to uncover the truth and bring those responsible to justice.</p>
+
+<p>Join us in our mission to protect and serve. If you possess the passion, determination, and dedication to uphold the law and defend the innocent, consider becoming a part of the FIB family. Together, we can make a difference and ensure a safer and brighter future for the people of Los Santos.</p>
+
+Thank you for visiting our website, and we look forward to working together for a safer city.
+
+Director, Federal Investigation Bureau (FIB) Los Santos<p></p>
     <!-- Add the introduction content here -->
   </section>
 
   <!-- About the director section -->
-  <section id="about-director">
-    <h1>About the Director</h1>
-    <!-- Add information about the director here -->
-  </section>
+  
 
   <!-- Divisions section -->
   <section id="divisions">
-    <h1>Divisions</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/758a1c340f80cb6f0da27a6cf2fb6deb.png" alt="Divisions Image">
+    <h1>Departments of the Federal Investigation Bureau (FIB)</h1>
+
+  <p><strong>1. Criminal Investigations Division (CID):</strong> The CID is at the forefront of investigating and solving complex criminal cases. Our skilled detectives meticulously gather evidence, analyze data, and conduct interviews to bring perpetrators to justice. From financial crimes to homicides, CID is dedicated to uncovering the truth behind every crime.</p>
+
+  <p><strong>2. Joint Terrorism Task Force (JTTF):</strong> The JTTF is a collaborative effort between FIB and other law enforcement agencies to combat terrorism and prevent potential threats. Working in coordination with local, state, and federal partners, JTTF agents gather intelligence and conduct operations to neutralize terrorist activities.</p>
+
+  <p><strong>3. Cyber Crimes Unit (CCU):</strong> In the digital age, cybercrimes pose a significant threat to our society. The CCU is responsible for investigating cyber-related offenses, including hacking, online fraud, and identity theft. With cutting-edge technology and expertise, CCU agents ensure a safer cyberspace for all.</p>
+
+  <p><strong>4. Intelligence and Analysis Division (IAD):</strong> The IAD gathers and analyzes intelligence from various sources to identify emerging threats and criminal trends. Through comprehensive analysis, IAD helps other divisions make informed decisions, contributing to our proactive approach in fighting crime.</p>
+
+  <p><strong>5. Special Operations Division (SOD):</strong> SOD handles high-risk and sensitive operations that require precision and expertise. From undercover operations to hostage rescues, SOD agents are well-trained and equipped to handle critical situations with tact and professionalism.</p>
+
+  <p><strong>6. Fugitive Apprehension Unit (FAU):</strong> The FAU is responsible for locating and apprehending fugitives on the run. With a relentless pursuit of justice, FAU agents track down individuals wanted for serious offenses and ensure they face the consequences of their actions.</p>
+
+  <p>Each of these departments plays a vital role in the FIB's commitment to protecting the citizens of Los Santos and maintaining a safer environment. Our dedicated agents work tirelessly to maintain the highest standards of excellence and integrity in their pursuit of justice.</p>
     <!-- Add information about different divisions within FIB here -->
   </section>
 
   <!-- Criminal Investigations section -->
   <section id="criminal-investigations">
-    <h1>Criminal Investigations</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/42d4d4e9691b80849281119ba28240b8.png" alt="Criminal Investigations Image">
+     <h2>Investigation Process:</h2>
+  <ul>
+    <li>Gathering Intelligence: FIB initiates investigations by gathering intelligence from various sources, including informants, surveillance, data analysis, and tips from the public.</li>
+    <li>Case Assignment: Once a case is identified, it is assigned to a specialized division within FIB based on the nature and complexity of the crime.</li>
+    <li>Evidence Collection: FIB agents meticulously collect evidence, including physical evidence, documents, and digital data, to build a strong case against the suspects.</li>
+    <li>Interviews and Interrogations: FIB agents conduct interviews and interrogations of witnesses, victims, and suspects to gather more information and establish the sequence of events.</li>
+    <li>Collaboration with Other Agencies: FIB often collaborates with other law enforcement agencies, both at the local and federal levels, to pool resources and expertise for complex cases or when dealing with criminals operating across jurisdictions.</li>
+  </ul>
+
+  <h2>Collaboration with NOOSE:</h2>
+  <ul>
+    <li>Combating Terrorism: Both FIB and NOOSE are integral parts of the United States' counter-terrorism efforts.</li>
+    <li>Joint Operations: FIB and NOOSE collaborate on joint operations to handle high-risk situations, such as hostage rescues or apprehending dangerous fugitives.</li>
+    <li>Information Sharing: FIB and NOOSE share critical information and intelligence on ongoing investigations and security matters.</li>
+    <li>Policy Development: FIB and NOOSE collaborate on the development of policies and strategies to address current and future security challenges.</li>
+  </ul>
+
+  <p>Overall, the FIB's investigations are characterized by a systematic and evidence-based approach, with a strong focus on collaboration and intelligence-sharing. The partnership with NOOSE enhances the efficiency and effectiveness of both agencies in protecting the nation and its citizens from various threats.</p>
+
     <!-- Add information about criminal investigations conducted by FIB here -->
   </section>
 
   <!-- HR section -->
   <section id="hr">
-    <h1>HR</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/4005bf92dbe16eaa8da76361ed950230.png" alt="HR Image">
+     <p>The FIB's HR department plays a vital role in managing personnel, fostering a positive work environment, and ensuring the agency's workforce is well-supported and motivated. HR is responsible for various aspects, including recruitment, training, performance evaluation, benefits administration, and employee relations.</p>
+
+  <h2>Recruitment</h2>
+  <p>HR collaborates with hiring managers to identify staffing needs and posts job openings. They review applications, conduct interviews, and select candidates who possess the skills and qualifications required for FIB positions.</p>
+
+  <h2>Training and Development</h2>
+  <p>HR designs and delivers training programs to equip agents with the necessary skills and knowledge to excel in their roles. They also organize workshops and seminars to foster continuous learning and professional growth.</p>
+
+  <h2>Performance Evaluation</h2>
+  <p>HR conducts regular performance evaluations to assess employees' contributions and identify areas for improvement. Feedback from evaluations is used to support career development and promote excellence within the agency.</p>
+
+  <h2>Employee Benefits</h2>
+  <p>HR administers various employee benefits, such as health insurance, retirement plans, and paid leave, to ensure the well-being and welfare of FIB agents.</p>
+
+  <h2>Employee Relations</h2>
+  <p>HR handles employee relations matters, ensuring a respectful and inclusive work environment. They address employee concerns, resolve conflicts, and promote a positive workplace culture.</p>
     <!-- Add information about FIB's Human Resources here -->
   </section>
 
   <!-- Joint Terrorism Task Force section -->
   <section id="joint-terrorism-task-force">
-    <h1>Joint Terrorism Task Force</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/432d0327c0016f3f07e81a3de905703d.png" alt="Joint Terrorism Task Force Image">
+    <p>The Joint Terrorism Task Force (JTTF) is a collaborative effort between the FIB and various law enforcement agencies in Los Santos. Its primary objective is to combat terrorism and prevent potential threats to national security. The JTTF brings together the expertise and resources of different agencies to identify, investigate, and neutralize terrorist activities.</p>
+
+  <h2>Collaboration with NOOSE and Other Agencies</h2>
+  <p>The FIB works closely with the National Office of Security Enforcement (NOOSE) and other local, state, and federal agencies in Los Santos to share intelligence and coordinate efforts. This collaboration allows for a more comprehensive approach to counter-terrorism, enabling the JTTF to respond swiftly and effectively to emerging threats.</p>
+
+  <h2>Gathering and Analyzing Intelligence</h2>
+  <p>The JTTF gathers and analyzes intelligence from various sources, including surveillance, informants, and open-source data. This information is shared with partner agencies, enhancing their understanding of potential threats and enabling coordinated action.</p>
+
+  <h2>Coordinated Operations</h2>
+  <p>When a potential threat is identified, the JTTF plans and executes joint operations with partner agencies. These operations often involve sharing resources, expertise, and tactical support to ensure successful outcomes.</p>
+
+  <h2>Preventing Terrorism</h2>
+  <p>Through its proactive approach, the JTTF aims to prevent terrorist attacks before they occur. By monitoring suspicious activities and individuals, the task force can intervene and disrupt terrorist plans.</p>
+
+  <h2>Protecting the Public</h2>
+  <p>The JTTF's collaboration with other agencies ensures a unified response to protect the public and maintain the safety and security of the city of Los Santos.</p>
     <!-- Add information about the Joint Terrorism Task Force here -->
   </section>
 
   <!-- FAQ section -->
   <section id="faq">
-    <h1>FAQ</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/8c2b2d5f2012d8a51a55e071584e982a.png" alt="FAQ Image">
+    <h1>Frequently Asked Questions (FAQ)</h1>
+  
+  <h2>Q: How can I apply to become an FIB agent?</h2>
+  <p>A: To apply, visit our Careers page and submit your application through the online portal. Ensure you meet the eligibility criteria and provide all required documents.</p>
+  
+  <h2>Q: What are the requirements to join the FIB?</h2>
+  <p>A: Applicants must be at least 21 years old, have a clean criminal record, and meet specific education and experience criteria. Check our Careers page for detailed requirements.</p>
+  
+  <h2>Q: Does the FIB offer training for new recruits?</h2>
+  <p>A: Yes, the FIB provides comprehensive training programs for new recruits to equip them with the necessary skills and knowledge for their roles.</p>
+  
+  <h2>Q: How can I report suspicious activities to the FIB?</h2>
+  <p>A: If you notice any suspicious activities related to national security or terrorism, contact our dedicated hotline at [phone number] or submit a tip anonymously through our website.</p>
+  
+  <h2>Q: Does the FIB work with other law enforcement agencies?</h2>
+  <p>A: Yes, the FIB collaborates with various local, state, and federal agencies, including NOOSE, to address security challenges and combat terrorism.</p>
+  
+  <h2>Q: What is the role of the FIB's Joint Terrorism Task Force (JTTF)?</h2>
+  <p>A: The JTTF is a collaborative effort between the FIB and other agencies to counter terrorism and prevent potential threats to national security.</p>
+  
+  <h2>Q: How can I request public records or information from the FIB?</h2>
+  <p>A: You can submit a Freedom of Information Act (FOIA) request through our website or contact our Public Records Office for more information.</p>
     <!-- Add frequently asked questions and their answers here -->
   </section>
 
   <!-- How to apply/why to apply section -->
   <section id="how-to-apply">
-    <h1>How to Apply / Why to Apply</h1>
+    <img src="https://imgtr.ee/images/2023/08/03/edcf1c2f46b2a7f970d24788c535175c.png" alt="How to Apply / Why to Apply Image">
+      <p>Thank you for considering a career with the FIB, the Federal Investigation Bureau. Applying to become an FIB agent opens doors to a world of unique opportunities and meaningful contributions to national security and public safety.</p>
+  
+  <h2>Why Apply to the FIB?</h2>
+  <ul>
+    <li><strong>Combat Terrorism:</strong> As an FIB agent, you'll be at the forefront of combating terrorism and protecting the nation from threats to its security.</li>
+    <li><strong>Professional Growth:</strong> The FIB offers extensive training and professional development, providing agents with the skills and knowledge needed to excel in their careers.</li>
+    <li><strong>Team-Oriented Environment:</strong> Join a dedicated team of professionals working together to achieve common goals and make a significant impact.</li>
+    <li><strong>Challenging Investigations:</strong> Engage in complex and high-stakes investigations that require critical thinking and problem-solving skills.</li>
+    <li><strong>National and Global Reach:</strong> The FIB operates not only in Los Santos but also collaborates with agencies worldwide, contributing to international law enforcement efforts.</li>
+    <li><strong>State-of-the-Art Resources:</strong> Access cutting-edge technology and resources to support your investigations and enhance law enforcement capabilities.</li>
+    <li><strong>Honor and Respect:</strong> Join a prestigious law enforcement agency that is recognized and respected for its commitment to justice and integrity.</li>
+    <li><strong>Public Service:</strong> Become an essential part of safeguarding society, upholding the rule of law, and ensuring the safety of communities.</li>
+  </ul>
     <!-- Add information about how to apply to FIB and why one should apply here -->
   </section>
 
   <!-- Chain of Command section -->
   <section id="chain-of-command">
-    <h1>Chain of Command</h1>
+    <img src="	https://imgtr.ee/images/2023/08/03/57db6945631a9635f3721b87316469d1.png" alt="Chain of Command Image">
+     <h2>High Command</h2>
+  <ol>
+    <li>Director</li>
+    <li>Deputy Director</li>
+    <li>Chief of Staff</li>
+    <li>Head of Department</li>
+    <li>"00" Agent</li>
+    <li>Deputy Head of Department</li>
+  </ol>
+
+  <h2>Non-High Command</h2>
+  <ol>
+    <li>Supervisor</li>
+    <li>Executive Agent</li>
+    <li>Black Ops Agent III</li>
+    <li>Black Ops Agent II</li>
+    <li>Black Ops Agent I</li>
+    <li>Elite SSA III</li>
+    <li>Elite SSA II</li>
+    <li>Elite SSA I</li>
+    <li>Elite Agent III</li>
+    <li>Elite Agent II</li>
+    <li>Elite Agent I</li>
+    <li>Sr. Special Agent III</li>
+    <li>Sr. Special Agent II</li>
+    <li>Sr. Special Agent I</li>
+    <li>Special Agent III</li>
+    <li>Special Agent II</li>
+    <li>Special Agent I</li>
+    <li>Field Agent III</li>
+    <li>Field Agent II</li>
+    <li>Field Agent I</li>
+    <li>Junior Agent III</li>
+    <li>Junior Agent II</li>
+    <li>Junior Agent I</li>
+    <li>Suspended</li>
+  </ol>
     <!-- Add information about the FIB's chain of command here -->
   </section>
 
   <!-- Add your footer section here -->
-  <footer>
-    <!-- Add your footer content here -->
+    <style>    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: navy;
+      color: gold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .fib-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .emergency-text {
+      font-size: 16px;
+    }
+    .disclaimer-text {
+      font-size: 12px;
+      margin-top: 10px;
+    }</style> <footer>
+    <img class="fib-logo" src="data:image/jpeg;base64,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" alt="FIB Logo">© 2023 Federal Investigation Bureau - Los Santos, San Andreas
+    <span class="emergency-text">Emergency? Call 911</span>
+    <span class="disclaimer-text">Disclaimer: This site is not real or official; it's based on a video game made by Rockstar Games and Rockstar North Productions.</span>
   </footer>
-</body>
 
-</html>
+
+
+</body></html>
