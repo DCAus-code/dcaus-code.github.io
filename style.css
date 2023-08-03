@@ -3,7 +3,20 @@ body {
   background-color: #282c34;
   color: white;
 }
+@media only screen and (max-width: 600px) {
+  /* Styles for screens up to 600px wide */
+  /* Adjust styles for smaller screens here */
+}
 
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for screens between 601px and 1024px wide */
+  /* Adjust styles for medium-sized screens here */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Styles for screens wider than 1025px */
+  /* Adjust styles for larger screens here */
+}
 #header {
   background-color: #7289da;
   color: white;
