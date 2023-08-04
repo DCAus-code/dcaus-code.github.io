@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Future ToS effective 12/4/23</title>
+  <style>body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  /* Add any styles specific to h1 here if needed */
+}
+
+body {
+  color: #fff; /* White */
+  background-color: #383737; /* Grey */
+}
+
+/* Headers and Important Elements */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; /* White */
+}
+
+/* Links */
+a {
+  color: #fff; /* White */
+}
+
+a:hover {
+  color: #f0f0f0; /* Grey */
+}
+
+/* Borders */
+hr {
+  border-color: #fff; /* White */
+}
+
+/* Buttons and Call-to-action elements */
+.button {
+  color: #fff; /* White */
+  background-color: #000; /* Black */
+}
+
+.button:hover {
+  background-color: #333; /* Dark Grey */
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #fff; /* White */
+}
+
+/* Forms */
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  border: 1px solid #fff; /* White */
+}
+
+/* Footer and Navigation */
+footer, nav {
+  background-color: #000; /* Black */
+  color: #fff; /* White */
+}
+
+/* Other elements as needed */
+
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: white;
+}
+element.style {
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+user agent stylesheet
+html {
+    display: block;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+</style>
+</head>
+<body>
+
+  <h1>Future ToS effective 12/4/23</h1>
+  <p>Welcome to Sageimatic's chat platform! Before you start using our services, please read the following Terms of Service carefully. By accessing or using our platform, you agree to be bound by these terms. If you do not agree with any part of these terms, you may not use our services.</p>
+
+  <h2>1. General Terms</h2>
+
+  <p>1.1. Eligibility: You must be at least 13 years old to use our chat platform. If you are under 13, please do not use our services.</p>
+
+  <p>1.2. Acceptable Use: You agree to use our platform only for lawful purposes and in compliance with all applicable laws and regulations.</p>
+
+  <p>1.3. User Account: You may be required to create a user account. You are responsible for maintaining the confidentiality of your account credentials and are liable for all activities associated with your account.</p>
+
+  <p>1.4. Content Guidelines: You are solely responsible for the content you share on our platform. Prohibited content includes but is not limited to: hate speech, harassment, explicit material, and any content that violates intellectual property rights.</p>
+
+  <p>1.5. Privacy: Our Privacy Policy outlines how we collect, use, and disclose your data. By using our services, you consent to the practices described in the Privacy Policy.</p>
+
+  <h2>2. Intellectual Property</h2>
+
+  <p>2.1. Ownership: Our chat platform and all its content, including but not limited to text, graphics, logos, and software, are the property of Sageimatic and are protected by intellectual property laws.</p>
+
+  <p>2.2. Limited License: Sageimatic grants you a limited, non-exclusive, non-transferable, and revocable license to use our platform for personal and non-commercial purposes only.</p>
+
+  <p>2.3. Copyright Infringement: If you believe that your copyrighted work has been infringed upon, please follow the instructions in our Copyright Policy for reporting such instances.</p>
+
+  <h2>3. Disclaimer of Warranty</h2>
+
+  <p>3.1. Our chat platform is provided on an "as-is" and "as-available" basis. Sageimatic makes no warranties, express or implied, regarding the platform's reliability, availability, or fitness for a particular purpose.</p>
+
+  <h2>4. Limitation of Liability</h2>
+
+  <p>4.1. Sageimatic shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of our platform, even if we have been advised of the possibility of such damages.</p>
+
+  <h2>5. Indemnification</h2>
+
+  <p>5.1. You agree to indemnify and hold Sageimatic harmless from any claims, damages, liabilities, or expenses arising from your use of the chat platform or any violation of these Terms of Service.</p>
+
+  <h2>6. Changes to the Terms of Service</h2>
+
+  <p>6.1. Sageimatic reserves the right to modify these Terms of Service at any time. We will notify you of any significant changes. Your continued use of our platform after the changes become effective constitutes your acceptance of the updated terms.</p>
+
+  <h2>7. Termination</h2>
+
+  <p>7.1. Sageimatic may, at its sole discretion, terminate your access to the chat platform if you violate these Terms of Service or for any other reason without prior notice.</p>
+
+  <h2>8. Governing Law</h2>
+
+  <p>8.1. These Terms of Service shall be governed by and construed in accordance with the laws of the United States, specifically the state of Pennsylvania, without regard to its conflict of laws principles.</p>
+
+  <h2>9. Contact Us</h2>
+
+  <p>9.1. If you have any questions or concerns regarding these Terms of Service, please contact us on Twitter: <a href="https://twitter.com/sageimatic">@sageimatic</a>.</p>
+
+  <!-- Your JavaScript and other scripts go here -->
+</body>
+</html>
