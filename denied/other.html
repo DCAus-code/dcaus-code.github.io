@@ -3045,16 +3045,175 @@ body::backdrop {
     margin-bottom: 56px;
   }
 }
-</style></head><body style="overflow: hidden;"><div id="__next" data-reactroot="" aria-hidden="true"><div class="MuiGrid-root jss2 MuiGrid-container MuiGrid-direction-xs-column"><header class="jss1"><nav class="MuiGrid-root jss191 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"><div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><a class="MuiTypography-root MuiLink-root jss195 MuiLink-underlineNone MuiTypography-colorPrimary" href="/"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><h1 class="MuiTypography-root jss196 jss198 jss229 jss193">Sageimatic Homepage</h1></div></a></div></div><h3 id="updateA">The site is going through major imporvements. Coming soon! </h3><style>
+</style></head><body style="overflow: hidden;"><div id="__next" data-reactroot="" aria-hidden="true">  <style>
+    
+     .close-icon {
+         color: white;
+         font-size: 30px;
+         font-weight: bold;
+     }
+     .notification-bar {
+      margin-top: 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 75%;
+      height: 40px;
+      background-color: transparent;
+      border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+      z-index: 9999;
+    }
+
+    .close-icon {
+      cursor: pointer;
+    }
+  </style><div class="notification-bar">
+    <span>Request could not be completed. Access Denied. Error code: 324DCG-website-update</span>
+    <span class="close-icon" onclick="closeNotification()">X</span>
+  </div>
+  <script>
+    function closeNotification() {
+      document.querySelector('.notification-bar').style.display = 'none';
+    }
+  </script><div class="MuiGrid-root jss2 MuiGrid-container MuiGrid-direction-xs-column"><header class="jss1"><nav class="MuiGrid-root jss191 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"><div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><a class="MuiTypography-root MuiLink-root jss195 MuiLink-underlineNone MuiTypography-colorPrimary" href="/"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><h1 class="MuiTypography-root jss196 jss198 jss229 jss193">Sageimatic Homepage</h1></div></a></div></div><h3 id="updateA">The site is going through major imporvements. Coming soon! </h3><style>
 #updateA {
   margin-top: 0px;
-  margin-left: -200px;
+  margin-left: -100px;
 }
-</style> <div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between"><button class="MuiButtonBase-root MuiButton-root jss237 jss242 MuiButton-text jss240 jss245 MuiButton-textPrimary" tabindex="0" type="button"><span class="MuiButton-label"><div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault jss246"><span class="jss247 jss252"><img class="jss249 jss250" src="https://external-preview.redd.it/bV7XO-88bbTfnBkhiIO9Dw16B_eJ-sy2vy8V8O6jMnA.jpg?auto=webp&amp;s=227bbd88128fd642bfc2bd7543c4e341b0f438a7" alt="danc112gameing773"></span></div><span class="MuiTypography-root jss196 jss205 jss230 jss236">Guest</span></span><span class="MuiTouchRipple-root"></span></button></div></div></nav></header><main class="MuiGrid-root jss3 MuiGrid-container MuiGrid-grid-xs-12"><div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root jss257 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root jss258 MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6"><h2 class="MuiTypography-root jss196 jss197 jss229 jss259 MuiTypography-alignLeft">Website Update...</h2><p class="MuiTypography-root jss196 jss205 jss230 MuiTypography-alignLeft">The site is currently under construction, and updates will be posted on Twitter @sageimatic. As of right now, we're performing some major construction, as seen on the nav bar, and changing up huge parts of the CSS. This will be the biggest update yet, and bring a whole new look! Just a heads up, this may take months to complete because we don't want to burn ourselves out. Also, Roblox's CSS file is really helping (just kidding). Thanks for your patience and support!</p></div><div class="MuiGrid-root jss260 MuiGrid-item MuiGrid-grid-sm-6"><img class="jss261" src="https://cdn.discordapp.com/attachments/1032284133075976232/1091542232651284481/cffgfg.jpg" alt="unauthorized"></div></div></div>  
+</style>   <style>
+       .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .MuiDropdown-root {
+      position: relative;
+      display: inline-block;
+    }
+
+    .MuiDropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222222; /* Updated background color to dark gray */
+      min-width: 160px;
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    .MuiDropdown-root:hover .MuiDropdown-content {
+      display: block;
+    }
+
+    .MuiDropdown-content a {
+      color: #fff; /* Updated text color to white */
+      text-decoration: none;
+      display: block;
+    }
+
+    .MuiDropdown-content a.disabled {
+      color: #888;
+      pointer-events: none;
+    }
+  </style>   <div class="MuiGrid-root MuiGrid-item">
+    <div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between MuiDropdown-root">
+      <button class="MuiButtonBase-root MuiButton-root jss237 jss242 MuiButton-text jss240 jss245 MuiButton-textPrimary" tabindex="0" type="button">
+        <span class="MuiButton-label">
+          <div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault jss246">
+            <span class="jss247 jss252">
+              <img class="jss249 jss250" src="https://external-preview.redd.it/bV7XO-88bbTfnBkhiIO9Dw16B_eJ-sy2vy8V8O6jMnA.jpg?auto=webp&amp;s=227bbd88128fd642bfc2bd7543c4e341b0f438a7" alt="danc112gameing773">
+            </span>
+          </div>
+          <span class="MuiTypography-root jss196 jss205 jss230 jss236">Guest</span>
+        </span>
+        <span class="MuiTouchRipple-root"></span>
+      </button>
+      <div class="MuiDropdown-content">
+            <div class="circle">!</div>
+        <a>This Profile Menu is unavailable because A: Your Not Logged in. B: The site is under construction. Or C: You have no wifi connection</a>
+      </div>
+    </div>
+  </div><div class="MuiGrid-root MuiGrid-item">
+    <div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-space-between MuiDropdown-root">
+      
+      <div class="MuiDropdown-content">
+        <a href="#">Sign Out</a>
+        <a href="#" class="disabled">Profile</a>
+        <!-- Add more options here -->
+      </div>
+    </div>
+  </div></nav></header><main class="MuiGrid-root jss3 MuiGrid-container MuiGrid-grid-xs-12"><div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root jss257 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root jss258 MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-6"><h2 class="MuiTypography-root jss196 jss197 jss229 jss259 MuiTypography-alignLeft">Website Update...</h2><p class="MuiTypography-root jss196 jss205 jss230 MuiTypography-alignLeft">The site is currently under construction, and updates will be posted on Twitter @sageimatic. As of right now, we're performing some major construction, as seen on the nav bar, and changing up huge parts of the CSS. This will be the biggest update yet, and bring a whole new look! Just a heads up, this may take months to complete because we don't want to burn ourselves out. Also, Roblox's CSS file is really helping (just kidding). Thanks for your patience and support!</p></div><div class="MuiGrid-root jss260 MuiGrid-item MuiGrid-grid-sm-6"><img class="jss261" src="https://cdn.discordapp.com/attachments/1032284133075976232/1091542232651284481/cffgfg.jpg" alt="unauthorized"></div></div></div>  
 
 
  
-</div></main><footer class="css-1s4as06-footer"><div class="MuiGrid-root MuiGrid-container css-fsfkrb-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-auto css-14ma99w-logo"></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-15j76c0"><div class="MuiGrid-root MuiGrid-container MuiGrid-item css-ekukdv-externalLinks"><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-12xiuro-Link-colorPrimary" href="https://lostinfinite.github.io/access/idk" target="_blank"><span class="MuiTypography-root MuiTypography-inherit css-zsdw7-Typography-root-Typography-body2-Typography-colorSecondary">Admin Login</span></a></div><div class="MuiGrid-root MuiGrid-container MuiGrid-item css-xrpnm6-copyright"><span class="MuiTypography-root MuiTypography-inherit css-zsdw7-Typography-root-Typography-body2-Typography-colorSecondary">©2023 Sageimatic. All rights reserved</span></div></div></div></footer>
+</div></main><style>    
+        footer {
+      background-color: #222;
+      color: #fff;
+      padding: 10px; /* Smaller padding */
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      width: 75px; /* Smaller size */
+      height: 75px;
+      border-radius: 50%; /* Make it circular */
+    }
+
+    .footer-text {
+      font-size: 14px; /* Smaller font size */
+    }   
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .footer-links {
+      display: flex;
+    }
+
+    .footer-link {
+      margin-right: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>       <footer class="css-1s4as06-footer">
+    <div class="footer-logo MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-auto css-14ma99w-logo">
+      <!-- The image with a smaller size and circular shape -->
+      <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="Sageimatic site">
+    </div>
+    <div class="MuiGrid-root MuiGrid-container css-fsfkrb-container">
+      <div class="footer-links MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-15j76c0">
+        <div class="MuiGrid-root MuiGrid-container MuiGrid-item css-xrpnm6-copyright footer-text">
+          <span class="MuiTypography-root MuiTypography-inherit css-zsdw7-Typography-root-Typography-body2-Typography-colorSecondary">
+            ©2023 Sageimatic. All rights reserved
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 </div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/search/jobs","query":{},"buildId":"Pmw2AJmCYblGn3qbvko-J","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script><next-route-announcer aria-hidden="true"><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p></next-route-announcer><div id="voicemod-shadow-root-container" style="position: fixed; z-index: 2147483647; top: 32px; right: 32px;" aria-hidden="true"></div><style>element.style {
@@ -3107,7 +3266,8 @@ html {
 
     height: 0px;
 }</style>
-<div id="voicemod-shadow-root-container"></div></body><style id="stylus-1" type="text/css" class="stylus">[class^=messageGroupBlocked] {
+<div id="voicemod-shadow-root-container"></div><style id="stylus-1" type="text/css" class="stylus">[class^=messageGroupBlocked] {
 
     height: 0px;
-}</style></html>
+}</style>
+</body></html>
