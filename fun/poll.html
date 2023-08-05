@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poll or Survey</title>
+  <style>
+    /* Add your CSS styling here */
+  </style>
+</head>
+<body>
+  <h1>Poll Question</h1>
+  <form id="pollForm">
+    <input type="radio" name="option" value="option1"> Option 1 <br>
+    <input type="radio" name="option" value="option2"> Option 2 <br>
+    <input type="radio" name="option" value="option3"> Option 3 <br>
+    <!-- Add more options as needed -->
+    <button type="button" onclick="submitPoll()">Submit</button>
+  </form>
+
+  <script>
+    function submitPoll() {
+      const form = document.getElementById("pollForm");
+      const selectedOption = form.querySelector('input[name="option"]:checked');
+
+      if (selectedOption) {
+        const answer = selectedOption.value;
+        // You can send the answer to the server using AJAX or perform any other action here
+        console.log("User selected: ", answer);
+        alert("Thank you for participating!");
+      } else {
+        alert("Please select an option before submitting.");
+      }
+    }
+  </script>
+</body>
+</html>
