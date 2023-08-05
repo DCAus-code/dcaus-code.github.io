@@ -3074,7 +3074,7 @@ body::backdrop {
     .close-icon {
       cursor: pointer;
     }
-  </style><div class="notification-bar">
+  </style><div class="notification-bar" style="display: none;">
     <span>Request could not be completed. Access Denied. Error code: 324DCG-website-update</span>
     <span class="close-icon" onclick="closeNotification()">X</span>
   </div>
@@ -3143,7 +3143,7 @@ body::backdrop {
       </button>
       <div class="MuiDropdown-content">
             <div class="circle">!</div>
-        <a>This Profile Menu is unavailable because A: Your Not Logged in. B: The site is under construction. Or C: You have no wifi connection</a>
+        <a>This Profile Menu is unavailable because</a> <a>A: Your Not Logged in.</a> <a>B: The site is under construction.</a> <a>Or C: You have no wifi connection</a><hr> <a>Admin? </a> <a href="https://lostinfinite.github.io/access/idk">Click Here</a>
       </div>
     </div>
   </div><div class="MuiGrid-root MuiGrid-item">
@@ -3270,4 +3270,5 @@ html {
 
     height: 0px;
 }</style>
+
 </body></html>
