@@ -22,7 +22,14 @@
 			const hashedPassword = hashPassword(passwordInput.value);
 
 			if (hashedPassword === 'dGVzdA==') {
-				window.location.href = '/access/admin-panel';
+				const selectedPanel = prompt("Enter 'admin' for Admin Panel or 'tester' for Tester Panel:");
+				if (selectedPanel === 'admin') {
+					window.location.href = '/access/admin-panel';
+				} else if (selectedPanel === 'tester') {
+					window.location.href = '/access/tester-panel';
+				} else {
+					alert('Invalid choice. Please enter either "admin" or "tester".');
+				}
 			} else {
 				alert('Incorrect password');
 			}
