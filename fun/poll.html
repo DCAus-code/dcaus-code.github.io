@@ -1,35 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Poll or Survey</title>
+<html><head>
+  <title>Cyberpunk CSS</title>
   <style>
-    /* Add your CSS styling here */
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff00cc;
+    }
+
+    .header {
+      padding: 20px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+      padding: 10px;
+    }
+
+    .navbar a {
+      padding: 10px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .content {
+      line-height: 1.6;
+    }
+
+    .neon-text {
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+
+    .futuristic-button {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    .futuristic-button:hover {
+      background-color: #ff00cc;
+      box-shadow: 0 0 20px #ff00cc;
+    }
+
+    /* Add more cyberpunk styles as per your requirements */
   </style>
 </head>
 <body>
-  <h1>Poll Question</h1>
-  <form id="pollForm">
-    <input type="radio" name="option" value="option1"> Option 1 <br>
-    <input type="radio" name="option" value="option2"> Option 2 <br>
-    <input type="radio" name="option" value="option3"> Option 3 <br>
-    <!-- Add more options as needed -->
-    <button type="button" onclick="submitPoll()">Submit</button>
-  </form>
+  <div class="header">
+    <h1 class="neon-text">My TikTok Career</h1>
+  </div>
 
-  <script>
-    function submitPoll() {
-      const form = document.getElementById("pollForm");
-      const selectedOption = form.querySelector('input[name="option"]:checked');
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#partner">Who i partnered with</a>
+    
+    <a href="#">Contact</a>
+  </div>
 
-      if (selectedOption) {
-        const answer = selectedOption.value;
-        // You can send the answer to the server using AJAX or perform any other action here
-        console.log("User selected: ", answer);
-        alert("Thank you for participating!");
-      } else {
-        alert("Please select an option before submitting.");
-      }
-    }
-  </script>
-</body>
-</html>
+  <div class="container">
+    <div class="content">
+      <h2 id="home">Hello There</h2>
+      <p>I am @sageimatic on TikTok, where I create engaging and captivating TikToks. I collaborate with talented creators to bring you the best content possible. I invite you to join me on an exciting journey into the world of TikTok.</p>
+
+<p>Let's explore the creativity, entertainment, and joy that TikTok has to offer. Together, we can experience the fun and beauty of this amazing platform. Come along, and let's embark on our TikTok adventure!</p>
+
+<p>This text highlights the TikTok content creator, introduces their partnerships with other creators, and invites the audience to join them on their TikTok journey. The message is presented in a professional and engaging manner.</p>
+    <h2 id="partner">Who ive partnered with so far</h2>
+    <div class="text-glow">@nikky.c On TikTok</div>
+    <style>
+
+		.text-glow {
+			font-size: 36px;
+			color: #8e44ad;
+			text-shadow: 0 0 10px #8e44ad;
+		}
+	</style>
+    <h2 id="con">Wanna partner up for a tiktok video? You can contact me here!</h2>
+    <strong>Contact me on twitter at</strong><a href="https://x.com/sageimatic"> @sageimatic</a>
+      <strong>Or email me at</strong><a herf="mailto:info@dcaus.cf"> info@dcaus.cf</a></div>
+  </div>
+
+
+</body></html>
