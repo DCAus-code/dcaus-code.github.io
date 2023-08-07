@@ -1,6 +1,171 @@
 <html><head>
     <title>Twitter-Style Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+          
+             .tag{
+                 color: blue;
+                 cursor: pointer;
+             }
+            .post-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #white;
+            margin-bottom: 15px;
+        }
+
+        .post-author {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .post-image {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        body {
+            background-color: #202020;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card {
+            width: 80%;
+            max-width: 400px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .profile-header img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .profile-picture img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: -50px auto 10px;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #fff;
+        }
+
+        .user-details {
+            padding: 20px 0;
+        }
+
+        .user-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .user-bio {
+            margin-top: 10px;
+        }
+
+        .user-location,
+        .user-join-date {
+            margin-top: 5px;
+        }
+
+        .user-stats {
+            margin-top: 15px;
+        }
+
+        .stat {
+            display: block;
+            color: #1DA1F2;
+            text-decoration: none;
+        }
+
+        .edit-profile-button {
+            display: block;
+            background-color: #1DA1F2;
+            color: #fff;
+            border-radius: 20px;
+            text-align: center;
+            padding: 8px 20px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .edit-profile-button:hover {
+            background-color: #0F86D6;
+        }
+
+        .edit-profile-button:focus {
+            outline: none;
+        }
+
+        /* Badges Section */
+        .badges {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .badge img {
+            height: 25px;
+        }
+
+        .verified-badge {
+            width: 25px;
+        }
+
+        .associated-badge img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .badge-dropdown {
+            display: none;
+            position: absolute;
+            top: 45px;
+            right: 0;
+            background-color: #1DA1F2;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .associated-badge:hover .badge-dropdown {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -10,27 +175,31 @@
                     <!-- Profile header image -->
                     <img src="https://pbs.twimg.com/profile_banners/1593707056032251904/1681188894/600x200" alt="Profile Header Image">
                 </a>
-                <div class="badges">
-                    <!-- Verified badge -->
-                    <div class="badge associated-badge">
-                        <a role="link">
-<img src="https://cdn-icons-png.flaticon.com/128/5253/5253968.png" alt="Verified Badge" class="badge verified-badge">
-                        </a>
-                        <div class="badge-dropdown">
-                            <span>Specal Verified Badge: Staff, manager, owner of Sageimatic</span>
-                        </div>
-                    </div>
-                    <!-- Associated badge -->
-                    <div class="badge associated-badge">
-                        <a role="link">
-                            <img src="https://pbs.twimg.com/profile_images/1645651728241491968/Ia6yAdUy_200x200.jpg" alt="Associated Badge">
-                        </a>
-                        <div class="badge-dropdown">
-                            <span>Associated with Sageimatic</span>
-                        </div>
-                    </div>
+                <div class="profile-picture">
+                    <!-- Profile Picture -->
+                    <img src="https://pbs.twimg.com/profile_images/1645651728241491968/Ia6yAdUy_200x200.jpg" alt="Profile Picture">
                 </div>
                 <div class="user-details">
+                    <div class="badges">
+                        <!-- Verified badge -->
+                        <div class="badge associated-badge">
+                            <a role="link">
+                                <img src="https://cdn-icons-png.flaticon.com/128/5253/5253968.png" alt="Verified Badge" class="badge verified-badge">
+                            </a>
+                            <div class="badge-dropdown">
+                                <span>Special Verified Badge: Staff, manager, owner of Sageimatic</span>
+                            </div>
+                        </div>
+                        <!-- Associated badge -->
+                        <div class="badge associated-badge">
+                            <a role="link">
+                                <img src="https://pbs.twimg.com/profile_images/1645651728241491968/Ia6yAdUy_200x200.jpg" alt="Associated Badge">
+                            </a>
+                            <div class="badge-dropdown">
+                                <span>Associated with Sageimatic</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="user-name">
                         <span class="profile-heading">@sageimatic</span>
                     </div>
@@ -41,7 +210,7 @@
                         <span>Pennsylvania, USA</span>
                     </div>
                     <div class="user-join-date">
-                        <span>Joined: Jantenthebuary 1 BCE</span>
+                        <span>Joined: February 1 BCE</span>
                     </div>
                     <div class="user-stats">
                         <a class="stat" role="link">
@@ -55,125 +224,52 @@
             </div>
             <strong>Verified Since: -9372... BCE</strong>
         </div>
+    </div>  <div class="post-container">
+               <style>   
+    .post-source{
+        color: white;
+        text-decoration: bold;
+        cursor: pointer;
+        
+    }
+    .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;}</style><div class="dropdown">
+            <p class="post-source">Source: Blog/SM <span class="dropdown-content">Post Sources may vary. They will be endorsed by DisS (Placeholder name). Post sources are checked by DisS. Additionally, this source is Blog/SM (Social Media)</span></p>
+        </div>
+        <p class="post-author">Author: Sageimatc</p><p class="post-date">Date: August 6, 2023</p><div class="dropdown"></div><h2 class="post-title">SB 136 MI</h2>
+        
+        <p class="post-content">his bill is not just harmful and discriminatory; it also stands on shaky legal ground as it goes against several fundamental principles and rights that should be protected for all individuals. In Missouri, as well as nationally, there are laws and bills in place that safeguard the rights and well-being of vulnerable children, and SCS/SB 134 directly contradicts them.
+
+The bill directly violates the principles of freedom of expression and self-determination. The right to express one's gender identity and sexual orientation is a fundamental aspect of personal autonomy and self-discovery. Attempting to suppress this expression goes against the very essence of individual rights and freedom.
+
+Furthermore, SCS/SB 134 interferes with the principles of privacy and confidentiality. A student's gender identity is a personal matter that should be handled with sensitivity and respect. Requiring school officials to disclose this information to parents, regardless of the student's readiness or consent, is a blatant breach of privacy and violates the student's right to confidentiality.
+
+Additionally, the bill goes against the principles of equal protection under the law. It discriminates against LGBTQ+ students by denying them the same support and resources available to their cisgender and heterosexual peers. This is a clear violation of the principle that all individuals should be treated equally and with dignity, regardless of their gender identity or sexual orientation.
+
+Moreover, SCS/SB 134 potentially conflicts with existing anti-discrimination laws and policies. Various states and federal laws prohibit discrimination based on gender identity and sexual orientation in educational settings. By attempting to suppress and deny support for LGBTQ+ students, this bill may be at odds with these established anti-discrimination protections.
+
+It's evident that SCS/SB 134 is not just morally wrong; it also treads on thin legal ice. It undermines essential rights and protections for vulnerable children, potentially exposing the state of Missouri to legal challenges and tarnishing its reputation as a fair and just society.
+
+To the sponsors of this bill, I implore you to reconsider your position and the legality of your actions. Instead of trying to discriminate against vulnerable children, work towards creating an inclusive and supportive environment that uplifts all students, regardless of their gender identity or sexual orientation. </p><p class="tag">#ProtectChildrensRights</p> <p class="tag">#EqualityForAll</p> <p class="tag">#RejectSCSSB134</p>
+        
+        <p class="post-date">Date: August 6, 2023</p>
     </div>
 
 
-<style>body {
-  background-color: #202020;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-/* ... (previous CSS styles) ... */
-
-.badges {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.badge img {
-  height: 25px;
-}
-
-.verified-badge {
-  width: 25px;
-}
-
-.associated-badge img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-}
-
-.badge-dropdown {
-  display: none;
-  position: absolute;
-  top: 45px;
-  right: 0;
-  background-color: #1DA1F2;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.associated-badge:hover .badge-dropdown {
-  display: block;
-}
-
-/* ... (rest of the CSS styles) ... */
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.profile-card {
-  width: 300px;
-  background-color: #333;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.profile-header img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.profile-picture img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 10px auto;
-}
-
-.user-details {
-  padding: 0 10px;
-}
-
-.user-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.user-bio {
-  margin-top: 10px;
-}
-
-.user-location,
-.user-join-date {
-  margin-top: 5px;
-}
-
-.user-stats {
-  margin-top: 15px;
-}
-
-.stat {
-  display: block;
-  color: #1DA1F2;
-  text-decoration: none;
-}
-
-.edit-profile-button {
-  display: block;
-  background-color: #1DA1F2;
-  color: #fff;
-  border-radius: 20px;
-  text-align: center;
-  padding: 8px 20px;
-  text-decoration: none;
-  margin-top: 15px;
-}
-
-.edit-profile-button:hover {
-  background-color: #0F86D6;
-}
-
-.edit-profile-button:focus {
-  outline: none;
-}
-</style></body></html>
+</body></html>
