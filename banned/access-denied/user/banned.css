@@ -1,13 +1,79 @@
-body{
-background-color: black;
-color: white;
-}
-
-h1 {
-color: red;
-}
-
-h6{
-color: red;
-text-decoration: underline;
-}
+ body {
+            background-color: #2C2C2C;
+            color: #FFFFFF;
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .banned-container {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .banned-title {
+            font-size: 32px;
+            color: #FF1744;
+            margin: 0;
+        }
+        
+        .banned-reason {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .off-itm {
+            font-size: 18px;
+            margin-top: 10px;
+            text-decoration: bold;
+            font-weight: bold;
+        }
+        
+        .mod-note {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        .roblox-logo {
+            width: 100px;
+            margin-top: 30px;
+            animation: spin 3s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .box {
+            background-color: #2c2c2c;
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .box-content {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .box-label {
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .box-content-text {
+            margin: 0;
+        }
