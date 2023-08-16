@@ -5,54 +5,70 @@
     <link rel="stylesheet" href="https://www.roblox.com/css/roblox-global.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+ .button-container {
+            text-align: center;
+        }
+        
+        .button {
+            background-color: #2C2C2C;
+            border: 2px solid #FFFFFF;
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
         body {
             background-color: #2C2C2C;
             color: #FFFFFF;
             font-family: "Roboto", sans-serif;
             margin: 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: flex-start;
             height: 100vh;
+            padding: 20px;
         }
-        
+
         .banned-container {
             background-color: #2c2c2c;
-            padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
+            text-align: left;
+            padding: 30px;
         }
-        
+
         .banned-title {
             font-size: 32px;
-            color: #FF1744;
+            color: #FFF;
             margin: 0;
         }
-        
+
         .banned-reason {
             font-size: 20px;
             margin-top: 10px;
         }
-        
+
         .off-itm {
             font-size: 18px;
             margin-top: 10px;
             text-decoration: bold;
             font-weight: bold;
         }
-        
+
         .mod-note {
             font-size: 18px;
             margin-top: 20px;
         }
-        
+
         .roblox-logo {
             width: 100px;
             margin-top: 30px;
             animation: spin 3s linear infinite;
         }
-        
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -61,7 +77,7 @@
                 transform: rotate(360deg);
             }
         }
-        
+
         .box {
             background-color: #2c2c2c;
             border: 2px solid #FFFFFF;
@@ -69,53 +85,52 @@
             padding: 20px;
             margin-top: 20px;
         }
-        
+
         .box-content {
             color: #FFFFFF;
             font-size: 18px;
             margin-bottom: 10px;
         }
-        
+
         .box-label {
             font-weight: bold;
             margin: 0;
         }
-        
+
         .box-content-text {
             margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="banned-container w3-animate-opacity">
-        <img class="img-logo" src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="sageimatic-logo"><style> .img-logo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-right: 10px;
-}</style> 
-        <h1 class="banned-title">Account Banned</h1>
-        <p>Pur Moderators have decided you broke the TOS</p>
-        <p>Date Reviewed: 11/30/2022</p>
-        <p class="mod-note">Moderator Note: Because you were banned, we have informed Homeland Secureity and restricted your access to various platforms, including Roblox.</p>
+<div class="banned-container w3-animate-opacity">
+    <img class="img-logo" src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="sageimatic-logo">
+    <style>
+        .img-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+    <h1 class="banned-title">Account Deleted</h1>
+    <p>Pur Moderators have decided you broke the TOS</p>
+    <p>Date Reviewed: 11/30/2022</p>
+    <p class="mod-note">Moderator Note: We do NOT and will not tolorate Illegal activites being searched, Asked, Or sent on our Platform. Your account has deleted. Your billing information has been sent to the proper authorities.</p>
+    <div class="box">
         
-        <div class="box">
-            <div class="box-content">
-                <p class="box-label">Reason:</p>
-                <p class="box-content-text">Illegal Activity</p>
-            </div>
-            <div class="box-content">
-                <p class="box-label">Offensive Item:</p>
-                <p class="box-content-text">"How to kill someone"</p>
-                <p class="box-content-text">"How to tie someone Up"</p>
-                <p class="box-content-text">"How to kill an Officer"</p>
-            </div>
+        <div class="box-content">
+            <p class="box-label">Reason:</p><p class="box-content-text">Illegal Activity</p><p class="box-label">Offensive Item:</p>
+            <p class="box-content-text">"How to kill someone"</p></div>
+             <div class="box-content"><p class="box-label">Reason:</p><p class="box-content-text">Illegal Activity</p><p class="box-label">Offensive Item:</p><p class="box-content-text">"How to tie someone Up"</p></div>
+             <div class="box-content"><p class="box-label">Reason:</p><p class="box-content-text">Illegal Activity</p><p class="box-label">Offensive Item:</p><p class="box-content-text">"How to kill an Officer"</p></div>
         </div>
-        
-        <div class="timer-container">
-            <p class="timer">Time Remaining: 99:99:99:99:99:99:99 99:99:99:99:99:99:99:59 (We are Serious, You are a national Secureity Threat)</p>
-        </div>
-    </div>
+    
+    <div class="timer-container">
+        <p class="timer">You may NOT reactivate your account</p>
+    </div>    <button class="button">Log out</button>
+</div>
+
 
 
 </body></html>
