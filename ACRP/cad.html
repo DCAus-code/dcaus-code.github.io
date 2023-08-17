@@ -1,0 +1,77 @@
+<html><head>
+    <title>Joining Instructions</title>
+    <style>
+        body {
+            font-family: "Roblox", sans-serif;
+            font-weight: bold;
+            color: black;
+            background-image: url("https://pbs.twimg.com/media/F3tPJjbWYAA_ZiC?format=webp&name=small");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .instructions {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .copy-area {
+            display: flex;
+            align-items: center;
+        }
+
+        #copyButton {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>Plan A:</h2>
+        <ol>
+            <li>Goto <a href="https://sonorancad.com/?comid=NUPPAH0" target="_blank">https://sonorancad.com/?comid=NUPPAH0</a></li>
+            <li>Sign up or log in to your account.</li>
+            <li>Click "Join" to join the community.</li>
+        </ol>
+        
+        <h2>Plan B:</h2>
+        <ol>
+            <li>If Plan A doesn't work, goto <a href="https://sonorancad.com" target="_blank">https://sonorancad.com</a></li>
+            <li>Sign up or log in to your account.</li>
+            <li>Click "Join Community".</li>
+            <li>Type in Community ID: NUPPAH0.</li>
+            <li>Click "Search" and then click "Join".</li>
+        </ol>
+        
+        <div class="copy-area">
+            <p>Copy the text below and paste it into your keyboard:</p>
+            <textarea id="copyText" rows="1" cols="50">Community ID: NUPPAH0</textarea>
+            <button id="copyButton">Copy</button>
+        </div>
+        
+        <script>
+            // JavaScript to copy text to clipboard
+            const copyButton = document.getElementById("copyButton");
+            const copyText = document.getElementById("copyText");
+            
+            copyButton.addEventListener("click", function() {
+                copyText.select();
+                document.execCommand("copy");
+                alert("Text copied to clipboard!");
+            });
+        </script>
+    </div>
+
+
+</body></html>
