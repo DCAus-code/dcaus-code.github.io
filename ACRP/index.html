@@ -1,16 +1,38 @@
 <html><head>
     <title>ACRP - Allegheny County RP</title>
     <style>
+        /* Styles for removing list markers */
+    .other , a{
+        color: white;
+         text-decoration: none;
+    }    
+    .navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Dark mode-friendly styles */
+         h2, h3, p {
+            color: black;
+            text-decoration: none;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #2c2c2c;
+            color: white;
         }
 
         header {
-            background-color: #3498db;
+            background-color: #5c5c5c;
             color: white;
             text-align: center;
             padding: 20px;
@@ -20,7 +42,9 @@
             width: 80%;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
+    background-image: url("https://pbs.twimg.com/media/F3tPJjbWYAA_ZiC?format=webp&name=small");
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: cover;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -38,7 +62,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #3498db;
+            background-color: #5c5c5c;
             color: white;
         }
     </style>
@@ -46,16 +70,18 @@
 <body>
     <header>
         <h1>Welcome to ACRP - Allegheny County RP</h1>
-        <p>Your Ultimate Roleplay Experience</p>
+        <p class="other">Your Ultimate Roleplay Experience</p>
+        <ul class="navigation">
+            <li><a href="/ACRP/tos">Rules</a></li>
+                        <li><a href="/ACRP/ranking">Staff Ranking</a></li><li><a href="/ACRP/cad">Sonoran CAD</a></li>
+        </ul>
     </header>
-
     <div class="container">
         <h2>About Us</h2>
         <p>We are dedicated to providing an immersive roleplay experience in Allegheny County. Join us for realistic scenarios and exciting interactions.</p>
-    
         <h2>Features</h2>
         <div class="features">
-            <div class="feature">
+            <div class="feature"> <h3>Sonoran CAD</h3><p>The ultmate CAD system for Cops and EMS and even civilians! Use the DMV to register yourself! or become dispatch!</p></div><div class="feature">
                 <h3>Realistic Scenarios</h3>
                 <p>Experience lifelike situations and challenges in our roleplay world.</p>
             </div>
@@ -69,9 +95,8 @@
             </div>
         </div>
     </div>
-
     <footer>
-        <p>© 2023 ACRP - Allegheny County RP. All rights reserved.</p>
+        <p class="other">© 2023 ACRP - Allegheny County RP. All rights reserved.</p>
     </footer>
 
 
