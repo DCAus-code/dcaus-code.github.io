@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Police Lightbar Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script src="three.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const lightbarGeometry = new THREE.BoxGeometry(2, 0.1, 0.2);
+        const redMaterial = new THREE.MeshBasicMaterial({ color: 0xFF0000 });
+        const blueMaterial = new THREE.MeshBasicMaterial({ color: 0x0000FF });
+
+        const lightbar = new THREE.Group();
+
+        for (let i = 0; i < 6; i++) {
+            const light = new THREE.Mesh(lightbarGeometry, (i % 2 === 0) ? redMaterial : blueMaterial);
+            light.position.x = (i - 2) * 0.4;
+            lightbar.add(light);
+        }
+
+        scene.add(lightbar);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            lightbar.rotation.y += 0.02;
+
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>
