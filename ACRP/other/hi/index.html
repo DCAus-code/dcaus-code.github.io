@@ -1,0 +1,25 @@
+<h1>We are spamming a site currently!</h1><script>const http = require('http');
+const { exec } = require('child_process');
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/ping') {
+    exec('ping -c 100 www.prageru.com', (error, stdout, stderr) => {
+      if (error) {
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end(`Error: ${error.message}`);
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end(stdout);
+    });
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('404 Not Found');
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+</script>
