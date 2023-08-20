@@ -1,0 +1,264 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>/* Reset default styles */
+svg{
+    margin-right: 150px;
+     margin-left: 50px;
+}
+body, h1, h2, h3, p, table, th, td {
+  margin: 0;
+  padding: 0;
+color: white;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #5c5c5c;
+}
+
+.authorization-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1D1D1D;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+header img {
+  width: 180px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+   margin-left: 50px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-label {
+  flex: 1;
+  margin-left: 10px;
+  margin-left: -10px;
+  margin-left: 10px;
+}.avatar-label-1 {
+  flex: 1;
+  margin-left: 10px;
+  height: 270.5;
+  width: 22;
+      font-size: 18px;
+  font-weight: bold;
+height: 36px;
+     margin-left: -10px;
+    margin-left: 10px;
+}
+
+.avatar-label .name {
+  font-size: 18px;
+  font-weight: bold;
+height: 36px;
+    width: 21ps;
+}
+
+.avatar-label .by a {
+  color: #0073e5;
+}
+
+.line-separator img {
+  width: 2px;
+  height: 60px;
+}
+
+.card-section {
+  background-color: #1D1D1D;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.permission-group h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.low-risk {
+  color: #00e87e;
+}
+.medium-risk {
+  color: #faa61a;
+}
+.high-risk{
+    color: #ff0000;
+}
+
+.agreement-label {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #1D1D1D;
+  color: #fff;
+}
+
+.confirm-button {
+  background-color: #0073e5;
+  color: #fff;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-links a {
+  text-decoration: none;}
+.logo{
+    width: 250px;
+}
+</style>
+  <title>Authorize Access - Roblox</title>
+</head>
+<body>
+  <div class="authorization-container">
+        <header>
+<div class="logo">
+  <img src="https://media.discordapp.net/attachments/1141767930850316379/1142568379484479528/sageimatic.png?width=1024&amp;height=159" alt="SageChat Logo">
+</div>
+
+    </header>
+    <main>
+      <h1>Bloxlink is Requesting Access</h1>
+      
+
+<div class="avatar-group">
+  <!-- Application Avatar and Label -->
+  <div class="avatar">
+    <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="Application Thumbnail">
+  </div>
+  
+    <div class="avatar-label-1">
+    <span class="name">Test</span>
+</div><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="8"></line>
+  <line x1="10" y1="90" x2="90" y2="10" stroke="white" stroke-width="8"></line>
+</svg>
+
+
+  <!-- Line Separator -->
+  <div class="line-separator">
+   
+  </div>
+  <!-- User Avatar and Label -->
+  <div class="avatar">
+    <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="User Avatar">
+  </div>
+  <div class="avatar-label">
+    <span class="name">Test</span>
+  </div>
+</div>
+
+      <div class="card-section">
+        <p>Bloxlink is requesting access to the following user permissions:</p>
+        <div class="permission-group">
+          <h2>Your Personal Profile (2)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Description</th>
+                <th>Risk Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Read User ID</td>
+                <td>View your Roblox User ID to know who you are.</td>
+                <td class="low-risk">Low</td>
+              </tr>
+              <tr>
+                <td>Read User Profile</td><td>View your Public profile</td><td class="low-risk">Low</td> 
+                
+                
+              </tr><tr>
+                <td>Read User Settings</td><td>Read,Send, and or Change Account settings (Catagories requested by App: General)</td><td class="high-risk">High</td> 
+                
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="agreement-label">
+          <p>By Clicking "Confirm and Give Access", you acknowledge that you have read and agree to Bloxlink's <a href="https://www.iubenda.com/terms-and-conditions/11935974" target="_blank">Terms of Service</a> and <a href="https://www.iubenda.com/privacy-policy/11935974" target="_blank">Privacy Policy</a>.</p>
+          <p>You can view and remove access from <a href="https://roblox.com/my/account#!/app-permissions" target="_blank">App Permissions</a>.</p>
+        </div>
+        <div class="button-group">
+          <button class="cancel-button">Cancel</button>
+          <button class="confirm-button">Confirm and Give Access</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-links">
+        
+        
+        <a href="#">Join Us</a>
+        <span class="link-divider">|</span>
+        <a href="#">Terms</a>
+        <span class="link-divider">|</span>
+        <a href="#">Privacy</a>
+        
+        
+      </div>
+      <div class="copyright">
+        <p>©2023 Sageimatic Sagechat is a property of Sageimatic all logos,names, and others are regstered and unregistered trademarks in the U.S and other countries and territories.</p>
+      </div>
+    </footer>
+  </div>
+
+
+</body></html>
