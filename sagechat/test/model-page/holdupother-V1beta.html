@@ -1,0 +1,122 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out of the Ordinary - Check Email</title>
+    <style>
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #1d1d1d;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1d1d1d;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 28px;
+        }
+
+        .message {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #FF0000;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #7289da;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #677bc4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="#FF0000" stroke-width="4" fill="none"></circle>
+            <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="#FF0000">!</text>
+        </svg>
+        <div class="header">Hold Up a Second</div>
+        <div class="message">Something seems out of the ordinary</div>
+        <div class="message">It appears that someone tried to log in from an unfamiliar location and encountered issues with the 2-factor authentication.</div>
+        <div class="message">Here's some information about the unknown device:</div>
+        <div class="message">IP Address: 192.000.0.000</div>
+        <div class="message">Location: Test</div>
+        <button class="button" id="openPopup">Verify Login Attempt</button>
+
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" stroke="#FF0000" stroke-width="4" fill="none"></circle>
+                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="#FF0000">!</text>
+                </svg>
+                <div class="header">Hold Up a Second</div>
+                <div class="message">Something seems out of the ordinary</div>
+                <div class="message">It appears that someone tried to log in from an unfamiliar location and encountered issues with the 2-factor authentication.</div>
+                <div class="message">Here's some information about the unknown device:</div>
+                <div class="message">IP Address: 192.168.1.100</div>
+                <div class="message">Location: Unknown</div>
+                <button class="button" id="closePopup">Close</button>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("openPopup").addEventListener("click", function() {
+                document.getElementById("popupOverlay").style.display = "flex";
+            });
+
+            document.getElementById("closePopup").addEventListener("click", function() {
+                document.getElementById("popupOverlay").style.display = "none";
+            });
+        </script>
+    </div>
+
+
+</body></html>
