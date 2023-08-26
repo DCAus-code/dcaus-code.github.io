@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Platform Admin Panel</title>
+    <style>
+        /* Your styles here */
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function generateUserToken() {
+            // Get user's IP address using ipify API
+            $.getJSON("https://api.ipify.org?format=json", function(data) {
+                const ipAddress = data.ip;
+
+                // Use the IP address as the salt
+                const salt = ipAddress;
+
+                // Apply hashing
+                const hashedIP = sha256(salt);
+
+                // Convert the hashed result to base64
+                const base64Token = btoa(hashedIP);
+
+                // Send the token to the server for storage
+                $.post("store_token.php", { token: base64Token }, function(response) {
+                    console.log(response);
+                });
+            });
+        }
+
+        function sha256(input) {
+            // Implement a secure hashing function (e.g., using a library)
+            // This is a simplified example, consider using a proper library
+            return input; // Replace with actual hashing
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>Chat Platform Admin Panel</h1>
+    </div>
+    
+    <div id="sidebar">
+        <!-- Sidebar menu items -->
+    </div>
+
+    <div id="content">
+        <h2>Welcome to the Admin Panel</h2>
+        <p>Select an option from the sidebar to get started.</p>
+        
+        <button onclick="generateUserToken()">Generate User Token</button>
+    </div>
+</body>
+</html>
