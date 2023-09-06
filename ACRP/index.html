@@ -1,6 +1,6 @@
 <html><head>
 <title>ACRP - Allegheny County RP</title>
-      <link rel="icon" href="https://dcaus.cf/images2/Png.png" type="image/x-icon">
+<link rel="icon" href="https://dcaus.cf/images2/Png.png" type="image/x-icon">
 <style>
         /* Styles for removing list markers */
     .other , a{
@@ -11,11 +11,13 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            color: black;
         }
 
         .navigation li {
             margin: 0;
             padding: 0;
+            color: black;
         }
 
         /* Dark mode-friendly styles */
@@ -69,9 +71,77 @@
     </style>
 </head>
 <body>
-<header>
-<h1>Welcome to ACRP - Allegheny County RP</h1>
-<p class="other">Your Ultimate Roleplay Experience</p>
+<header><style>
+    /* Apply to the img with class "img-png" */
+.img-png {
+    width: 40px; /* Set the width to 40 pixels */
+    height: 40px; /* Set the height to 40 pixels */
+    border-radius: 50%; /* Create a rounded border (circle) */
+}
+
+    /* Apply to the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Apply to the header */
+/* Apply to the header */
+/* Apply to the header */
+header {
+    position: relative;
+    background-image: url('https://policeroleplay.community/images/cta-optimised.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Apply to the pseudo-element for the blur effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(10px); /* Adjust the blur value as needed */
+    z-index: -1; /* Place it behind the content */
+}
+
+
+/* Apply to the navigation list */
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Apply to navigation list items */
+.navigation li {
+    margin: 0;
+    padding: 0;
+    display: inline; /* Display list items inline */
+    margin-right: 20px; /* Add space between items */
+}
+
+/* Apply to navigation links */
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    color: black;
+}
+</style>
+<img class="img-png" src="https://dcaus.cf/images2/Png.png" alt="ACRP (Allegheny County RP)">
+<p class="other">Powering Roleplay</p>
 <ul class="navigation">
 <li><a href="/ACRP/tos">Rules</a></li>
 <li><a href="/ACRP/ranking">Staff Ranking</a></li><li><a href="/ACRP/cad">Sonoran CAD</a></li>
