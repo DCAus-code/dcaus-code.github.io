@@ -1,21 +1,159 @@
-<html><head>
-<title>Rank Pyramid</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="icon" href="https://dcaus.cf/images2/Png.png" type="image/x-icon">
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACRP - Allegheny County RP</title>
+<link rel="icon" href="https://dcaus.cf/images2/Png.png" type="image/x-icon">
 <style>
-        h1{
-            color: #000;
-        }
-        body {
-            background-image: url(https://erlc.com/wp-content/uploads/2020/06/BlurredPolice-1888x960-1.jpg); /* Black background */
-            margin: 0;
-            display: fill;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif; /* Use the Roblox font or similar if available */
-        }
+       .h3-1{
+           margin-right: 900px;
+       } 
         
-        .pyramid {
+     /* Add this to your existing CSS */
+.gradient-text {
+    text-align: center;
+    padding: 40px 0;
+    background: url('https://policeroleplay.community/images/cta-optimised.gif') center/cover, linear-gradient(to right, #2196F3, #FF5722); /* Adjust gradient colors as needed */
+    background-blend-mode: multiply; /* Blend the gradient with the background image */
+    animation: flashing 1s infinite alternate; /* Animation */
+}
+
+.gradient-text h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.gradient-text p {
+    font-size: 24px;
+    color: white;
+}
+
+/* Define the flashing animation */
+@keyframes flashing {
+    0% {
+        background: url('https://policeroleplay.community/images/cta-optimised.gif') center/cover, linear-gradient(to right, #2196F3, #FF5722);
+    }
+    50% {
+        background: url('https://policeroleplay.community/images/cta-optimised.gif') center/cover, linear-gradient(to right, #FF5722, #2196F3);
+    }
+    100% {
+        background: url('https://policeroleplay.community/images/cta-optimised.gif') center/cover, linear-gradient(to right, #2196F3, #FF5722);
+    }
+}
+
+
+
+        /* Global styles */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e; /* Dark background */
+            color: white;
+        }
+
+        /* Header styles */
+        .img-png {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background-image: url('https://dcaus.cf/ACRP/other/hi/cta-optimised%20(1).gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* Blur effect for the header background */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(10px); /* Adjust the blur value as needed */
+            z-index: -1;
+        }
+
+        .other-1 {
+            margin-right: 750px;
+            color: white;
+        }
+
+        /* Navigation styles */
+        .navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: black;
+            margin-top: 15px;
+        }
+
+        .navigation li {
+            margin: 0;
+            padding: 0;
+            color: black;
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Container styles */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333; /* Dark gray background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow */
+        }
+
+        /* Features section styles */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #333; /* Dark gray background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #2196F3; /* Blue heading color */
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark gray background */
+            color: white;
+        }
+     .pyramid {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -52,6 +190,15 @@
     </style>
 </head>
 <body>
+<header>
+<img class="img-png" src="https://dcaus.cf/images2/Png.png" alt="ACRP (Allegheny County RP)">
+<p class="other-1">Unlock the Ultimate Roleplay Experience</p>
+<ul class="navigation">
+<li><a href="/ACRP/tos">Explore Our Rules</a></li>
+<li><a href="/ACRP/ranking">Staff Ranks</a></li>
+<li><a href="/ACRP/cad">Experience the Sonoran CAD</a></li>
+</ul>
+</header>
 <div class="pyramid">
 <h1>Owner Ranks</h1><div class="rank owner-rank">Owner: Sageimatic (danc112gameing7734)</div><h1>IA Ranks</h1>
 <div class="rank ia-rank">Head IA: Not Filled</div>
@@ -64,6 +211,14 @@
 <div class="rank other-rank">Staff: Not Filled</div>
 <div class="rank other-rank">Trial Mod: Not Filled</div>
 <div class="rank other-rank">Trial Mod: Not Filled</div>
-</div> <h1>WE ARE HIRING!!!</h1><h1>Allegheny County RP Join the Server via Code: PITT Game: ER;LC Emergency Response Liberty County On roblox and goto the hamberger lines goto "servers" then "Join By Code"thenn type PITT</h1>
+</div>
+ <div class="gradient-text">
+<h1>ACRP!</h1>
+<p>Powering Roleplay!</p>
+<p>Join now! ER;LC (on RBLX) Server code is: PITT</p>
+</div>
+<footer>
+<p class="other">© 2023 ACRP - Allegheny County RP. All rights reserved.</p>
+</footer>
 
 </body></html>
