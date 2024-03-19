@@ -1,0 +1,105 @@
+    /* Width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+    .footer__logo{
+        border-radius: 100px;
+        height: 58px;
+        width: 58px;
+    }   
+    .footer__logo1{
+        border-radius: 100px;
+        height: 58px;
+        width: 58px;
+    }   
+    body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+        
+        .header,
+        .footer {
+            background-color: #0078d4;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+        
+        .footer__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer__links {
+            margin-top: 10px;
+        }
+        
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer__link:hover {
+            color: #f0f0f0;
+        }
+        
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #0078d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    .header__link {
+        text-decoration: none;
+        color: white;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .header__link:hover {
+    color: black;
+    }
+.header_link:active {
+ color: gray;
+        }
