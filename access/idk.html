@@ -1,208 +1,59 @@
-<html><head>
-	<title>Login Page</title>
-    <style> element.style {
-}
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #282c34;
-    color: white;
-}
-body {
-    color: #FFFFFF;
-    margin: 0;
-    font-size: 14px;
-    font-style: normal;
-    font-family: HCo Gotham SSm, Helvetica, Arial, san-serif;
-    font-weight: 300;
-    line-height: 140%;
-    font-display: swap;
-    letter-spacing: 0.15px;
-    background-color: #1D1D1D;
-}
-body {
-    color: #FFFFFF;
-    margin: 0;
-    font-size: 14px;
-    font-style: normal;
-    font-family: HCo Gotham SSm, Helvetica, Arial, san-serif;
-    font-weight: 300;
-    line-height: 140%;
-    font-display: swap;
-    letter-spacing: 0.15px;
-    background-color: #1D1D1D;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-user agent stylesheet
-body {
-    display: block;
-    margin: 8px;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-body::backdrop {
-    background-color: #1D1D1D;
-}
-body::backdrop {
-    background-color: #1D1D1D;
-} element.style {
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-html[Attributes Style] {
-    -webkit-locale: "en-US";
-}
-user agent stylesheet
-html {
-    display: block;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-*, *::before, *::after {
-    box-sizing: inherit;
-}</style>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #282c34;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input, button {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-	<form action="/admin" method="POST">
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password">
-		<button type="submit">Submit</button>
-	</form>
+<form id="loginForm" action="#">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Submit</button>
+</form>
 
-	<script>
-		function hashPassword(password) {
-			// Hashing algorithm goes here
-			return btoa(password);
-		}
+<script>
+    function hashPassword(password) {
+        // Hashing algorithm goes here
+        return btoa(password);
+    }
 
-		document.querySelector('form').addEventListener('submit', function(event) {
-			event.preventDefault();
-			const passwordInput = document.getElementById('password');
-			const hashedPassword = hashPassword(passwordInput.value);
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const usernameInput = document.getElementById('username').value;
+        const passwordInput = document.getElementById('password').value;
+        const hashedPassword = hashPassword(passwordInput);
 
-			if (hashedPassword === 'dGVzdA==') {
-				const selectedPanel = prompt("Enter 'admin' for Admin Panel or 'tester' for Tester Panel:");
-				if (selectedPanel === 'admin') {
-					window.location.href = '/access/admin-panel';
-				} else if (selectedPanel === 'tester') {
-					window.location.href = '/access/tester-panel';
-				} else {
-					alert('Invalid choice. Please enter either "admin" or "tester".');
-				}
-			} else {
-				alert('Incorrect password');
-			}
-		});
-	</script>
-
-
-</body></html>
+        if (usernameInput === 'admin' && hashedPassword === 'YWRtaW4xMjM0IQ==') {
+            window.location.href = 'https://lostinfinite.github.io/access/admin-panel';
+        } else if (usernameInput === 'tester' && hashedPassword === 'dGVzdGVyMTIzNCM=') {
+            window.location.href = 'https://lostinfinite.github.io/access/tester-panel';
+        } else {
+            alert('Invalid username or password');
+        }
+    });
+</script>
+</body>
+</html>
