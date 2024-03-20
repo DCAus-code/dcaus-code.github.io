@@ -1,4 +1,17 @@
-    /* Width */
+.header__links {
+    display: flex;
+}
+
+.header__section {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.header__separator {
+    border-right: 1px solid black;
+    margin: 0 10px;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
