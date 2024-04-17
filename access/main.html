@@ -1,5 +1,12 @@
 <html lang="en"><head>
-   
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph metadata for rich embeds -->
+    <meta property="og:title" content="Sageimatic">
+    <meta property="og:description" content="Welcome to my site! I am sage and i hope you like it!">
+    <meta property="og:image" content="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj">
+    <meta property="og:url" content="https://lostinfinite.github.io/access/main">
+    <meta property="og:type" content="website">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,6 +57,9 @@ main {
 body {
     font-size: 14px;
   }
+.alert {
+display: none;
+}
 }
 </style></head>
 
@@ -93,7 +103,36 @@ body {
 
     
   <main>
-  <style>main {
+  <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span><h3>NEW UPDATES!</h3>
+<p>- Added mobile Support!</p>
+<p>All for now!</p></div>
+    <style>.alert {
+  padding: 20px;
+  background-color: #14DA00; /* Red */
+  color: white;
+  margin-bottom: 15px;
+ font-family: sans-serif;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: blue;
+}
+</style>
+    <style>main {
   animation: animateBg 12s linear infinite;
   background-image: linear-gradient(0deg,#ff0000,#4e0570,#190094,#0300cc,#1100ff,#8300b3,#0692ea,#ff0000,#4e0570);
   background-size: 100% 800%;
@@ -132,6 +171,7 @@ body {
             </a>
         </div>
     </footer>
+
 
 
 
