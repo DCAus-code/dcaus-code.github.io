@@ -31,7 +31,27 @@
 .header__separator {
     border-right: 1px solid black;
     margin: 0 10px;
-}</style></head>
+}
+
+@media only screen and (max-width: 600px) {
+
+ .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+           
+        }
+main {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+body {
+    font-size: 14px;
+  }
+}
+</style></head>
 
 <body><style>
         .animated-gradient {
@@ -112,6 +132,7 @@
             </a>
         </div>
     </footer>
+
 
 
 
