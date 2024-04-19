@@ -1,4 +1,4 @@
-<!HTML DOCTYPE> 
+<!DOCTYPE html> 
 <html lang="en"><head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,7 +107,7 @@ display: none;
 
     
   <main>
-  <div class="alert">
+  <div class="alert" style="display: none;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span><h3>NEW UPDATES!</h3>
 <p>- Added mobile Support!</p>
 <p>- Fixed the footer!</p>
@@ -115,6 +115,115 @@ display: none;
 <p>- Fixed the Gradiant BG</p> <p>-Added Build info</p>
 <p style="font-size: 7 px;">Version 3.4.5.00972 Alpha</p>
 <p>All for now!</p></div>
+
+    
+    
+    <style>
+        
+        .alert-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        }
+        .alert-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .alert-subject {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .alert-message {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+        }
+        .alert-message img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .alert-timestamp {
+            font-size: 6px;
+            color: #ffffff;
+            margin-top: 5px;
+            align-self: flex-end;
+        }
+        .alert-button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007aff;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .alert-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <style>
+
+    :root{
+        --danger: #ed4245;
+    }
+    .alert1 {
+  padding: 20px;
+  color: white;
+  margin-bottom: 15px;
+ font-family: sans-serif;
+}
+
+/* The close button */
+.closebtn1 {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn1:hover {
+ color: var(--danger);
+}
+</style>
+
+
+   <div class="alert-1">
+    <div class="alert-container">
+        <span class="closebtn1" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="alert-subject">
+            <span>Change Log</span>
+            <span class="alert-timestamp">4/18/24</span>
+        </div>
+        <div class="alert-message">
+            <img alt="Warning Icon" src="https://icon-library.com/images/warning-icon-svg/warning-icon-svg-10.jpg">Added Mobile Support, Fixed the footer, Changed how the change log notification, added build info, And more to come</div>
+    </div>
+        
+    </div>
+
+
+
     <style>.alert {
   padding: 20px;
   background-color: #14DA00; /* Red */
@@ -179,6 +288,7 @@ display: none;
             </a>
         </div>
     </footer>
+
 
 
 
