@@ -1,19 +1,27 @@
-<html>
-  <head>
+<html><head>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
   <body class="container mt-5">
-    <form onsubmit="sendContact(event)">
+    <h1>Welcome to ACRPs ban appeal</h1><form onsubmit="sendContact(event)">
       <div class="mb-3">
-        <label for="emailInput" class="form-label">Enter your email address</label>
-        <input type="email" class="form-control" id="emailInput">
+        <label for="emailInput" class="form-label">Enter your Discord</label>
+        <input type="null" class="form-control" id="emailInput">
       </div>
       <div class="mb-3">
-        <label for="messageInput" class="form-label">Enter your message</label>
-        <textarea class="form-control" id="messageInput" rows="3"></textarea>
+        <label for="why" class="form-label">Why did you get banned?</label>
+        <textarea class="form-control" id="why" rows="1" style="height: 15px;"></textarea>
+      </div><div class="mb-3">
+        <label for="con-1" class="form-label">Why should we unban you?</label>
+        <textarea class="form-control" id="con-1" rows="1" style="height: 15px;"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="mb-3">
+        <label for="false" class="form-label">Were you falsely banned?</label>
+          <br><input type="radio" id="false" name="fav_language" value="false">
+  <label for="css">Yes</label><br>
+  <input type="radio" id="false" name="fav_language" value="no">
+  <label for="javascript">No</label>
+      </div><button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <script>
       async function sendContact(ev) {
@@ -29,7 +37,8 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
-              { name: 'Message', value: senderMessage }
+              { name: 'Why Were You banned:', value: why }
+              { name: 'Why should you be unbanned:', value: con-1 }
             ]
           }],
         };
@@ -51,5 +60,6 @@
         }
       }
     </script>
-  </body>
-</html>
+  
+
+</body></html>
