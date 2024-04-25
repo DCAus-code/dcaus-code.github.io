@@ -10,7 +10,21 @@
 h1,h2,h3,h4,h5,h6,h7,h8,h9,h0,p,a{
   color: #fff;
 }
-    
+:root{
+--cyan: #00FFFF;
+}
+     .header__link {
+        text-decoration: none;
+        color: white;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .header__link:hover {
+    color: var(--cyan);
+    }
+.header_link:active {
+ color: var(--cyan);
+        }
     .header__links {
     display: flex;
 }
