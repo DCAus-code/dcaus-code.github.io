@@ -169,8 +169,8 @@ body {
         padding-right: 6px;
     }
     .header__link:hover {
-    color: black;
+    color: cyan;
     }
 .header_link:active {
- color: gray;
+ color: cyan;
         }
