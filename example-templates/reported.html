@@ -1,0 +1,356 @@
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta charset="utf-8">
+  <title>Reported Unsafe Site: Navigation Blocked</title>
+  
+  
+    <style>/* Copyright (C) Microsoft Corporation. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  /* Setting font-size to 62.5% so that 1 rem = 10px. */
+  font-size: 62.5%;
+}
+
+#Wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding-top: 4.8rem;
+  padding-left: 4.8rem;
+  padding-right: 4.8rem;
+  padding-bottom: 3.2rem;
+}
+
+#branding {
+  font-size: 1.2rem;
+  margin-top: 0.9rem;
+}
+
+.branding-ltr {
+  text-align: right;
+}
+
+.branding-rtl {
+  text-align: left;
+}
+
+.white-pushbutton {
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 3.2rem;
+  padding: 0 1.6rem 0 1.6rem;
+  text-align: center;
+  margin: 2.4rem 0 2.4rem 0;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  transition: height 0s;
+}
+
+.white-pushbutton:active {
+  color: #000000;
+  background-color: #999999;
+  transition-duration: .001s;
+  transition-timing-function: ease-out;
+}
+
+.white-pushbutton:hover {
+  border: 2px solid #999999;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+
+.white-pushbutton:hover {
+  cursor: pointer;
+}
+
+h1 {
+  line-height: 3.2rem;
+  font-size: 2.8rem;
+  font-weight: normal;
+  margin: 0 0 0 -.2rem;
+  padding: .4rem 0 .4rem 0;
+}
+
+h2 {
+  line-height: 2.4rem;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0 0 0 -.2rem;
+  padding: .4rem 0 .4rem 0;
+  opacity: .8;
+}
+
+p {
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+  margin: 1.6rem 0 0 0;
+  padding: 0;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ul-rtl {
+  list-style: none;
+  margin-right: 1rem;
+  padding-right: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.li-rtl {
+  padding-right: 1em;
+  text-indent: -1em;
+}
+
+.bullet-li-ltr:before {
+  padding-right: .6rem;
+  content: "\2022";
+}
+
+.bullet-li-rtl:before {
+  content: "\2022";
+  padding-left: .6rem;
+}
+
+.caret-li-ltr:before {
+  content: ">";
+  padding-right: .5rem;
+}
+
+.caret-li-rtl:before {
+  content: ">";
+  padding-left: .5rem;
+}
+
+.msgBlock {
+  max-width: 600px;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+
+.msgIcon {
+  width: 5.8rem;
+  font-size: 5.8rem;
+  margin: .2rem .4rem 0 2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.msgBody {
+  max-width: 460px;
+  width: 46rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 2rem;
+}
+
+.smallBlockIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.smallManagedIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.msgBlockIcon {
+  width: 5.8rem;
+  height: 5.8rem;
+}
+
+.msgManagedIcon {
+  width: 5.8rem;
+  height: 5.8rem;
+}
+
+#moreInformationDropdownSpan {
+  font-size: 1.3rem;
+}
+
+#infoBlockID {
+  font-size: 1.2rem;
+  margin: 1rem 0 0 1rem;
+}
+
+.chevronDown {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-size: 1.2rem .7rem;
+  background-image: -webkit-image-set(
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAQAAACWu2SvAAAALUlEQVQI12NguMBgwIAODICiQOIBmhRcBFUKhYfgYOiHCGAaC5XCIgyRQhIGAHsaDoGZYIPTAAAAAElFTkSuQmCC) 1x,
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAQAAACf8RT1AAAATUlEQVQoz2NgIBlcYDAgWq0BUDWQeECkFrhK4rSgqCKsBUMFfi1YZXFrwSmDXQKv3ZiSBH2HqoCo8EMoIjqGIAqJj1CoFhKUQ7TgUA4A44gdgVHnj3wAAAAASUVORK5CYII=) 2x);
+}
+
+.chevronDown_white {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-size: 1.2rem .7rem;
+  background-image: -webkit-image-set(
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAQAAACWu2SvAAAALklEQVQI12P4f+G/AQMa+G/w/wKIeIAqBRdBlULhITgY+iECmMbCpDCFoVJIwgAZMzBf7w0SLQAAAABJRU5ErkJggg==) 1x,
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAQAAACf8RT1AAAATklEQVQoz2NgIBX8v/DfgGi1Bv8vgIgHxGmBqyROC4oqwlowVODXglUWtxacMtgl8NqNKUnQd6gKiAo/hCKiYwiikPgIhWkhXjlUCw7lAP1tYzuz/aLgAAAAAElFTkSuQmCC) 2x);
+}
+
+.chevronUp {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-size: 1.2rem .7rem;
+  background-image: -webkit-image-set(
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAQAAACWu2SvAAAALElEQVQI12NgQAADIMQCDBgeAKEBNmEDKIkhjMpC5yB4GNphIhewuMWA4QIAYcsOgVNKQMcAAAAASUVORK5CYII=) 1x,
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAQAAACf8RT1AAAATElEQVQoz2NgwA4MgJAEYMDwAAgNSFFuACWJVo7KIko5UVowFeDVgl0SpxbcZmGVwe9aDFnC4YGigrgQh6siOoJgKi+QkGoMgKpJBQAV5h2BDNReAgAAAABJRU5ErkJggg==) 2x);
+}
+
+.chevronUp_white {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-size: 1.2rem .7rem;
+  background-image: -webkit-image-set(
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAQAAACWu2SvAAAAL0lEQVQI12NggIP/Bv8NGDABUPgBEBpgEzaAkBjCqCx0DoKHoR0m8v8CpluAUhcADbowX2BMO9MAAAAASUVORK5CYII=) 1x,
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAQAAACf8RT1AAAAUUlEQVQoz5XLyw0AIAhEQUqi/yoswU7Wg8bvomtIOMA8g9FxOP9EPCPzJOLethAMSJOYB8mN08udk+uLH583374KX4TGJ6XynhiSyGuSDJ9TAEVdbEBlNxwjAAAAAElFTkSuQmCC) 2x);
+}
+
+.managedIcon {
+  padding-right: .3rem;
+  vertical-align: sub;
+}
+
+#threatDetailsText {
+  margin: 0 0 2.4rem 0;
+}
+
+#proceedButton {
+  margin-left: 1.6rem;
+}
+
+/*//////////////////////////////////////////////////////////*/
+/* Frame Block CSS */
+
+/* We should show only the triangle if the blocking page is
+ * too small */
+@media (min-width: 300px) and (min-height: 250px) {
+  .smartscreen_small {
+    display: none;
+  }
+}
+
+/* We should show the blocking page with more info if the
+ * blocking page is big enough */
+@media (max-width: 299px), (max-height: 249px) {
+  #Wrapper {
+    display: none;
+  }
+
+  .smartscreen_small {
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.1rem;
+    margin-top: -1.1rem;
+  }
+}
+</style>
+  
+  
+  
+  
+</head>
+<body class="whiteFont red" id="background" style="background-color: #FF5829; color: rgb(255, 255, 255);">
+  <div id="Wrapper">
+    <div class="msgBlock">
+      <div class="msgIcon whiteFont" aria-hidden="true" style="color: rgb(255, 255, 255);">
+        
+          <h1 class="msgBlockIcon" style="font-size: 100px;">
+    :(
+          </h1>
+          <svg class="msgManagedIcon" viewBox="0 0 16 16" fill="none" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <path fill="#000" fill-rule="evenodd" d="M5 1v1H1.5A1.5 1.5 0 0 0 0 3.5v8A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 2H11V1a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1Zm5 0H6v1h4V1Zm4.5 2a.5.5 0 0 1 .5.5v2A1.5 1.5 0 0 1 13.5 7H9v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V7H2.5A1.5 1.5 0 0 1 1 5.5v-2a.5.5 0 0 1 .5-.5h13ZM7 8H2.5A2.489 2.489 0 0 1 1 7.5v4a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-4c-.418.314-.937.5-1.5.5H9v.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V8Z" clip-rule="evenodd"></path>
+          </svg>
+        
+        
+      </div>
+      <div class="msgBody">
+        <h1 class="whiteFont" style="color: rgb(255, 255, 255);">This site has been reported as unsafe</h1>
+        <h2 id="contentlocations">You tried to visit veryunsafesite.com</h2>
+        <h2 id="contentlocations">This URL is posted and promoted by: Balllicker898989</h2><span style="font-size: 10px;">Have {username} contact us! If you are {username} then check your email for why and what will happen to you and your account.</span><p><span id="recommendation">The safety team at Sageimatic have kept you safe once again! This site has been reported to us as a threat because {reason}. We will <strong>NOT</strong> let you continue to this site.</span></p>
+        <button class="white-pushbutton" id="homepageButton" aria-labelledby="goToHomePage" type="submit" style="color: rgb(184, 0, 0); background-color: rgb(255, 255, 255);" onclick="window.location.href='https://lostinfinite.github.io'">
+          <a herf="/">Go back</a>
+        </button>
+        <button class="white-pushbutton" id="proceedButton" aria-labelledby="proceed" type="submit" style="display: none; color: rgb(184, 0, 0); background-color: rgb(255, 255, 255);">
+          <span id="proceed"></span>
+        </button>
+        
+        
+        
+          <div id="branding" class="branding-ltr">
+            <span id="SmartScreenOutro">Sageimatic SmartGuard</span>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="smartscreen_small">
+    <center>
+      <svg class="smallBlockIcon" viewBox="0 0 90 90" fill="none" aria-labelledby="aria-title" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+        <title id="aria-title">Microsoft Defender SmartScreen blocked this web content because it was reported as unsafe.</title>
+        <path d="M90 90H0L45 0L90 90ZM9.70312 84H80.2969L45 13.4062L9.70312 84ZM48 36V66H42V36H48ZM42 72H48V78H42V72Z" fill="currentColor"></path>
+      </svg>
+      <svg class="smallManagedIcon" viewBox="0 0 16 16" fill="none" aria-labelledby="aria-title" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <title id="aria-title">Microsoft Defender SmartScreen blocked this web content because it was reported as unsafe.</title>
+        <path fill="#000" fill-rule="evenodd" d="M5 1v1H1.5A1.5 1.5 0 0 0 0 3.5v8A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 2H11V1a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1Zm5 0H6v1h4V1Zm4.5 2a.5.5 0 0 1 .5.5v2A1.5 1.5 0 0 1 13.5 7H9v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V7H2.5A1.5 1.5 0 0 1 1 5.5v-2a.5.5 0 0 1 .5-.5h13ZM7 8H2.5A2.489 2.489 0 0 1 1 7.5v4a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-4c-.418.314-.937.5-1.5.5H9v.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V8Z" clip-rule="evenodd"></path>
+      </svg>
+    </center>
+  </div>
+
+
+<style>/* Copyright 2014 The Chromium Authors
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+/* This file is dynamically processed by a C++ data source handler to fill in
+ * some per-platform/locale styles that dramatically alter the page. This is
+ * done to reduce flicker, as JS may not run before the page is rendered.
+ *
+ * There are two ways to include this stylesheet:
+ * 1. via its edge://resources/ URL in HTML, i.e.:
+ *
+ *   <link rel="stylesheet" href="edge://resources/css/text_defaults.css">
+ *
+ * 2. via the webui::AppendWebUICSSTextDefaults() method to directly append it
+ * to an HTML string.
+ * Otherwise its placeholders won't be expanded. */
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 75%;
+}
+
+button {
+  font-family: system-ui, sans-serif;
+}
+</style></body></html>
