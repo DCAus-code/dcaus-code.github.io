@@ -3,7 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nj's Bot Center</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+    body{
+    color: #FFF;
+    align-content: center;
+    text-align: center;
+    font-family: 'oswald', sans-serif, system-ui
+    }
+       
 #res1{
     color: #FFF;
     align-content: center;
@@ -17,26 +24,33 @@
         }
 
         nav {
+             display: flex;
             background-color: #000;
             padding: 10px 20px;
             color: #fff;
-            position: fixed;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
-            text-align: left;
             font-size: 1.2em;
         }
+    .nav-contents{
+  
+        display: inline-block;
+ margin: 0 10px; 
+ padding: 5px; 
+        color: FFF;
+        text-decoration: none, bold;
+    }
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         .card {
-            background-color: #FFF;
+            background-color: #656668;
             padding: 20px;
             width: 300px;
             text-align: center;
@@ -60,7 +74,6 @@
 
         .card p {
             font-size: 1em;
-            color: #333;
         }
 
         /* Define the animation for the outline color change */
@@ -77,8 +90,8 @@
         }
 
         .card:hover {
-            background-color: #1d1d1d;
-            color: #FFF;
+            background-color: #525252;
+            color: ;
             animation: outlineGlow 2s forwards; /* Trigger the outline animation */\
         p,h1,a{
             color: white;
@@ -95,20 +108,148 @@
 <body>
 
 <nav>
-    Nj's Bot Center
+    <p class="nav-contents">Nj's Bot Center</p>
+    <a href="https://contentltd.net" class="nav-contents">Hosted by ContentLTD</a> 
 </nav>
-<hr>
 
 
 
-<hr><hr><h1 id="res1">Welcome to my amazing site!</h1><p id="res1">Lorem ipsum odor amet, consectetuer adipiscing elit. Ipsum sagittis aenean dignissim quisque magna. Vehicula curabitur rutrum parturient tortor fusce nostra torquent iaculis. Primis senectus blandit vestibulum nisl quisque nunc platea posuere est. Magna quis eu id ultricies tempor laoreet curabitur laoreet. Ut curabitur iaculis, nulla fusce tincidunt augue libero aliquam cras? Conubia ullamcorper semper convallis diam nec blandit. Proin dignissim blandit phasellus velit bibendum id. Magnis dui sociosqu ad vestibulum dictumst. Fermentum rhoncus torquent fusce convallis fames cursus.</p><div class="container">
-    <div class="card" onclick="window.location.href='https://contentltd.net/redirect/paid/nj/authdis1.html'">
+
+<h1 id="res1">Welcome to my amazing site!</h1><p id="res1">Lorem ipsum odor amet, consectetuer adipiscing elit. Ipsum sagittis aenean dignissim quisque magna. Vehicula curabitur rutrum parturient tortor fusce nostra torquent iaculis. Primis senectus blandit vestibulum nisl quisque nunc platea posuere est. Magna quis eu id ultricies tempor laoreet curabitur laoreet. Ut curabitur iaculis, nulla fusce tincidunt augue libero aliquam cras? Conubia ullamcorper semper convallis diam nec blandit. Proin dignissim blandit phasellus velit bibendum id. Magnis dui sociosqu ad vestibulum dictumst. Fermentum rhoncus torquent fusce convallis fames cursus.</p><hr><h1>Here are some of my projects!</h1><div class="container">
+    
+<div class="card" onclick="window.location.href='https://contentltd.net/redirect/paid/nj/authdis1.html'">
         <!-- Lazy load the image -->
-        <img loading="lazy" src="https://static.wikia.nocookie.net/roblox/images/6/66/Content_Deleted.png/revision/latest/scale-to-width-down/250?cb=20230428000418" alt="Content Deleted Image">
+        <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRryqMMLyJsZAeFx5GXH_9BTME8RWImg0hdJdblA2F26MkxgOoTz5NLtgsYXcuGlt1PVM&amp;usqp=CAU" alt="Content Deleted Image">
         <h1>Title Here</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
     </div>
 </div>
+
+      <style>.footer-dark {
+    margin-top: 50px;
+    position: relative;
+    padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+ 
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}</style><div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>NJ's Bot Center Links</h3>
+                        <ul>
+                            <li><a>No link(s) available</a>
+<hr></li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>ContentLTD Links</h3>
+                        <ul>
+                            <li><a href="https://contentltd.net">About Us</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                    <hr><div class="col-md-6 item text">
+                        <h3>ContentLTD</h3>
+                        <p>Site was hosted and created in colaboration with ContentLTD.</p>
+                    </div>
+                    <div class="col item social"></div>
+                </div>
+                <p class="copyright">ContentLTD © 2024</p>
+            </div>
+        </footer>
+    </div>
+    
+    
+
 
 
 
