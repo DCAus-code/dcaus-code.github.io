@@ -4,7 +4,65 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/raw/refs/heads/master/SF-Pro.ttf" rel="stylesheet">
-<style type="text/css">
+
+    <style type="text/css">
+    
+    .exempt{
+color: #f5f5f7;
+background-color: #161617CC;
+text-shadow: none;
+box-shadow: none;
+text-shadow: transparent;
+box-shadow: transparent;
+    }
+    * {
+        box-sizing: border-box; /* Ensures padding/border are included in width */
+    }
+
+    @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+        .navigation, nav {
+            background-color: none;
+            color: none;
+            font-family: "SF Pro";
+            width: 100%; /* Ensure the navigation is full width */
+            margin: 0; /* Remove any margin */
+            padding: 0; /* Remove any padding */
+        }
+
+        .navigation ul {
+            margin: 0; /* Remove margins to take up full width */
+            padding: 0; /* Remove padding if any */
+            width: 100%; /* Ensure full width */
+            list-style: none; /* Remove bullets if it's a ul */
+            display: flex; /* Use flexbox to control items inside */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .navigation li {
+            display: inline-block;
+            margin: 5px 20px; /* Adjust margins as needed */
+            padding: 5px;
+            color: #FFF;
+            cursor: pointer;
+        }
+
+        .navigation img {
+            width: 20px;
+        }
+
+        .nav-div {
+            display: flex;
+            justify-content: space-between; /* Adjust as needed */
+            align-items: center; /* Vertically center items */
+            width: 100%; /* Ensure the div takes full width */
+        }
+
+        nav, .navigation {
+            flex: 1;
+            width: 100%; /* Take up full width of the container */
+        }
+    }
+
 /* Base font */
 /* Base font */
 @font-face {
@@ -75,6 +133,20 @@
 .mobile {
   display: none;
 }
+    strong{
+     background-color: rgba(222, 222, 222,);
+                text-shadow: 
+        0 0 20px rgba(222, 222, 222, 0.8), /* Base glow */
+        0 0 40px rgba(222, 222, 222, 0.6), /* Outer glow */
+        0 0 60px rgba(222, 222, 222, 0.4), /* Extra layer for stronger effect */
+        0 0 80px rgba(222, 222, 222, 0.2); /* Fading glow */
+
+                box-shadow: 
+        0 0 20px rgba(222, 222, 222, 0.8), /* Base glow */
+        0 0 40px rgba(222, 222, 222, 0.6), /* Outer glow */
+        0 0 60px rgba(222, 222, 222, 0.4), /* Extra layer for stronger effect */
+        0 0 80px rgba(222, 222, 222, 0.2); /* Fading glow */
+}
 #button-main{
      background-color: rgba(255, 152, 0, 0.1);
                 text-shadow: 
@@ -89,6 +161,20 @@
         0 0 60px rgba(255, 45, 85, 0.4), /* Extra layer for stronger effect */
         0 0 80px rgba(255, 45, 85, 0.2); /* Fading glow */
 }
+    .exempt-cf{
+        color: #f5f5f7;
+          font-size: 17px;
+  line-height: 1.4705882353;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  font-family: 'SF Pro';
+            text-shadow: 
+        0 0 20px rgba(255, 152, 0, 0.8), /* Base glow */
+        0 0 40px rgba(255, 152, 0, 0.6), /* Outer glow */
+        0 0 60px rgba(255, 152, 0, 0.4), /* Extra layer for stronger effect */
+        0 0 80px rgba(255, 152, 0, 0.2); /* Fading glow */
+
+    }
     #cloudflare{
             text-shadow: 
         0 0 20px rgba(255, 152, 0, 0.8), /* Base glow */
@@ -157,8 +243,7 @@ a{
       /* thai copy bug fix*/
       td.appl_app_title *{max-width:204px!important}
       }
-    </style>
-    <style type="text/css">
+    </style><style type="text/css">
       /* Mobile Styles */
       @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
       .appl_desktop{display:!important;}
@@ -338,7 +423,8 @@ a{
       <img src="http://new.applemusic.com/img/APPLE_EMAIL_LINK/spacer2.gif?v=2&amp;a=EesR1gPO4q%2F%2BfuKpQfb5EkxH7tnIUvIbk0D6fHUVRXMPx8cz4u3zpGgrZzFwinFdnDwYBKhjuUGfjb38SBd0zprXORnd2OR1v7y6SFU%2Fu9%2BOweX9mVhy%2FjotphODsMr%2BGnNrGWvlbT7qW42tqcKTyQ%3D%3D" alt="" width="1" height="1">
     </div>
     <div class="appl_desktop">
-      <nav class="navigation">
+      
+ <div class="div-nav"><nav class="navigation">
     <style>
   @font-face {
   font-family: "SF Pro";
@@ -437,8 +523,8 @@ a{
 }</style>
         <ul style="list-style:none;">
           <li><a href="https://contentltd.net/" id="nav">Home</a></li>
-            <li><a href="https://contentltd.net/sites" id="nav">Paid Sites</a></li><li><a href="https://contentltd.net/sites/tos" id="nav">Terms &amp; Conditions</a></li><li><a href="https://contentltd.net/sites/privacy" id="nav">Privacy Policy</a></li><li><a href="https://contentltd.net/credits" id="nav"></a><a href="https://contentltd.net/sites/paid-dir" id="nav">Paid Sites Directory</a></li></ul>
-      </nav> <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="appl_body appl_container_full">
+            <li><a href="https://contentltd.net/sites/tos" id="nav">Terms &amp; Conditions</a></li><li><a href="https://contentltd.net/sites/privacy" id="nav">Privacy Policy</a></li><li><a href="https://contentltd.net/credits" id="nav"></a><a href="https://contentltd.net/sites/paid-dir" id="nav">Paid Sites Directory</a></li></ul>
+      </nav></div> <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="appl_body appl_container_full">
         <tbody><tr>
           <td bgcolor="#000" style="padding-top:12px;padding-left:10px;padding-right:10px;min-width:740px;">
             <table width="740" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto; border-radius:8px;overflow:hidden;">
@@ -533,7 +619,7 @@ a{
 <h2 style="margin-top:0px; margin-bottom:15px; font-weight:500;font-size:34px;line-height:36px;letter-spacing:0.004em;border-bottom:0; text-align:center; width:100%;padding:0">DDOS Protection
 </h2>
 
-                        <p style="margin-top:0px; margin-bottom:15px; font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;color:;" class="appl_headline_txt">We use <strong id="cloudflare">Cloudflare®</strong> for our protection. Enjoy those bennifits and <strong>never worry about DDOS attacks.</strong><br>
+                        <p style="margin-top:0px; margin-bottom:15px; font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;color:;" class="appl_headline_txt">We use <strong-cf id="cloudflare" class="exempt-cf">Cloudflare®</strong-cf> for our protection. Enjoy those bennifits and <strong class="exempt">never worry about DDOS attacks.</strong><br>
                           
                         </p>
                       </td>
@@ -864,6 +950,7 @@ DDoS protection via Cloudflare®. User content hosted under UGC policy. ContentL
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp;</div>
   
+
 
 
 
