@@ -1,0 +1,23 @@
+{
+  "canonical": "https://contentltd.net/elections/acrp",
+  "og": {
+    "locale": "en_US",
+    "type": "website",
+    "title": "ER;LC -- ACRP -- Election Info",
+    "url": "https://contentltd.net/elections/acrp",
+    "site_name": "ACRP -- ELECTION INFO",
+    "image": {
+      "url": "https://th.bing.com/th/id/R.01fd98f6c97867bd137d48fcdae25f31?rik=VvfVCf%2fbPRSf0Q&riu=http%3a%2f%2fimages.vector-images.com%2f119%2fallegheny_county_logo.gif&ehk=iApMZg39B0REW4qmtBLQ22Yxy%2bwlbE175Pf9GFIrEyE%3d&risl=&pid=ImgRaw&r=0",
+      "width": 1200,
+      "height": 630,
+      "type": "image/jpeg"
+    }
+  },
+  "article": {
+    "publisher": "https://contentltd.net"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@contentltd_rblx"
+  }
+}
