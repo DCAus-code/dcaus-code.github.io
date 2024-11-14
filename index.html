@@ -1,339 +1,402 @@
-<html lang="en" data-theme="dark"><head>
-    <link rel="icon" href="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj">
+<!DOCTYPE html> <html lang="en"><head>
     <meta charset="UTF-8">
-<meta name="description" content="Information on ContentLTD (ContentLimited).">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContentLTD</title>
-    
-    <!-- Open Graph metadata for rich embeds -->
-    <meta property="og:title" content="ContentLTD">
-    <meta property="og:description" content="Hello, I'm ContentLimited (shortened to ContentLTD usually). I'm a web developer and game creator, currently working on an exciting game project. Follow me on social media to stay updated!">
-    <meta property="og:image" content="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj">
-    <meta property="og:url" content="https://lostinfinite.github.io/access/main">
-    <meta property="og:type" content="website">
-      <meta property="og:description" content="Last Updated 9/22/2024">
-       <meta property="og:field" content="Last Updated 9/22/2024">
-    <style> 
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-        h1,h2,h3,h4,h5{
-            color: white;
-            font-weight: 800;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contentltd</title>
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json"><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
         body {
-            color: white;
-            font-size: 25px;
-            background-color: #251717;
-            font-family: "Oswald", sans-serif;
-            place-items: center; /* Centers content horizontally and vertically */
-            text-align: center; 
-            margin: 0; /* Removes default margin */
-            height: 100vh; /* Sets the height to full viewport height */
-            position: relative; /* Allows for positioning of pseudo-elements */
-            overflow: auto; /* Enables scrolling if content goes beyond the viewport */
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-       /* body::before {
-            content: '';
-            position: absolute;
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #111;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://github.com/lostinfinite/lostinfinite.github.io/blob/main/media/blurple%20(1).jpg?raw=true');
-           
-            z-index: -1; /* Places the pseudo-element behind the content */
-        }
-*/
-        .main {
-            filter: blur(0px); 
-            color: white;
+            z-index: 10;
         }
 
-        .link-icon {
-            height: 50px;
-        }
-
-        .yt_btn, .x_btn, .gthb_btn {
-            font-size: 50px;
-            width: 500px; /* Set width for larger screens */
-            display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            text-align: center;
+        .header a {
+            color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .get-launcher {
+            background-color: #ffbb00;
+            color: #000;
             border: none;
-            margin: 5px; /* Add margin to separate buttons */
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        .yt_btn {
-            background-color: #FA3131; /* YouTube red */
+        .get-launcher:hover {
+            background-color: #ffcc33;
         }
 
-        .yt_btn:hover {
-            background-color: #cf0202; /* Darker red on hover */
+        /* Main Content */
+        .container {
+            padding: 50px;
+            flex-grow: 1;
         }
 
-        .x_btn {
-            background-color: #10A7FF; /* Twitter blue */
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
-        .x_btn:hover {
-            background-color: #0d8ddd; /* Darker blue on hover */
+        /* Newswire Cards */
+        .news-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .gthb_btn {
-            background-color: #2b2c34; /* GitHub black */
+        .news-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
         }
 
-        .gthb_btn:hover {
-            background-color: #1d1d1d; /* Darker black on hover */
+        .news-card:hover {
+            transform: scale(1.05);
         }
 
-        @media (max-width: 767px) {
-            body, div, p, h1, h2, h3 {
-                font-size: 16px;
-            }
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
 
-            .soc {
-                font-size: 16px;
-            }
+        .news-card-content {
+            padding: 15px;
+        }
 
-            .yt_btn, .x_btn, .gthb_btn {
-                font-size: 10px;
-                width: 20px; /* Adjust width for mobile devices */
-                height: 14px; /* Adjust height for mobile devices */
-            }
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-            .link-icon {
-                display: none;
-            }
+        .news-card-meta {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Featured Games Section */
+        .featured-games {
+            padding: 50px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .featured-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .main-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .view-more {
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            color: #ffbb00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-more a:hover {
+            color: #ffcc33;
+        }
+
+        /* Detailed Footer */
+        .detailed-footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 50px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .detailed-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .detailed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-top,
+        .footer-middle,
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-top a {
+            margin: 0 15px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-language {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <style>.warn {
-    background-color: #8B0000;
-    color: white;
-    padding: 15px;
-    border: 2px solid #7F0000;
-    border-radius: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensures it stays on top of other content */
-    font-size: 20px;
-}
 
-.warn a {
-    color: #FFD700; /* Gold color for links */
-}
-</style>
-        <style>
-  @font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Display Thin */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-/* Text Black */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-/* Text Bold */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-/* Text Heavy */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-/* Text Light */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Text Medium */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* Text Regular */
-@font-face {
-  font-family: "SF Pro";
-  src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-  li,a,#nav {
-    text-decoration: none;
-    color: #f5f5f7;
-        position: sticky;
-  }
-.navigation {
-   text-align: center;
-   background-color: rgba(22, 22, 23, 0.8);
-   height:50px;
-  font-family: "SF Pro";
-  position: sticky;
-    top: 0;
-    z-index: 1000;
-   
-} 
-.navigation ul {
-   margin: 0 85px;
-   font-family: "SF Pro";
-}
-.navigation li {
-   display:inline-block;
-   margin:5px 20px;
-   padding:5px;
-   color:#FFF;
-   cursor:pointer;
-   font-family: "SF Pro";
-}
-.
-.navigation img {
-   width:20px;
-   font-family: "SF Pro";
-   
-}</style>
-
-    
-
-  
-
-    
-    <div class="main">
-        <nav class="navigation">
-        <ul style="list-style:none;">
-          <li><a href="https://contentltd.net/sites" id="nav">Paid Sites</a></li>
-            <li><a href="https://contentltd.net/credits" id="nav">Credits</a></li><a href="https://contentltd.net/credits">
-            </a><li><a href="https://contentltd.net/sites/paid-dir" id="nav">Paid Sites Directory</a></li>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo">ContentLTD</div>
+        <nav class="menu">
+            <a href="https://contentltd.net/products">Products</a>
             
-        <li><a href="https://contentltd.net/sources" id="nav">Assets Used</a></li></ul>
-      </nav><h1 style="font-size: 45px;">Welcome to my amazing website!</h1>
+            <a href="https://contentltd.net/credits">Credits</a>
+            <a href="https://contentltd.net/sources">Assets Used</a>
+            
+            <a href="mailto://info@contentltd.net">Support</a>
+        </nav>
         
-        
-        <blockquote style="font-size: 20px; font-style: italic; color: #aaa;">
-            "Another day Another Migraine" ~ Rye Hemlock from the TikTok Series "Your Bank"
-        </blockquote>
+    </header>
 
-        
-        <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="Profile Image">
-        
-        <p>Hello, I'm ContentLimited (or ContentLTD). I’m a website developer and game creator. While my UI design could use some polish, I’m passionate about creating meaningful and engaging experiences. I’m currently working on a game (coming soon), and more information will be released soon! Feel free to contact me on Twitter @contentltd_rblx.</p>
+    <!-- Main Content -->
+                        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        
-        <hr><h2 style="font-size: 36px;">Funny ACRP Quotes</h2><blockquote style="font-style: italic; color: #666; padding: 10px; border-left: 4px solid #ccc; margin-left: 20px;">
-    "Join up for a life-changing session" 
-    <br> 
-    <span style="font-weight: bold;">~ Donkeys (@Lastoutbreak), Co-Founder of ACRP</span>
-</blockquote>
-<blockquote style="font-style: italic; color: #666; padding: 10px; border-left: 4px solid #ccc; margin-left: 20px;">
-    "Boy doesn't join server start up, What happens next is shocking | Dhar Mann"
-    <br> 
-    <span style="font-weight: bold;">~ @ContentLTD</span>
-</blockquote>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
 
-        <hr><h2 style="font-size: 36px;">My Journey So Far</h2><p>
-            My path started with web development, dabbling in projects like the Allegheny County Role-Play (ACRP) server on Roblox. I'm now developing a custom 3D graphics engine and game that reflects my evolving skills and creative vision. Stay tuned for updates!
-        </p>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
 
-        
-        <hr>
-<div class="soc">
-            <h2 style="font-size: 36px;">Connect With Me</h2>
- <p style="font-size: 14px;">Follow me to get the latest updates on my game and other projects!</p><a href="https://www.youtube.com/@ContentLTD_rblx" class="yt_btn" target="_blank"><img style="" alt="Li" loading="lazy" src="https://cdn.prod.website-files.com/63734fce0109ae1b7967dc8e/637454ffc09b2340da480c9c_icon-youtube.png" class="link-icon"> YouTube</a>
-            <a href="https://x.com/@contentltd_rblx" class="x_btn" target="_blank"><img style="" alt="Li" loading="lazy" src="https://cdn.prod.website-files.com/63734fce0109ae1b7967dc8e/63735f86b77485ac1823567a_icon-twitter.png" class="link-icon"> Twitter/X</a>
-            <a href="https://github.com/lostinfinite" class="gthb_btn" target="_blank"><img style="" alt="Li" loading="lazy" src="https://github.com/lostinfinite/lostinfinite.github.io/blob/main/media/image-removebg-preview%20(1).png?raw=true" class="link-icon"> GitHub</a>
-        </div>
-        <hr>
+        .content-left {
+            flex: 2;
+            position: relative;
+        }
 
-        
+        .content-left img {
+            width: 100%;
+            border-radius: 5px;
+        }
 
-<section id="political-views" style="padding: 20px; text-align: center;">
-    <h2>Political Views I Stand With</h2>
-    
-    <div style="display: flex; justify-content: center; gap: 20px;">
-        <div>
-            <p>Free Ukraine</p>
-            <img src="https://media.istockphoto.com/id/1384270355/photo/flag-of-ukraine.webp?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=DFiM9Y6ob8zk8S-yOV3M5HyxM-hUjwQDcJBz4J6vqN8=" alt="Ukrainian Flag" style="width: 100px;">
-        </div>
-
-        <div>
-            <p>Free Palestine</p>
-            <img src="https://cdn.britannica.com/74/84674-004-C0E414EA/Flag-Palestinian-Authority-Palestine.jpg" alt="Palestinian Flag" style="width: 100px;">
-        </div>
-
-        <div>
-            <p>Harris for President</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Kamala_Harris_2024_presidential_campaign_logo.png" alt="Kamala for President Campaign" style="width: 200px;">
-        </div>
-    </div>
-</section><hr>
-
-
-        
-        <p><sup>There would be a timer/countdown right about here that would count down until my game comes out, but I&nbsp;couldn't really figure out how to get that working.</sup></p>
-<hr>
- <style>
-        .footer {
+        .content-right {
+            flex: 1;
             text-align: center;
             padding: 20px;
-            background-color: #1D1212;
-            border-top: 1px solid #ddd;
-            color: FFF;
         }
-        .footer img {
-            width: 100px; /* Adjust the width as needed */
-            height: auto;
+
+        .content-right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-        .footer p {
-            margin: 10px 0 0;
+
+        .content-right button {
+            padding: 15px 30px;
+            background-color: #ffbb00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .content-right button:hover {
+            background-color: #ffcc33;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 10px;
+            text-align: center;
             font-size: 14px;
-            color: #333;
         }
-    </style> <footer class="footer">
-        <img src="https://companieslogo.com/img/orig/NET.W-4b716d1d.png?t=1724398565" alt="Cloudflare Logo">
-        <p style="color: FFF;">Secured by Cloudflare</p>
-    </footer>
+    </style>
+
+    <div class="container">
+    <div class="container">
+        <!-- Left Content -->
+        <div class="content-left">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.v8m9Rc-n4-5xiPO8IROUigHaEK?rs=1&amp;pid=ImgDetMain" alt="Could not load">
+        </div>
+
+        <!-- Right Content -->
+        <div class="content-right">
+            <h2>Allegheny County Roleplay</h2>
+            <p>Roleplay server, in ER;LC. </p>
+            <a href="https://discord.gg/VCxHdRaWze"><button>JOIN NOW</button></a>
+        </div>
+    </div></div><h1 class="title">Newswire</h1><div class="container">
+        
+        <div class="news-grid">
+            <!-- News Card 1 -->
+            <p>Could not load, try again later.</p><!--<div class="news-card">
+                <img src="image1.png" alt="Circoloco Records">
+                <div class="news-card-content">
+                    <div class="news-card-title">THIS RHYTHM (feat. Rahh) - PROSPA</div>
+                    <div class="news-card-meta">Rockstar Games | November 8, 2024</div>
+                </div>
+            </div>-->
+            <!-- News Card 2 -->
+            
+            
+            
+        </div>
+    </div><!-- Featured Games Section -->
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>-->
+
+    <!-- Footer -->
+        <div class="footer">
+        <p>© ContentLTD | All Rights Reserved</p>
     </div>
-
-
-
-
-
-
 
 
 
