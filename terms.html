@@ -1,53 +1,1219 @@
-<style>body{
-    font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        table thead {
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            
+            font-weight: bold;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: ;
+        }
+        table tbody tr:hover {
+          
+        }
+   
+    </style><style>
+
+        @font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Display Thin */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Text Black */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Text Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Text Heavy */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Text Light */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Text Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+    :root {
+    --base-rem-size: 0.75rem;
+    --font-size-1: 0.75rem;
+    --font-size-2: 0.75rem;
+    --font-size-3: 1rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 2rem;
+    --font-size-7: 2.5rem;
+    --font-size-8: 3rem;
+    --font-size-9: 4rem;
+    --font-size-10: 5rem;
+    --base-pixel-size: 12px;
+    --grey: #111;
+    --yellow-action: #ffbb00;
+    --white: #FFF;
+    --max-width: 1920px;
+    --padding-top-bottom: var(--padding-sides);
+        --padding-sides: var(--grid-gap-static-lg);
+            --grid-gap-static-lg: 4rem;
+        --grid-gap-static-md: 2rem;
+        --max-width-static-md: 1088px;
+        
+}
+
+li {
+    list-style-type: none; /* Hides only the marker */
+}
+.tos{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-bottom: var(--base-rem-size);
+    max-width: var(--max-width);
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width-static-md);
+    padding: var(--grid-gap-static-md);
+    text-align: left;
+    padding: 80px;
+    
+}
+    li a{
+        color: #FFF;
+        transition: background-color 0.3s;
+text-decoration: none;    
+}
+     li a:hover{
+        color: #FFBB00;
+
+    }
+ @media (max-width: 768px) {
+    .pc{
+    display: none;
+        transition: display 0.03s;
+    }
+    .mobile{
+        display: show;
+        transition: display 0.03s;
+    }
+        
+    } 
+@media (min-width: 770px) {
+  .pc{
+    display: show;
+      transition: display 0.03s;
+
+}
+.mobile{
+    display: none;
+    transition: display 0.03s;
+}
+    
+}
+
+
+    
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content-left {
+            flex: 2;
+            position: relative;
+        }
+
+        .content-left img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-right button {
+background-color: transparent;
+            color: #FFF;
+            border-color: #FFF;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 245.31px;
+            height: 62.22px;
+        }
+
+        .content-right button:hover {
+            background-color: #FFF;
+            color: #000;
+            border-color: #000;
+        }
+
+        .footer {
+            background-color: #000;
+            padding: 80px;
+        display: flex;
+            font-size: 14px;
+        }
+    </style><style>
+   .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-}</style><h2>Terms of Service</h2>
-<p>These Terms of Service govern your use of the website located at&nbsp;<a href="https://lostinfinite.github.io">https://lostinfinite.github.io</a>&nbsp;and any related services provided by Sageimatic.</p>
-<p>By accessing&nbsp;<a href="https://lostinfinite.github.io">https://lostinfinite.github.io</a>, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations. If you do not agree with these Terms of Service, you are prohibited from using or accessing this website or using any other services provided by Sageimatic.</p>
-<p>We, Sageimatic, reserve the right to review and amend any of these Terms of Service at our sole discretion. Upon doing so, we will update this page. Any changes to these Terms of Service will take effect immediately from the date of publication.</p>
-<p>These Terms of Service were last updated on 14 February 2024.</p>
-<h3>Limitations of Use</h3>
-<p>By using this website, you warrant on behalf of yourself, your users, and other parties you represent that you will not:</p>
-<ul>
-<li>modify, copy, prepare derivative works of, decompile, or reverse engineer any materials and software contained on this website;</li>
-<li>remove any copyright or other proprietary notations from any materials and software on this website;</li>
-<li>transfer the materials to another person or "mirror" the materials on any other server;</li>
-<li>knowingly or negligently use this website or any of its associated services in a way that abuses or disrupts our networks or any other service Sageimatic provides;</li>
-<li>use this website or its associated services to transmit or publish any harassing, indecent, obscene, fraudulent, or unlawful material;</li>
-<li>use this website or its associated services in violation of any applicable laws or regulations;</li>
-<li>use this website in conjunction with sending unauthorized advertising or spam;</li>
-<li>harvest, collect, or gather user data without the user&rsquo;s consent; or</li>
-<li>use this website or its associated services in such a way that may infringe the privacy, intellectual property rights, or other rights of third parties.</li>
-</ul>
-<h3>Intellectual Property</h3>
-<p>The intellectual property in the materials contained in this website are owned by or licensed to Sageimatic and are protected by applicable copyright and trademark law. We grant our users permission to download one copy of the materials for personal, non-commercial transitory use.</p>
-<p>This constitutes the grant of a license, not a transfer of title. This license shall automatically terminate if you violate any of these restrictions or the Terms of Service, and may be terminated by Sageimatic at any time.</p>
-<h3>User-Generated Content</h3>
-<p>You retain your intellectual property ownership rights over content you submit to us for publication on our website. We will never claim ownership of your content, but we do require a license from you in order to use it.</p>
-<p>When you use our website or its associated services to post, upload, share, or otherwise transmit content covered by intellectual property rights, you grant to us a non-exclusive, royalty-free, transferable, sub-licensable, worldwide license to use, distribute, modify, run, copy, publicly display, translate, or otherwise create derivative works of your content in a manner that is consistent with your privacy preferences and our Privacy Policy.</p>
-<p>Please note that we cannot be held liable for the conduct of our users. We strive to protect our platform with reasonable measures mainly designing various layers of verifications and high-quality filters, however, we cannot guarantee a perfect customer experience. We are not liable for any fraudulent users and their actions, any such users violate the hereby Terms of Service and will be permanently removed from our platform.</p>
-<p>The license you grant us can be terminated at any time by deleting your content or account. However, to the extent that we (or our partners) have used your content in connection with commercial or sponsored content, the license will continue until the relevant commercial or post has been discontinued by us.</p>
-<p>You give us permission to use your username and other identifying information associated with your account in a manner that is consistent with your privacy preferences and our Privacy Policy.</p>
-<h3>Disclaimer and Limitations of Liability</h3>
-<p>Our website and the materials on our website are provided on an 'as is' basis. To the extent permitted by law, Sageimatic makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property, or other violation of rights.</p>
-<p>In no event shall Sageimatic or its suppliers be liable for any consequential loss suffered or incurred by you or any third party arising from the use or inability to use this website or the materials on this website, even if Sageimatic or an authorized representative has been notified, orally or in writing, of the possibility of such damage.</p>
-<p>In the context of this agreement, "consequential loss" includes any consequential loss, indirect loss, real or anticipated loss of profit, loss of benefit, loss of revenue, loss of business, loss of goodwill, loss of opportunity, loss of savings, loss of reputation, loss of use and/or loss or corruption of data, whether under statute, contract, equity, tort (including negligence), indemnity or otherwise.</p>
-<p>Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
-<h3>Accuracy of Materials</h3>
-<p>The materials appearing on our website are not comprehensive and are for general information purposes only. Sageimatic does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on this website, or otherwise relating to such materials or on any resources linked to this website. You should not rely solely on the said materials to make decisions, we advise you to consult other, more complete sources of information. You are solely responsible for the strict reliance on the materials posted on our website. We have the right to change the information on our website without prior notice and users are responsible to monitor said changes.</p>
-<h3>Links</h3>
-<p>Sageimatic has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement, approval or control by Sageimatic of the site. Use of any such linked site is at your own risk and we strongly advise you make your own investigations with respect to the suitability of those sites.</p>
-<h3>Inaccuracies and Mistakes</h3>
-<p>Please note that any content available on our website may contain typographical errors, inaccuracies, or mistakes related to the service&rsquo;s description and availability. We have the right to cancel or update any existing services should any information provided by us be proven inaccurate. Said information can be amended at any time without prior notice. Please note that we are not obligated to clarify any of the information related to our website and service.</p>
-<h3>Indemnification</h3>
-<p>You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys&rsquo; fees and expenses, made by any third party due to or arising out of: (1) your Contributions; (2) use of the website; (3) breach of these Terms of Service; (4) any breach of your representations and warranties set forth in these Terms of Service; (5) your violation of the rights of a third party, including but not limited to intellectual property rights; or (6) any overt harmful act toward any other user of the website with whom you connected via the website.</p>
-<p>Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it.</p>
-<h3>Right to Terminate</h3>
-<p>We may suspend or terminate your right to use our website and terminate these Terms of Service immediately upon written notice to you for any breach of these Terms of Service.</p>
-<h3>Severance</h3>
-<p>Any term of these Terms of Service which is wholly or partially void or unenforceable is severed to the extent that it is void or unenforceable. The validity of the remainder of these Terms of Service is not affected.</p>
-<h3>Entire Agreement</h3>
-<p>These Terms of Service and any policies or operating rules posted by us on the website or with respect to the website constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Terms of Service shall not operate as a waiver of such right or provision. These Terms of Service operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control.</p>
-<p>If any provision or part of a provision of these Terms of Service is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Terms of Service and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment, or agency relationship created between you and us as a result of these Terms of Service or use of the website. You agree that these Terms of Service will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you may have based on the electronic form of these Terms of Service and the lack of signing by the parties hereto to execute these Terms of Service.</p>
-<h3>Governing Law</h3>
-<p>These Terms of Service are governed by and construed in accordance with the laws of Pennsylvania. You irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+}
+
+   .btn-main-img-cont {
+    margin-left: 0 !important;
+    align-self: flex-start !important; /* Overrides alignment within flex containers */
+    text-align:  !important; /* Ensures the text inside aligns left */
+    float: left; /* Aligns the element to the left within its container */
+}
+
+
+    
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "SF Pro", sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0,0,0,.85);
+            backdrop-filter: blur(25px);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .get-launcher {
+            background-color: #ffbb00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .get-launcher:hover {
+            background-color: #111;
+            color: #ffbb00;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 50px;
+            flex-grow: 1;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Newswire Cards */
+        .news-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .news-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-card-content {
+            padding: 15px;
+        }
+
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-card-meta {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Featured Games Section */
+        .featured-games {
+            padding: 50px;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .featured-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .main-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .view-more {
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            color: #ffbb00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-more a:hover {
+            color: #ffcc33;
+        }
+
+        /* Detailed Footer */
+        .detailed-footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 50px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .detailed-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .detailed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-top,
+        .footer-middle,
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-top a {
+            margin: 0 15px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-language {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style><title>ContentLTD</title>
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json">
+</head>
+<body>
+<div class="pc">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <nav class="menu">
+            <a href="https://contentltd.net/products">Products</a>
+            
+            <a href="https://contentltd.net/credits">Credits</a>
+            <a href="https://contentltd.net/sources">Assets Used</a>
+            
+            <a href="mailto:info@contentltd.net">Support</a>
+        </nav><a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN OKRP</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <div style=" ;"> 
+    <div style="" class="tos">
+    <h1>ContentLTD Terms of Service (TOS)</h1>
+    <br><p><strong>Effective Date:</strong> 11/23/24</p>
+    <p><strong>Last Updated:</strong> 11/23/24</p><br>
+
+
+    <p>Welcome to ContentLTD. These Terms of Service (“Terms”) govern your access to and use of ContentLTD’s services, including Emergency Response: Liberty County (ER:LC) Roblox servers, associated Discord servers, and official websites (collectively, the “Services”). By accessing or using our Services, you agree to these Terms. If you do not agree, you may not use our Services.</p>
+
+    <p>This Agreement complies with <strong>General Data Protection Regulation (GDPR)</strong> for users in the European Economic Area (EEA) and considers local age requirements for access and participation.</p>
+
+    <br><br><br><h2>Table of Contents</h2>
+    <br><ol>
+        <li><a href="#agreement-and-acceptance">Agreement and Acceptance</a></li>
+        <li><a href="#age-requirements">Age Requirements</a></li>
+        <li><a href="#gdpr-and-parental-consent">GDPR and Parental Consent</a></li>
+        <li><a href="#ownership-and-intellectual-property">Ownership and Intellectual Property</a></li>
+        <li><a href="#user-conduct">User Conduct</a></li>
+        <li><a href="#data-collection-and-privacy">Data Collection and Privacy</a></li>
+        <li><a href="#arbitration-and-dispute-resolution">Arbitration and Dispute Resolution</a></li>
+        <li><a href="#termination-of-service">Termination of Service</a></li>
+        <li><a href="#contact-information">Contact Information</a></li>
+        <li><a href="#additional-notes">Additional Notes</a></li>
+    </ol>
+
+    <br><br><br><h2 id="agreement-and-acceptance">1. Agreement and Acceptance</h2><br>
+    <p><strong>1.1 Binding Legal Agreement:</strong> These Terms constitute a binding agreement between you (“you,” “your”) and ContentLTD (“we,” “us,” “our”). By accessing or using our Services, you affirm that:</p>
+    <ul>
+        <li>You are at least the <strong>minimum age to use the Services</strong> for your country (see Section 2 for age-specific requirements).</li>
+        <li>You are at least 18 years old or have reached the <strong>age of majority</strong> in your country, or a parent or legal guardian has reviewed and agreed to these Terms on your behalf.</li>
+        <li>You have read, understood, and agree to these Terms and any third-party terms applicable to the Services (e.g., <strong>Roblox Terms of Service</strong>, <strong>Discord Terms of Service</strong>, <strong>Bloxlink Terms of Service</strong>).</li>
+    </ul>
+    <br><p><strong>1.2 Agreement by Use:</strong> By accessing our ER:LC Roblox servers, participating in associated Discord servers, or using our Services in any capacity, you confirm your agreement to these Terms.</p>
+    <br><p><strong>1.3 Parental Responsibility:</strong> If you are under 18 or the applicable age of majority in your country, your parent or guardian must agree to these Terms on your behalf. They are responsible for monitoring your use of the Services and ensuring compliance with these Terms.</p>
+
+    <br><br><br><h2 id="age-requirements">2. Age Requirements</h2>
+    <br><p><strong>2.1 Minimum Age for Use:</strong> To use our Services, you must meet the minimum age requirements for your country as outlined below:</p>
+    <table>
+        <tbody><tr>
+            <th>Country</th>
+            <th>Minimum Age</th>
+        </tr>
+        <tr>
+            <td>United States</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>United Kingdom</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Other Countries</td>
+            <td>Veries</td>
+        </tr><!-- Add more rows as needed -->
+    </tbody></table>
+    <p><strong>2.2 Legal Compliance:</strong> By using the Services, you confirm that your participation complies with the minimum age requirements in your jurisdiction. If you are below the required age, you must not use the Services.</p>
+
+    <br><br><br><h2 id="gdpr-and-parental-consent">3. GDPR and Parental Consent</h2>
+    <br><p><strong>3.1 For Users in the EEA:</strong> If you are under 16 years old in the EEA, you may not use the Services unless your parent or guardian consents to these Terms on your behalf.</p>
+    <br><p><strong>3.2 Data Protection Compliance:</strong> ContentLTD complies with GDPR regulations. Any personal data collected from users will be processed lawfully, transparently, and for specific, legitimate purposes as detailed in our Privacy Policy.</p>
+
+    <br><br><br><h2 id="ownership-and-intellectual-property">4. Ownership and Intellectual Property</h2>
+    <br><p><strong>4.1 Our Intellectual Property:</strong> All content, including website code, server assets, designs, trademarks, and other materials, is the exclusive property of ContentLTD and protected by intellectual property laws.</p>
+    <br><p><strong>4.2 Restricted Use:</strong> You may not copy, modify, distribute, or reverse-engineer our Services without explicit written permission. Violations may result in immediate suspension and legal action.</p>
+
+    <br><br><br><h2 id="user-conduct">5. User Conduct</h2>
+    <br><p><strong>5.1 Compliance with Rules:</strong> You agree to comply with all rules and guidelines outlined in our Discord servers and ER:LC servers.</p>
+    <br><p><strong>5.2 Prohibited Activities:</strong> You must not:</p>
+    <ul>
+        <li>Engage in harassment, hate speech, or discriminatory behavior.</li><br>
+        <li>Use cheats, exploits, or hacks.</li>
+        <br><li>Impersonate ContentLTD staff or other users.</li>
+        <br><li>Violate applicable laws or third-party terms (e.g., Roblox Terms of Service).</li>
+    </ul>
+    <br><p><strong>5.3 Enforcement:</strong> Violations may result in warnings, suspensions, or permanent bans, which may extend across all ContentLTD servers.</p>
+
+    <br><br><br><h2 id="data-collection-and-privacy">6. Data Collection and Privacy</h2>
+    <br><p><strong>6.1 Message Logging:</strong> All messages in Discord servers, including posted, edited, and deleted messages, are logged for moderation and security purposes.</p>
+    <br><p><strong>6.2 Privacy Expectations:</strong> Tickets and communications within our Discord servers are not private. By using our Services, you consent to message logging and review by staff.</p>
+    <br><p><strong>6.3 GDPR Rights:</strong> Users in the EEA have the right to request access, correction, deletion, or restriction of their personal data in accordance with GDPR. For details, see our Privacy Policy.</p>
+
+    <br><br><br><h2 id="arbitration-and-dispute-resolution">7. Arbitration and Dispute Resolution</h2>
+    <br><p><strong>7.1 Binding Arbitration:</strong> Disputes will be resolved through final and binding arbitration in Pennsylvania, USA, in accordance with applicable laws.</p>
+    <br><p><strong>7.2 Class Action Waiver:</strong> You waive the right to participate in any class or collective legal actions. Disputes must be resolved on an individual basis.</p>
+    <br><p><strong>7.3 Exceptions:</strong> You or ContentLTD may pursue claims in small claims court or seek injunctive relief for intellectual property violations.</p>
+
+    <br><br><br><h2 id="termination-of-service">8. Termination of Service</h2>
+    <br><p><strong>8.1 Termination by Us:</strong> We may terminate or suspend access to our Services at our discretion, including for violations of these Terms or applicable laws.</p>
+    <br><p><strong>8.2 Termination by You:</strong> You may terminate your use of the Services at any time by ceasing participation in our Discord servers and ER:LC servers.</p>
+
+    <br><br><br><h2 id="contact-information">9. Contact Information</h2>
+    <br><p>If you have questions about these Terms or our Services, please contact:</p>
+    <p><strong>Email:</strong> info@contentltd.net</p>
+
+    <br><br><br><h2 id="additional-notes">10. Additional Notes</h2>
+    <br><p><strong>10.1 Acknowledgment of Agreement:</strong> By using our Services, you affirm that you have read, understood, and agreed to these Terms.</p>
+    <br><p><strong>10.2 International Users:</strong> Users from different countries must adhere to local age and data protection laws.</p>
+
+    <p>Thank you for being part of ContentLTD.</p>
+        
+
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style><div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div>
+
+<br>
+
+<br> <br> <br><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Follow us!</h2><br><div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a>
+    <a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a></div>
+    </div>
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="mobile">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN OKRP</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <br><br><div style=" ;"> 
+    <div style="" class="tos">
+    <h1>ContentLTD Terms of Service (TOS)</h1>
+    <br><p><strong>Effective Date:</strong> 11/23/24</p>
+    <p><strong>Last Updated:</strong> 11/23/24</p><br>
+
+
+    <p>Welcome to ContentLTD. These Terms of Service (“Terms”) govern your access to and use of ContentLTD’s services, including Emergency Response: Liberty County (ER:LC) Roblox servers, associated Discord servers, and official websites (collectively, the “Services”). By accessing or using our Services, you agree to these Terms. If you do not agree, you may not use our Services.</p>
+
+    <p>This Agreement complies with <strong>General Data Protection Regulation (GDPR)</strong> for users in the European Economic Area (EEA) and considers local age requirements for access and participation.</p>
+
+    <br><br><br><h2>Table of Contents</h2>
+    <br><ol>
+        <li><a href="#agreement-and-acceptance">Agreement and Acceptance</a></li>
+        <li><a href="#age-requirements">Age Requirements</a></li>
+        <li><a href="#gdpr-and-parental-consent">GDPR and Parental Consent</a></li>
+        <li><a href="#ownership-and-intellectual-property">Ownership and Intellectual Property</a></li>
+        <li><a href="#user-conduct">User Conduct</a></li>
+        <li><a href="#data-collection-and-privacy">Data Collection and Privacy</a></li>
+        <li><a href="#arbitration-and-dispute-resolution">Arbitration and Dispute Resolution</a></li>
+        <li><a href="#termination-of-service">Termination of Service</a></li>
+        <li><a href="#contact-information">Contact Information</a></li>
+        <li><a href="#additional-notes">Additional Notes</a></li>
+    </ol>
+
+    <br><br><br><h2 id="agreement-and-acceptance">1. Agreement and Acceptance</h2><br>
+    <p><strong>1.1 Binding Legal Agreement:</strong> These Terms constitute a binding agreement between you (“you,” “your”) and ContentLTD (“we,” “us,” “our”). By accessing or using our Services, you affirm that:</p>
+    <ul>
+        <li>You are at least the <strong>minimum age to use the Services</strong> for your country (see Section 2 for age-specific requirements).</li>
+        <li>You are at least 18 years old or have reached the <strong>age of majority</strong> in your country, or a parent or legal guardian has reviewed and agreed to these Terms on your behalf.</li>
+        <li>You have read, understood, and agree to these Terms and any third-party terms applicable to the Services (e.g., <strong>Roblox Terms of Service</strong>, <strong>Discord Terms of Service</strong>, <strong>Bloxlink Terms of Service</strong>).</li>
+    </ul>
+    <br><p><strong>1.2 Agreement by Use:</strong> By accessing our ER:LC Roblox servers, participating in associated Discord servers, or using our Services in any capacity, you confirm your agreement to these Terms.</p>
+    <br><p><strong>1.3 Parental Responsibility:</strong> If you are under 18 or the applicable age of majority in your country, your parent or guardian must agree to these Terms on your behalf. They are responsible for monitoring your use of the Services and ensuring compliance with these Terms.</p>
+
+    <br><br><br><h2 id="age-requirements">2. Age Requirements</h2>
+    <br><p><strong>2.1 Minimum Age for Use:</strong> To use our Services, you must meet the minimum age requirements for your country as outlined below:</p>
+    <table>
+        <tbody><tr>
+            <th>Country</th>
+            <th>Minimum Age</th>
+        </tr>
+        <tr>
+            <td>United States</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>United Kingdom</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Other Countries</td>
+            <td>Veries</td>
+        </tr><!-- Add more rows as needed -->
+    </tbody></table>
+    <p><strong>2.2 Legal Compliance:</strong> By using the Services, you confirm that your participation complies with the minimum age requirements in your jurisdiction. If you are below the required age, you must not use the Services.</p>
+
+    <br><br><br><h2 id="gdpr-and-parental-consent">3. GDPR and Parental Consent</h2>
+    <br><p><strong>3.1 For Users in the EEA:</strong> If you are under 16 years old in the EEA, you may not use the Services unless your parent or guardian consents to these Terms on your behalf.</p>
+    <br><p><strong>3.2 Data Protection Compliance:</strong> ContentLTD complies with GDPR regulations. Any personal data collected from users will be processed lawfully, transparently, and for specific, legitimate purposes as detailed in our Privacy Policy.</p>
+
+    <br><br><br><h2 id="ownership-and-intellectual-property">4. Ownership and Intellectual Property</h2>
+    <br><p><strong>4.1 Our Intellectual Property:</strong> All content, including website code, server assets, designs, trademarks, and other materials, is the exclusive property of ContentLTD and protected by intellectual property laws.</p>
+    <br><p><strong>4.2 Restricted Use:</strong> You may not copy, modify, distribute, or reverse-engineer our Services without explicit written permission. Violations may result in immediate suspension and legal action.</p>
+
+    <br><br><br><h2 id="user-conduct">5. User Conduct</h2>
+    <br><p><strong>5.1 Compliance with Rules:</strong> You agree to comply with all rules and guidelines outlined in our Discord servers and ER:LC servers.</p>
+    <br><p><strong>5.2 Prohibited Activities:</strong> You must not:</p>
+    <ul>
+        <li>Engage in harassment, hate speech, or discriminatory behavior.</li><br>
+        <li>Use cheats, exploits, or hacks.</li>
+        <br><li>Impersonate ContentLTD staff or other users.</li>
+        <br><li>Violate applicable laws or third-party terms (e.g., Roblox Terms of Service).</li>
+    </ul>
+    <br><p><strong>5.3 Enforcement:</strong> Violations may result in warnings, suspensions, or permanent bans, which may extend across all ContentLTD servers.</p>
+
+    <br><br><br><h2 id="data-collection-and-privacy">6. Data Collection and Privacy</h2>
+    <br><p><strong>6.1 Message Logging:</strong> All messages in Discord servers, including posted, edited, and deleted messages, are logged for moderation and security purposes.</p>
+    <br><p><strong>6.2 Privacy Expectations:</strong> Tickets and communications within our Discord servers are not private. By using our Services, you consent to message logging and review by staff.</p>
+    <br><p><strong>6.3 GDPR Rights:</strong> Users in the EEA have the right to request access, correction, deletion, or restriction of their personal data in accordance with GDPR. For details, see our Privacy Policy.</p>
+
+    <br><br><br><h2 id="arbitration-and-dispute-resolution">7. Arbitration and Dispute Resolution</h2>
+    <br><p><strong>7.1 Binding Arbitration:</strong> Disputes will be resolved through final and binding arbitration in Pennsylvania, USA, in accordance with applicable laws.</p>
+    <br><p><strong>7.2 Class Action Waiver:</strong> You waive the right to participate in any class or collective legal actions. Disputes must be resolved on an individual basis.</p>
+    <br><p><strong>7.3 Exceptions:</strong> You or ContentLTD may pursue claims in small claims court or seek injunctive relief for intellectual property violations.</p>
+
+    <br><br><br><h2 id="termination-of-service">8. Termination of Service</h2>
+    <br><p><strong>8.1 Termination by Us:</strong> We may terminate or suspend access to our Services at our discretion, including for violations of these Terms or applicable laws.</p>
+    <br><p><strong>8.2 Termination by You:</strong> You may terminate your use of the Services at any time by ceasing participation in our Discord servers and ER:LC servers.</p>
+
+    <br><br><br><h2 id="contact-information">9. Contact Information</h2>
+    <br><p>If you have questions about these Terms or our Services, please contact:</p>
+    <p><strong>Email:</strong> info@contentltd.net</p>
+
+    <br><br><br><h2 id="additional-notes">10. Additional Notes</h2>
+    <br><p><strong>10.1 Acknowledgment of Agreement:</strong> By using our Services, you affirm that you have read, understood, and agreed to these Terms.</p>
+    <br><p><strong>10.2 International Users:</strong> Users from different countries must adhere to local age and data protection laws.</p>
+
+    <p>Thank you for being part of ContentLTD.</p>
+        
+
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style>
+
+
+
+</div>
+        <div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div><div class="divider-mobile"></div>
+
+
+
+ <div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a><a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a>
+    </div> <div class="divider-mobile"></div><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body></html>
