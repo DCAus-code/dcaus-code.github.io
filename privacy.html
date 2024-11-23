@@ -1,139 +1,1277 @@
-<style>body{
-    font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        table thead {
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            
+            font-weight: bold;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: ;
+        }
+        table tbody tr:hover {
+          
+        }
+   
+    </style><style>
+
+        @font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Display Thin */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Text Black */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Text Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Text Heavy */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Text Light */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Text Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+    :root {
+    --base-rem-size: 0.75rem;
+    --font-size-1: 0.75rem;
+    --font-size-2: 0.75rem;
+    --font-size-3: 1rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 2rem;
+    --font-size-7: 2.5rem;
+    --font-size-8: 3rem;
+    --font-size-9: 4rem;
+    --font-size-10: 5rem;
+    --base-pixel-size: 12px;
+    --grey: #111;
+    --yellow-action: #ffbb00;
+    --white: #FFF;
+    --max-width: 1920px;
+    --padding-top-bottom: var(--padding-sides);
+        --padding-sides: var(--grid-gap-static-lg);
+            --grid-gap-static-lg: 4rem;
+        --grid-gap-static-md: 2rem;
+        --max-width-static-md: 1088px;
+        
+}
+
+li {
+    list-style-type: none; /* Hides only the marker */
+}
+.tos{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-bottom: var(--base-rem-size);
+    max-width: var(--max-width);
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width-static-md);
+    padding: var(--grid-gap-static-md);
+    text-align: left;
+    padding: 80px;
+    
+}
+    li a{
+        color: #FFF;
+        transition: background-color 0.3s;
+text-decoration: none;    
+}
+     li a:hover{
+        color: #FFBB00;
+
+    }
+ @media (max-width: 768px) {
+    .pc{
+    display: none;
+        transition: display 0.03s;
+    }
+    .mobile{
+        display: show;
+        transition: display 0.03s;
+    }
+        
+    } 
+@media (min-width: 770px) {
+  .pc{
+    display: show;
+      transition: display 0.03s;
+
+}
+.mobile{
+    display: none;
+    transition: display 0.03s;
+}
+    
+}
+
+
+    
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content-left {
+            flex: 2;
+            position: relative;
+        }
+
+        .content-left img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-right button {
+background-color: transparent;
+            color: #FFF;
+            border-color: #FFF;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 245.31px;
+            height: 62.22px;
+        }
+
+        .content-right button:hover {
+            background-color: #FFF;
+            color: #000;
+            border-color: #000;
+        }
+
+        .footer {
+            background-color: #000;
+            padding: 80px;
+        display: flex;
+            font-size: 14px;
+        }
+    </style><style>
+   .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-}</style><h2>Privacy Policy</h2>
-<p>Your privacy is important to us. It is ContentLTD's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://lostinfinite.github.io">https://lostinfinite.github.io</a>, and other sites we own and operate.</p>
-<p>Personal information is any information about you which can be used to identify you. This includes information about you as a person (such as name, address, and date of birth), your devices, payment details, and even information about how you use a website or online service.</p>
-<p>In the event our site contains links to third-party sites and services, please be aware that those sites and services have their own privacy policies. After following a link to any third-party content, you should read their posted privacy policy information about how they collect and use personal information. This Privacy Policy does not apply to any of your activities after you leave our site.</p>
-<p>This policy is effective as of 14 February 2024</p>
-<p>Last updated: 14 February 2024</p>
-<h3>Information We Collect</h3>
-<p>Information we collect falls into one of two categories: “voluntarily provided” information and “automatically collected” information.</p>
-<p>“Voluntarily provided” information refers to any information you knowingly and actively provide us when using or participating in any of our services and promotions.</p>
-<p>“Automatically collected” information refers to any information automatically sent by your devices in the course of accessing our products and services.</p>
-<h3>Personal Information</h3>
-<p>We may ask for personal information — for example, when you submit content to us or when you contact us — which may include one or more of the following:</p>
+}
 
-<p>- Name</p>
-<p>- Email</p>
-<p>- Date of birth</p>
+   .btn-main-img-cont {
+    margin-left: 0 !important;
+    align-self: flex-start !important; /* Overrides alignment within flex containers */
+    text-align:  !important; /* Ensures the text inside aligns left */
+    float: left; /* Aligns the element to the left within its container */
+}
 
-<h3>Sensitive Information</h3>
-<p>“Sensitive information” or “special categories of data” is a subset of personal information that is given a higher level of protection. Examples of sensitive information include information relating to your racial or ethnic origin, political opinions, religion, trade union or other professional associations or memberships, philosophical beliefs, sexual orientation, sexual practices or sex life, criminal records, health information, or biometric information.</p>
-<p>The types of sensitive information that we may collect about you include:</p>
-<ul>
-<li>Biometric information</li>
-</ul>
-<p>We will not collect sensitive information about you without first obtaining your consent, and we will only use or disclose your sensitive information as permitted, required, or authorized by law.</p>
-<h3>User-Generated Content</h3>
-<p>We consider “user-generated content” to be materials (text, image and/or video content) voluntarily supplied to us by our users for the purpose of publication on our website or re-publishing on our social media channels. All user-generated content is associated with the account or email address used to submit the materials.</p>
-<p>Please be aware that any content you submit for the purpose of publication will be public after posting (and subsequent review or vetting process). Once published, it may be accessible to third parties not covered under this privacy policy.</p>
-<h3>Legitimate Reasons for Processing Your Personal Information</h3>
-<p>We only collect and use your personal information when we have a legitimate reason for doing so. In which instance, we only collect personal information that is reasonably necessary to provide our services to you.</p>
-<h3>Collection and Use of Information</h3>
-<p>We may collect personal information from you when you do any of the following on our website:</p>
-<ul>
-<li>Register for an account</li>
-<li>Use a mobile device or web browser to access our content</li>
-<li>Contact us via email, social media, or on any similar technologies</li>
-<li>When you mention us on social media</li>
-</ul>
-<p>We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:</p>
-<ul>
-<li>to provide you with our platform's core features and services</li>
-<li>to enable you to customize or personalize your experience of our website</li>
-<li>to contact and communicate with you</li>
-<li>to enable you to access and use our website, associated applications, and associated social media platforms</li>
-<li>for security and fraud prevention, and to ensure that our sites and apps are safe, secure, and used in line with our terms of use</li>
-</ul>
-<p>We may combine voluntarily provided and automatically collected personal information with general information or research data we receive from other trusted sources. For example, Our marketing and market research activities may uncover data and insights, which we may combine with information about how visitors use our site to improve our site and your experience on it.</p>
-<h4>Security of Your Personal Information</h4>
-<p>When we collect and process personal information, and while we retain this information, we will protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
-<p>Although we will do our best to protect the personal information you provide to us, we advise that no method of electronic transmission or storage is 100% secure and no one can guarantee absolute data security.</p>
-<p>You are responsible for selecting any password and its overall security strength, ensuring the security of your own information within the bounds of our services. For example, ensuring any passwords associated with accessing your personal information and accounts are secure and confidential.</p>
-<h4>How Long We Keep Your Personal Information</h4>
-<p>We keep your personal information only for as long as we need to. This time period may depend on what we are using your information for, in accordance with this privacy policy. For example, if you have provided us with personal information as part of creating an account with us, we may retain this information for the duration your account exists on our system. If your personal information is no longer required for this purpose, we will delete it or make it anonymous by removing all details that identify you.</p>
-<p>However, if necessary, we may retain your personal information for our compliance with a legal, accounting, or reporting obligation or for archiving purposes in the public interest, scientific, or historical research purposes or statistical purposes.</p>
-<h3>Children’s Privacy</h3>
-<p>We do not aim any of our products or services directly at children under the age of 13 and we do not knowingly collect personal information about children under 13.</p>
-<h3>Your Rights and Controlling Your Personal Information</h3>
-<p><strong>Your choice:</strong> By providing personal information to us, you understand we will collect, hold, use, and disclose your personal information in accordance with this privacy policy. You do not have to provide personal information to us, however, if you do not, it may affect your use of our website or the products and/or services offered on or through it.</p>
-<p><strong>Information from third parties:</strong> If we receive personal information about you from a third party, we will protect it as set out in this privacy policy. If you are a third party providing personal information about somebody else, you represent and warrant that you have such person’s consent to provide the personal information to us.</p>
-<p><strong>Marketing permission:</strong> If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by contacting us using the details below.</p>
-<p><strong>Access:</strong> You may request details of the personal information that we hold about you.</p>
-<p><strong>Correction:</strong> If you believe that any information we hold about you is inaccurate, out of date, incomplete, irrelevant, or misleading, please contact us using the details provided in this privacy policy. We will take reasonable steps to correct any information found to be inaccurate, incomplete, misleading, or out of date.</p>
-<p><strong>Non-discrimination:</strong> We will not discriminate against you for exercising any of your rights over your personal information. Unless your personal information is required to provide you with a particular service or offer (for example providing user support), we will not deny you goods or services and/or charge you different prices or rates for goods or services, including through granting discounts or other benefits, or imposing penalties, or provide you with a different level or quality of goods or services.</p>
-<p><strong>Downloading of Personal Information:</strong> We provide a means for you to download the personal information you have shared through our site. Please contact us for more information.</p>
-<p><strong>Notification of data breaches:</strong> We will comply with laws applicable to us in respect of any data breach.</p>
-<p><strong>Complaints:</strong> If you believe that we have breached a relevant data protection law and wish to make a complaint, please contact us using the details below and provide us with full details of the alleged breach. We will promptly investigate your complaint and respond to you, in writing, setting out the outcome of our investigation and the steps we will take to deal with your complaint. You also have the right to contact a regulatory body or data protection authority in relation to your complaint.</p>
-<p><strong>Unsubscribe:</strong> To unsubscribe from our email database or opt-out of communications (including marketing communications), please contact us using the details provided in this privacy policy, or opt-out using the opt-out facilities provided in the communication. We may need to request specific information from you to help us confirm your identity.</p>
-<h3>Use of Cookies</h3>
-<p>We use &quot;cookies&quot; to collect information about you and your activity across our site. A cookie is a small piece of data that our website stores on your computer, and accesses each time you visit, so we can understand how you use our site. This helps us serve you content based on preferences you have specified.</p>
-<p>Please refer to our Cookie Policy for more information.</p>
-<h3>Business Transfers</h3>
-<p>If we or our assets are acquired, or in the unlikely event that we go out of business or enter bankruptcy, we would include data, including your personal information, among the assets transferred to any parties who acquire us. You acknowledge that such transfers may occur, and that any parties who acquire us may, to the extent permitted by applicable law, continue to use your personal information according to this policy, which they will be required to assume as it is the basis for any ownership or use rights we have over such information.</p>
-<h3>Limits of Our Policy</h3>
-<p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and policies of those sites, and cannot accept responsibility or liability for their respective privacy practices.</p>
-<h3>Changes to This Policy</h3>
-<p>At our discretion, we may change our privacy policy to reflect updates to our business processes, current acceptable practices, or legislative or regulatory changes. If we decide to change this privacy policy, we will post the changes here at the same link by which you are accessing this privacy policy.</p>
-<p>If the changes are significant, or if required by applicable law, we will contact you (based on your selected preferences for communications from us) and all our registered users with the new details and links to the updated or changed policy.</p>
-<p>If required by law, we will get your permission or give you the opportunity to opt in to or opt out of, as applicable, any new uses of your personal information.</p>
-<h3>Additional Disclosures for Australian Privacy Act Compliance (AU)</h3>
-<h4>International Transfers of Personal Information</h4>
-<p>Where the disclosure of your personal information is solely subject to Australian privacy laws, you acknowledge that some third parties may not be regulated by the Privacy Act and the Australian Privacy Principles in the Privacy Act. You acknowledge that if any such third party engages in any act or practice that contravenes the Australian Privacy Principles, it would not be accountable under the Privacy Act, and you will not be able to seek redress under the Privacy Act.</p>
-<h3>Additional Disclosures for General Data Protection Regulation (GDPR) Compliance (EU)</h3>
-<h4>Data Controller / Data Processor</h4>
-<p>The GDPR distinguishes between organisations that process personal information for their own purposes (known as &quot;data controllers&quot;) and organisations that process personal information on behalf of other organisations (known as &quot;data processors&quot;). We, ContentLTD, located at the address provided in our Contact Us section, are a Data Controller with respect to the personal information you provide to us.</p>
-<h4>Legal Bases for Processing Your Personal Information</h4>
-<p>We will only collect and use your personal information when we have a legal right to do so. In which case, we will collect and use your personal information lawfully, fairly, and in a transparent manner. If we seek your consent to process your personal information, and you are under 16 years of age, we will seek your parent or legal guardian’s consent to process your personal information for that specific purpose.</p>
-<p>Our lawful bases depend on the services you use and how you use them. This means we only collect and use your information on the following grounds:</p>
-<h3>Consent From You</h3>
-<p>Where you give us consent to collect and use your personal information for a specific purpose. You may withdraw your consent at any time using the facilities we provide; however this will not affect any use of your information that has already taken place. When you contact us, you may consent to your name and email address being used so we can respond to your enquiry. While you may request that we delete your contact details at any time, we cannot recall any email we have already sent. If you have any further enquiries about how to withdraw your consent, please feel free to enquire using the details provided in the Contact Us section of this privacy policy.</p>
-<h3>Performance of a Contract or Transaction</h3>
-<p>Where you have entered into a contract or transaction with us, or in order to take preparatory steps prior to our entering into a contract or transaction with you. For example, if you contact us with an enquiry, we may require personal information such as your name and contact details in order to respond.</p>
-<h3>Our Legitimate Interests</h3>
-<p>Where we assess it is necessary for our legitimate interests, such as for us to provide, operate, improve and communicate our services. We consider our legitimate interests to include research and development, understanding our audience, marketing and promoting our services, measures taken to operate our services efficiently, marketing analysis, and measures taken to protect our legal rights and interests.</p>
-<h3>Compliance with Law</h3>
-<p>In some cases, we may have a legal obligation to use or keep your personal information. Such cases may include (but are not limited to) court orders, criminal investigations, government requests, and regulatory obligations. If you have any further enquiries about how we retain personal information in order to comply with the law, please feel free to enquire using the details provided in the Contact Us section of this privacy policy.</p>
-<h4>International Transfers Outside of the European Economic Area (EEA)</h4>
-<p>We will ensure that any transfer of personal information from countries in the European Economic Area (EEA) to countries outside the EEA will be protected by appropriate safeguards, for example by using standard data protection clauses approved by the European Commission, or the use of binding corporate rules or other legally accepted means.</p>
-<h4>Your Rights and Controlling Your Personal Information</h4>
-<p><strong>Restrict:</strong> You have the right to request that we restrict the processing of your personal information if (i) you are concerned about the accuracy of your personal information; (ii) you believe your personal information has been unlawfully processed; (iii) you need us to maintain the personal information solely for the purpose of a legal claim; or (iv) we are in the process of considering your objection in relation to processing on the basis of legitimate interests.</p>
-<p><strong>Objecting to processing:</strong> You have the right to object to processing of your personal information that is based on our legitimate interests or public interest. If this is done, we must provide compelling legitimate grounds for the processing which overrides your interests, rights, and freedoms, in order to proceed with the processing of your personal information.</p>
-<p><strong>Data portability:</strong> You may have the right to request a copy of the personal information we hold about you. Where possible, we will provide this information in CSV format or other easily readable machine format. You may also have the right to request that we transfer this personal information to a third party.</p>
-<h3>Additional Disclosures for U.S. States Privacy Law Compliance.</h3>
-<p>The following section includes provisions that comply with the privacy laws of these states (California, Colorado, Delaware, Florida, Virginia, and Utah) and is applicable only to the residents of those states. Specific references to a particular state (in a heading or in the text) are only a reference to that state's law and applies only to that state's residents. Non-state specific language applies to all of the states listed above.</p>
-<h4>Do Not Track</h4>
-<p>Some browsers have a &quot;Do Not Track&quot; feature that lets you tell websites that you do not want to have your online activities tracked. At this time, we do not respond to browser &quot;Do Not Track&quot; signals.</p>
-<p>We adhere to the standards outlined in this privacy policy, ensuring we collect and process personal information lawfully, fairly, transparently, and with legitimate, legal reasons for doing so.</p>
-<h4>Cookies and Pixels</h4>
-<p>At all times, you may decline cookies from our site if your browser permits. Most browsers allow you to activate settings on your browser to refuse the setting of all or some cookies. Accordingly, your ability to limit cookies is based only on your browser’s capabilities. Please refer to the Cookies section of this privacy policy for more information.</p>
-<h4>California Privacy Laws - CPPA</h4>
-<p>Under California Civil Code Section 1798.83, if you live in California and your business relationship with us is mainly for personal, family, or household purposes, you may ask us about the information we release to other organizations for their marketing purposes. In accordance with your right to non-discrimination, we may offer you certain financial incentives permitted by the California Consumer Privacy Act, and the California Privacy Rights Act (collectively, CCPA) that can result in different prices, rates, or quality levels for the goods or services we provide. Any CCPA-permitted financial incentive we offer will reasonably relate to the value of your personal information, and we will provide written terms that describe clearly the nature of such an offer. Participation in a financial incentive program requires your prior opt-in consent, which you may revoke at any time.</p>
-<p>Under California Civil Code Section 1798.83, if you live in California and your business relationship with us is mainly for personal, family, or household purposes, you may ask us about the information we release to other organizations for their marketing purposes. To make such a request, please contact us using the details provided in this privacy policy with “Request for California privacy information” in the subject line. You may make this type of request once every calendar year. We will email you a list of categories of personal information we revealed to other organisations for their marketing purposes in the last calendar year, along with their names and addresses. Not all personal information shared in this way is covered by Section 1798.83 of the California Civil Code.</p>
-<h4>California Notice of Collection</h4>
-<p>In the past 12 months, we have collected the following categories of personal information enumerated in the CCPA:</p>
-<ul>
-<li>Identifiers, such as name, email address, phone number, account name, IP address, and an ID or number assigned to your account.</li>
-<li>Audio or visual data, such as photos or videos you share with us or post on the service.</li>
-<li>Geolocation data.</li>
-</ul>
-<p>For more information on information we collect, including the sources we receive information from, review the “Information We Collect” section. We collect and use these categories of personal information for the business purposes described in the “Collection and Use of Information” section, including to provide and manage our Service.</p>
-<h4>Right to Know and Delete</h4>
-<p>You have rights to delete your personal information we collected and know certain information about our data practices in the preceding 12 months. In particular, you have the right to request the following from us:</p>
-<ul>
-<li>The categories of personal information we have collected about you;</li>
-<li>The categories of sources from which the personal information was collected;</li>
-<li>The categories of personal information about you we disclosed for a business purpose or sold;</li>
-<li>The categories of third parties to whom the personal information was disclosed for a business purpose or sold;</li>
-<li>The business or commercial purpose for collecting or selling the personal information; and</li>
-<li>The specific pieces of personal information we have collected about you.</li>
-</ul>
-<p>To exercise any of these rights, please contact us using the details provided in this privacy policy.</p>
-<h4>Shine the Light</h4>
-<p>In addition to the rights discussed above, you have the right to request information from us regarding the manner in which we share certain personal information as defined by applicable statute with third parties and affiliates for their own direct marketing purposes.</p>
-<p>To receive this information, send us a request using the contact details provided in this privacy policy. Requests must include “Privacy Rights Request” in the first line of the description and include your name, street address, city, state, and ZIP code.</p>
-<h3>Contact Us</h3>
-<p>For any questions or concerns regarding your privacy, you may contact us using the following details:</p>
-<p>ContentLTD<br />
-info@contentltd.net</p>
+
+    
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "SF Pro", sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0,0,0,.85);
+            backdrop-filter: blur(25px);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .get-launcher {
+            background-color: #ffbb00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .get-launcher:hover {
+            background-color: #111;
+            color: #ffbb00;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 50px;
+            flex-grow: 1;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Newswire Cards */
+        .news-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .news-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-card-content {
+            padding: 15px;
+        }
+
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-card-meta {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Featured Games Section */
+        .featured-games {
+            padding: 50px;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .featured-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .main-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .view-more {
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            color: #ffbb00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-more a:hover {
+            color: #ffcc33;
+        }
+
+        /* Detailed Footer */
+        .detailed-footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 50px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .detailed-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .detailed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-top,
+        .footer-middle,
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-top a {
+            margin: 0 15px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-language {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style><title>ContentLTD -- Privacy Policy</title>
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json">
+</head>
+<body>
+<div class="pc">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <nav class="menu">
+            <a href="https://contentltd.net/products">Products</a>
+            
+            <a href="https://contentltd.net/credits">Credits</a>
+            <a href="https://contentltd.net/sources">Assets Used</a>
+            
+            <a href="mailto:info@contentltd.net">Support</a>
+        </nav><a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN OKRP</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <div style=" ;"> 
+    <div style="" class="tos">
+    <h1>ContentLTD Privacy Policy</h1>
+    <br><p><strong>Effective Date:</strong> 11/23/24</p>
+    <p><strong>Last Updated:</strong> 11/23/24</p>
+
+    <br><p>This Privacy Policy explains how ContentLTD (“we,” “us,” or “our”) collects, uses, discloses, and protects your information when you use our Services, including Emergency Response: Liberty County (ER:LC) Roblox servers, associated Discord servers, and official websites (collectively, the “Services”). By using our Services, you agree to this Privacy Policy. If you do not agree, you must not use our Services.</p>
+
+    <br><br><br><h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#how-we-use-your-information">How We Use Your Information</a></li>
+        <li><a href="#information-sharing-and-disclosure">Information Sharing and Disclosure</a></li>
+        <li><a href="#legal-bases-for-processing">Legal Bases for Processing</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#data-protection-and-security">Data Protection and Security</a></li>
+        <li><a href="#international-users">International Users</a></li>
+        <li><a href="#data-retention">Data Retention</a></li>
+        <li><a href="#children-s-privacy">Children’s Privacy</a></li>
+        <li><a href="#changes-to-this-policy">Changes to This Policy</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+    </ol>
+
+    <br><br><br>
+
+    <h2 id="information-we-collect">1. Information We Collect</h2>
+    <br>
+    <p>We may collect the following types of information:</p>
+    <br>
+    <ul>
+        <li><strong>Personal Information:</strong> Name, username, email address, IP address, and account details on Roblox, Discord, or linked services like Bloxlink.</li>
+        <li><strong>Communication Data:</strong> Messages sent, edited, and deleted in our Discord servers, and support tickets submitted within the servers.</li>
+        <li><strong>Usage Data:</strong> Gameplay statistics, connection logs, and activity patterns on our Roblox servers and websites.</li>
+        <li><strong>Technical Data:</strong> Device type, browser type, operating system, and other technical identifiers.</li>
+        <li><strong>Geolocation Data:</strong> Country or region based on IP address for compliance and localization purposes.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="how-we-use-your-information">2. How We Use Your Information</h2>
+    <br>
+    <p>We use your information to:</p>
+    <br>
+    <ul>
+        <li>Provide and maintain our Services, including account verification and gameplay functionality.</li>
+        <li>Monitor and moderate activity within our Discord servers and Roblox servers to ensure rule compliance.</li>
+        <li>Enforce our Terms of Service and respond to violations.</li>
+        <li>Analyze usage data to improve our Services and user experience.</li>
+        <li>Comply with legal obligations, including cooperating with law enforcement.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="information-sharing-and-disclosure">3. Information Sharing and Disclosure</h2>
+    <br>
+    <p>We may share your information under the following circumstances:</p>
+    <br>
+    <ul>
+        <li><strong>With Law Enforcement:</strong> To comply with legal obligations or in response to lawful requests.</li>
+        <li><strong>With Service Providers:</strong> Third-party vendors assisting with hosting, moderation, analytics, or technical support.</li>
+        <li><strong>With Third-Party Services:</strong> Integrated services such as Roblox, Discord, and Bloxlink, governed by their respective privacy policies.</li>
+        <li><strong>For Legal Protection:</strong> To protect our rights, users, or Services in case of disputes or security concerns.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="legal-bases-for-processing">4. Legal Bases for Processing</h2>
+    <br>
+    <p>Depending on your location, we process your personal information under the following legal bases:</p>
+    <br>
+    <ul>
+        <li><strong>GDPR (EEA):</strong> Based on your consent, to fulfill contractual obligations, or to comply with legal obligations.</li>
+        <li><strong>CCPA (California):</strong> As necessary to provide Services or with your consent for data collection and use.</li>
+        <li><strong>LGPD (Brazil):</strong> Based on legitimate interest, consent, or compliance with legal obligations.</li>
+        <li><strong>PIPEDA (Canada):</strong> With your consent or as required for the provision of Services.</li>
+        <li><strong>Other Jurisdictions:</strong> As required or permitted by local data protection laws.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="your-rights">5. Your Rights</h2>
+    <br>
+    <p>Depending on your jurisdiction, you may have the following rights:</p>
+    <br>
+    <ul>
+        <li><strong>Access:</strong> Request access to personal information we hold about you.</li>
+        <li><strong>Correction:</strong> Request corrections to inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request deletion of your personal information, subject to legal limitations.</li>
+        <li><strong>Data Portability:</strong> Receive your personal data in a structured, commonly used format.</li>
+        <li><strong>Restriction:</strong> Request limitations on how we process your information.</li>
+        <li><strong>Objection:</strong> Object to the processing of your data for specific purposes.</li>
+        <li><strong>Opt-Out:</strong> Opt out of targeted advertising or data selling (where applicable).</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="data-protection-and-security">6. Data Protection and Security</h2>
+    <br>
+    <p>We employ robust security measures to protect your information from unauthorized access, misuse, or loss. However, no system is completely secure, and we cannot guarantee absolute security.</p>
+
+    <br><br><br>
+
+    <h2 id="international-users">7. International Users</h2>
+    <br>
+    <p>We comply with privacy laws applicable in different jurisdictions, including:</p>
+    <br>
+    <ul>
+        <li><strong>GDPR:</strong> Users in the European Economic Area (EEA) have enhanced rights, including the right to withdraw consent at any time.</li>
+        <li><strong>CCPA:</strong> California residents can request disclosure of how their information is collected, used, or shared and can opt out of data selling.</li>
+        <li><strong>LGPD:</strong> Brazilian users can request confirmation of data processing, access to data, or portability of data.</li>
+        <li><strong>Other Countries:</strong> We respect local data protection laws where our users reside.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="data-retention">8. Data Retention</h2>
+    <br>
+    <p>We retain your information for as long as necessary to provide our Services, comply with legal obligations, resolve disputes, and enforce our Terms of Service. Logged communications in Discord and gameplay data in Roblox may be retained indefinitely unless a deletion request is approved under applicable laws.</p>
+
+    <br><br><br>
+
+    <h2 id="children-s-privacy">9. Children’s Privacy</h2>
+    <br>
+    <p>We require users to meet the minimum age for social media use in their jurisdiction to access our Services. For users under the age of majority, parental consent is required. For more information, refer to our <a style="text-decoration: none; color: #FFF;" href="https://contentltd.net/terms#age-requirements">Age Requirements</a> section in the Terms of Service.</p>
+
+    <br><br><br>
+
+    <h2 id="changes-to-this-policy">10. Changes to This Policy</h2>
+    <br>
+    <p>We may update this Privacy Policy periodically. Changes will be posted here with an updated “Last Updated” date. Continued use of our Services constitutes acceptance of the revised policy.</p>
+
+    <br><br><br>
+
+    <h2 id="contact-us">11. Contact Us</h2>
+    <br>
+    <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:</p>
+    <br>
+    <p><strong>Email:</strong> info@contentltd.net</p>
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style><div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div>
+
+<br>
+
+<br> <br> <br><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Follow us!</h2><br><div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a>
+    <a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a></div>
+    </div>
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="mobile">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN OKRP</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <br><br><div style=" ;"> 
+    <div style="" class="tos">
+    <h1>ContentLTD Privacy Policy</h1>
+    <br><p><strong>Effective Date:</strong> 11/23/24</p>
+    <p><strong>Last Updated:</strong> 11/23/24</p>
+
+    <br><p>This Privacy Policy explains how ContentLTD (“we,” “us,” or “our”) collects, uses, discloses, and protects your information when you use our Services, including Emergency Response: Liberty County (ER:LC) Roblox servers, associated Discord servers, and official websites (collectively, the “Services”). By using our Services, you agree to this Privacy Policy. If you do not agree, you must not use our Services.</p>
+
+    <br><br><br><h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#how-we-use-your-information">How We Use Your Information</a></li>
+        <li><a href="#information-sharing-and-disclosure">Information Sharing and Disclosure</a></li>
+        <li><a href="#legal-bases-for-processing">Legal Bases for Processing</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#data-protection-and-security">Data Protection and Security</a></li>
+        <li><a href="#international-users">International Users</a></li>
+        <li><a href="#data-retention">Data Retention</a></li>
+        <li><a href="#children-s-privacy">Children’s Privacy</a></li>
+        <li><a href="#changes-to-this-policy">Changes to This Policy</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+    </ol>
+
+    <br><br><br>
+
+    <h2 id="information-we-collect">1. Information We Collect</h2>
+    <br>
+    <p>We may collect the following types of information:</p>
+    <br>
+    <ul>
+        <li><strong>Personal Information:</strong> Name, username, email address, IP address, and account details on Roblox, Discord, or linked services like Bloxlink.</li>
+        <li><strong>Communication Data:</strong> Messages sent, edited, and deleted in our Discord servers, and support tickets submitted within the servers.</li>
+        <li><strong>Usage Data:</strong> Gameplay statistics, connection logs, and activity patterns on our Roblox servers and websites.</li>
+        <li><strong>Technical Data:</strong> Device type, browser type, operating system, and other technical identifiers.</li>
+        <li><strong>Geolocation Data:</strong> Country or region based on IP address for compliance and localization purposes.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="how-we-use-your-information">2. How We Use Your Information</h2>
+    <br>
+    <p>We use your information to:</p>
+    <br>
+    <ul>
+        <li>Provide and maintain our Services, including account verification and gameplay functionality.</li>
+        <li>Monitor and moderate activity within our Discord servers and Roblox servers to ensure rule compliance.</li>
+        <li>Enforce our Terms of Service and respond to violations.</li>
+        <li>Analyze usage data to improve our Services and user experience.</li>
+        <li>Comply with legal obligations, including cooperating with law enforcement.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="information-sharing-and-disclosure">3. Information Sharing and Disclosure</h2>
+    <br>
+    <p>We may share your information under the following circumstances:</p>
+    <br>
+    <ul>
+        <li><strong>With Law Enforcement:</strong> To comply with legal obligations or in response to lawful requests.</li>
+        <li><strong>With Service Providers:</strong> Third-party vendors assisting with hosting, moderation, analytics, or technical support.</li>
+        <li><strong>With Third-Party Services:</strong> Integrated services such as Roblox, Discord, and Bloxlink, governed by their respective privacy policies.</li>
+        <li><strong>For Legal Protection:</strong> To protect our rights, users, or Services in case of disputes or security concerns.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="legal-bases-for-processing">4. Legal Bases for Processing</h2>
+    <br>
+    <p>Depending on your location, we process your personal information under the following legal bases:</p>
+    <br>
+    <ul>
+        <li><strong>GDPR (EEA):</strong> Based on your consent, to fulfill contractual obligations, or to comply with legal obligations.</li>
+        <li><strong>CCPA (California):</strong> As necessary to provide Services or with your consent for data collection and use.</li>
+        <li><strong>LGPD (Brazil):</strong> Based on legitimate interest, consent, or compliance with legal obligations.</li>
+        <li><strong>PIPEDA (Canada):</strong> With your consent or as required for the provision of Services.</li>
+        <li><strong>Other Jurisdictions:</strong> As required or permitted by local data protection laws.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="your-rights">5. Your Rights</h2>
+    <br>
+    <p>Depending on your jurisdiction, you may have the following rights:</p>
+    <br>
+    <ul>
+        <li><strong>Access:</strong> Request access to personal information we hold about you.</li>
+        <li><strong>Correction:</strong> Request corrections to inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request deletion of your personal information, subject to legal limitations.</li>
+        <li><strong>Data Portability:</strong> Receive your personal data in a structured, commonly used format.</li>
+        <li><strong>Restriction:</strong> Request limitations on how we process your information.</li>
+        <li><strong>Objection:</strong> Object to the processing of your data for specific purposes.</li>
+        <li><strong>Opt-Out:</strong> Opt out of targeted advertising or data selling (where applicable).</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="data-protection-and-security">6. Data Protection and Security</h2>
+    <br>
+    <p>We employ robust security measures to protect your information from unauthorized access, misuse, or loss. However, no system is completely secure, and we cannot guarantee absolute security.</p>
+
+    <br><br><br>
+
+    <h2 id="international-users">7. International Users</h2>
+    <br>
+    <p>We comply with privacy laws applicable in different jurisdictions, including:</p>
+    <br>
+    <ul>
+        <li><strong>GDPR:</strong> Users in the European Economic Area (EEA) have enhanced rights, including the right to withdraw consent at any time.</li>
+        <li><strong>CCPA:</strong> California residents can request disclosure of how their information is collected, used, or shared and can opt out of data selling.</li>
+        <li><strong>LGPD:</strong> Brazilian users can request confirmation of data processing, access to data, or portability of data.</li>
+        <li><strong>Other Countries:</strong> We respect local data protection laws where our users reside.</li>
+    </ul>
+
+    <br><br><br>
+
+    <h2 id="data-retention">8. Data Retention</h2>
+    <br>
+    <p>We retain your information for as long as necessary to provide our Services, comply with legal obligations, resolve disputes, and enforce our Terms of Service. Logged communications in Discord and gameplay data in Roblox may be retained indefinitely unless a deletion request is approved under applicable laws.</p>
+
+    <br><br><br>
+
+    <h2 id="children-s-privacy">9. Children’s Privacy</h2>
+    <br>
+    <p>We require users to meet the minimum age for social media use in their jurisdiction to access our Services. For users under the age of majority, parental consent is required. For more information, refer to our <a style="text-decoration: none; color: #FFF;" href="https://contentltd.net/terms#age-requirements">Age Requirements</a> section in the Terms of Service.</p>
+
+    <br><br><br>
+
+    <h2 id="changes-to-this-policy">10. Changes to This Policy</h2>
+    <br>
+    <p>We may update this Privacy Policy periodically. Changes will be posted here with an updated “Last Updated” date. Continued use of our Services constitutes acceptance of the revised policy.</p>
+
+    <br><br><br>
+
+    <h2 id="contact-us">11. Contact Us</h2>
+    <br>
+    <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:</p>
+    <br>
+    <p><strong>Email:</strong> info@contentltd.net</p>
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style>
+
+
+
+</div>
+        <div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div><div class="divider-mobile"></div>
+
+
+
+ <div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a><a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a>
+    </div> <div class="divider-mobile"></div><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body></html>
