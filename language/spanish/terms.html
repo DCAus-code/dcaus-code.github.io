@@ -1,0 +1,1267 @@
+<html lang="es" class="translated-ltr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        table thead {
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            
+            font-weight: bold;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: ;
+        }
+        table tbody tr:hover {
+          
+        }
+   
+    </style><style>
+
+        @font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Display Thin */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Text Black */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Text Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Text Heavy */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Text Light */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Text Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+    :root {
+    --base-rem-size: 0.75rem;
+    --font-size-1: 0.75rem;
+    --font-size-2: 0.75rem;
+    --font-size-3: 1rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 2rem;
+    --font-size-7: 2.5rem;
+    --font-size-8: 3rem;
+    --font-size-9: 4rem;
+    --font-size-10: 5rem;
+    --base-pixel-size: 12px;
+    --grey: #111;
+    --yellow-action: #ffbb00;
+    --white: #FFF;
+    --max-width: 1920px;
+    --padding-top-bottom: var(--padding-sides);
+        --padding-sides: var(--grid-gap-static-lg);
+            --grid-gap-static-lg: 4rem;
+        --grid-gap-static-md: 2rem;
+        --max-width-static-md: 1088px;
+        
+}
+
+li {
+    list-style-type: none; /* Hides only the marker */
+}
+.tos{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-bottom: var(--base-rem-size);
+    max-width: var(--max-width);
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width-static-md);
+    padding: var(--grid-gap-static-md);
+    text-align: left;
+    padding: 80px;
+    
+}
+    li a{
+        color: #FFF;
+        transition: background-color 0.3s;
+text-decoration: none;    
+}
+     li a:hover{
+        color: #FFBB00;
+
+    }
+ @media (max-width: 768px) {
+    .pc{
+    display: none;
+        transition: display 0.03s;
+    }
+    .mobile{
+        display: show;
+        transition: display 0.03s;
+    }
+        
+    } 
+@media (min-width: 770px) {
+  .pc{
+    display: show;
+      transition: display 0.03s;
+
+}
+.mobile{
+    display: none;
+    transition: display 0.03s;
+}
+    
+}
+
+
+    
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content-left {
+            flex: 2;
+            position: relative;
+        }
+
+        .content-left img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-right button {
+background-color: transparent;
+            color: #FFF;
+            border-color: #FFF;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 245.31px;
+            height: 62.22px;
+        }
+
+        .content-right button:hover {
+            background-color: #FFF;
+            color: #000;
+            border-color: #000;
+        }
+
+        .footer {
+            background-color: #000;
+            padding: 80px;
+        display: flex;
+            font-size: 14px;
+        }
+    </style><style>
+   .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+   .btn-main-img-cont {
+    margin-left: 0 !important;
+    align-self: flex-start !important; /* Overrides alignment within flex containers */
+    text-align:  !important; /* Ensures the text inside aligns left */
+    float: left; /* Aligns the element to the left within its container */
+}
+
+
+    
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "SF Pro", sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0,0,0,.85);
+            backdrop-filter: blur(25px);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .get-launcher {
+            background-color: #ffbb00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .get-launcher:hover {
+            background-color: #111;
+            color: #ffbb00;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 50px;
+            flex-grow: 1;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Newswire Cards */
+        .news-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .news-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-card-content {
+            padding: 15px;
+        }
+
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-card-meta {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Featured Games Section */
+        .featured-games {
+            padding: 50px;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .featured-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .main-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .view-more {
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            color: #ffbb00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-more a:hover {
+            color: #ffcc33;
+        }
+
+        /* Detailed Footer */
+        .detailed-footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 50px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .detailed-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .detailed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-top,
+        .footer-middle,
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-top a {
+            margin: 0 15px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-language {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style><title>ContenidoLTD</title>
+    <link rel="alternate" title="oIncrustar (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json">
+</head>
+<body>
+<div class="pc">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="Logotipo de ContentLTD"></div></a>
+        <nav class="menu">
+            <a href="https://contentltd.net/products"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Productos</font></font></a>
+            
+            <a href="https://contentltd.net/credits"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créditos</font></font></a>
+            <a href="https://contentltd.net/sources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Activos utilizados</font></font></a>
+            
+            <a href="mailto:info@contentltd.net"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apoyo</font></font></a>
+        </nav><a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ÚNETE A OKRP</font></font></button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <div style=" ;"> 
+    <div style="" class="tos">
+    <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Condiciones de servicio de ContentLTD (TOS)</font></font></h1>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fecha de entrada en vigor:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 23/11/24</font></font></p>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 23/11/24</font></font></p><br>
+
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bienvenido a ContentLTD. Estos Términos de servicio (“Términos”) rigen su acceso y uso de los servicios de ContentLTD, incluidos los servidores de Roblox de Emergency Response: Liberty County (ER:LC), los servidores de Discord asociados y los sitios web oficiales (en conjunto, los “Servicios”). Al acceder o utilizar nuestros Servicios, usted acepta estos Términos. Si no los acepta, no podrá utilizar nuestros Servicios.</font></font></p>
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Este Acuerdo cumple con </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">el Reglamento General de Protección de Datos (RGPD)</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> para los usuarios del Espacio Económico Europeo (EEE) y considera los requisitos de edad locales para el acceso y la participación.</font></font></p>
+
+    <br><br><br><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tabla de contenido</font></font></h2>
+    <br><ol>
+        <li><a href="#agreement-and-acceptance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acuerdo y aceptación</font></font></a></li>
+        <li><a href="#age-requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requisitos de edad</font></font></a></li>
+        <li><a href="#gdpr-and-parental-consent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RGPD y consentimiento parental</font></font></a></li>
+        <li><a href="#ownership-and-intellectual-property"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Titularidad y propiedad intelectual</font></font></a></li>
+        <li><a href="#user-conduct"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Conducta del usuario</font></font></a></li>
+        <li><a href="#data-collection-and-privacy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recopilación de datos y privacidad</font></font></a></li>
+        <li><a href="#arbitration-and-dispute-resolution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arbitraje y resolución de disputas</font></font></a></li>
+        <li><a href="#termination-of-service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terminación del servicio</font></font></a></li>
+        <li><a href="#contact-information"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información del contacto</font></font></a></li>
+        <li><a href="#additional-notes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notas adicionales</font></font></a></li>
+    <li><a href="#bklst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Servidores y SHR incluidos en la lista negra</font></font></a></li><li><a href="#ugc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contenido generado por el usuario (UGC)</font></font></a></li><li><a href="#common"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cláusula de sentido común</font></font></a></li></ol>
+
+    <br><br><br><h2 id="agreement-and-acceptance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. Acuerdo y aceptación</font></font></h2><br>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.1 Acuerdo legal vinculante:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Estos Términos constituyen un acuerdo vinculante entre usted (“usted”, “su”) y ContentLTD (“nosotros”, “nos”, “nuestro”). Al acceder o utilizar nuestros Servicios, usted afirma que:</font></font></p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tienes al menos la </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">edad mínima para usar los Servicios</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> en tu país (consulta la Sección 2 para conocer los requisitos específicos por edad).</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tiene al menos 18 años o ha alcanzado la </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mayoría de edad</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> en su país, o un padre o tutor legal ha revisado y aceptado estos Términos en su nombre.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ha leído, comprendido y acepta estos Términos y cualquier término de terceros aplicable a los Servicios (por ejemplo, </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Roblox</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Discord</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Bloxlink</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ).</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.2 Acuerdo de uso:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Al acceder a nuestros servidores ER:LC Roblox, participar en servidores Discord asociados o utilizar nuestros Servicios en cualquier capacidad, usted confirma su aceptación de estos Términos.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.3 Responsabilidad de los padres:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> si usted es menor de 18 años o la mayoría de edad aplicable en su país, su padre o tutor debe aceptar estos Términos en su nombre. Ellos son responsables de supervisar su uso de los Servicios y garantizar el cumplimiento de estos Términos.</font></font></p>
+
+    <br><br><br><h2 id="age-requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2. Requisitos de edad</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.1 Edad mínima de uso:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Para utilizar nuestros Servicios, debe cumplir con los requisitos de edad mínima para su país, como se detalla a continuación:</font></font></p>
+    <table>
+        <tbody><tr>
+            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">País</font></font></th>
+            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edad mínima</font></font></th>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estados Unidos</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reino Unido</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Francia</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alemania</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Otros países</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verías</font></font></td>
+        </tr><!-- Add more rows as needed -->
+    </tbody></table>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.2 Cumplimiento legal:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Al utilizar los Servicios, usted confirma que su participación cumple con los requisitos de edad mínima en su jurisdicción. Si no tiene la edad requerida, no debe utilizar los Servicios.</font></font></p>
+
+    <br><br><br><h2 id="gdpr-and-parental-consent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3. RGPD y consentimiento de los padres</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.1 Para usuarios del EEE:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> si tiene menos de 16 años en el EEE, no podrá utilizar los Servicios a menos que su padre o tutor consienta estos Términos en su nombre.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.2 Cumplimiento de la normativa de protección de datos:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ContentLTD cumple con la normativa GDPR. Todos los datos personales recopilados de los usuarios se procesarán de forma legal, transparente y para fines específicos y legítimos, tal y como se detalla en nuestra Política de privacidad.</font></font></p>
+
+    <br><br><br><h2 id="ownership-and-intellectual-property"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4. Titularidad y propiedad intelectual</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1 Nuestra propiedad intelectual:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Todo el contenido, incluido el código del sitio web, los activos del servidor, los diseños, las marcas comerciales y otros materiales, son propiedad exclusiva de ContentLTD y están protegidos por las leyes de propiedad intelectual.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.2 Uso restringido:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> No podrá copiar, modificar, distribuir ni aplicar ingeniería inversa a nuestros Servicios sin permiso explícito por escrito. Las infracciones pueden dar lugar a la suspensión inmediata y a acciones legales.</font></font></p>
+
+    <br><br><br><h2 id="user-conduct"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5. Conducta del usuario</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5.1 Cumplimiento de las reglas:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Usted acepta cumplir con todas las reglas y pautas descritas en nuestros servidores de Discord y servidores de ER:LC.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5.2 Actividades prohibidas:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> No debe:</font></font></p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Participar en acoso, discurso de odio o comportamiento discriminatorio.</font></font></li><br>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Utilice trucos, exploits o hacks.</font></font></li>
+        <br><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hacerse pasar por personal de ContentLTD o por otros usuarios.</font></font></li>
+        <br><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Violar las leyes aplicables o los términos de terceros (por ejemplo, los Términos de servicio de Roblox).</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5.3 Cumplimiento:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Las infracciones pueden dar lugar a advertencias, suspensiones o prohibiciones permanentes, que pueden extenderse a todos los servidores de ContentLTD.</font></font></p>
+
+    <br><br><br><h2 id="data-collection-and-privacy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6. Recopilación de datos y privacidad</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6.1 Registro de mensajes:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> todos los mensajes en los servidores de Discord, incluidos los mensajes publicados, editados y eliminados, se registran con fines de moderación y seguridad.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6.2 Expectativas de privacidad:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Los tickets y las comunicaciones dentro de nuestros servidores de Discord no son privados. Al utilizar nuestros Servicios, usted acepta que el personal registre y revise sus mensajes.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6.3 Derechos del RGPD:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Los usuarios del EEE tienen derecho a solicitar el acceso, la corrección, la eliminación o la restricción de sus datos personales de conformidad con el RGPD. Para obtener más información, consulte nuestra Política de privacidad.</font></font></p>
+
+    <br><br><br><h2 id="arbitration-and-dispute-resolution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7. Arbitraje y resolución de disputas</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7.1 Arbitraje vinculante:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Las disputas se resolverán mediante arbitraje final y vinculante en Pensilvania, EE. UU., de conformidad con las leyes aplicables.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7.2 Renuncia a demandas colectivas:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Usted renuncia al derecho de participar en cualquier demanda colectiva o de clase. Las disputas deben resolverse de forma individual.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7.3 Excepciones:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Usted o ContentLTD pueden presentar reclamos en un tribunal de reclamos menores o solicitar medidas cautelares por violaciones de propiedad intelectual.</font></font></p>
+
+    <br><br><br><h2 id="termination-of-service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8. Terminación del Servicio</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8.1 Terminación por nuestra parte:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Podemos terminar o suspender el acceso a nuestros Servicios a nuestra discreción, incluso por violaciones de estos Términos o las leyes aplicables.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8.2 Terminación por su parte:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Usted puede terminar su uso de los Servicios en cualquier momento dejando de participar en nuestros servidores de Discord y ER:LC.</font></font></p>
+
+    <br><br><br><h2 id="contact-information"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9. Información de contacto</font></font></h2>
+    <br><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Si tiene preguntas sobre estos Términos o nuestros Servicios, comuníquese con:</font></font></p>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Correo electrónico:</font></font></strong> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> info@contentltd.net</font></font></p>
+
+    <br><br><br><h2 id="additional-notes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10. Notas adicionales</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10.1 Reconocimiento de acuerdo:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Al utilizar nuestros Servicios, usted afirma que ha leído, comprendido y aceptado estos Términos.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10.2 Usuarios internacionales:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Los usuarios de diferentes países deben cumplir con las leyes locales de edad y protección de datos.</font></font></p>
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gracias por ser parte de ContentLTD.</font></font></p>
+
+<br><br><br>  <h2 id="bklst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11. Servidores y SHR incluidos en la lista negra</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11.1 Servidores incluidos en la lista negra:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Los servidores incluidos en la lista negra de ContentLTD tienen prohibido interactuar con nuestros Servicios. Esto incluye, entre otros, el acceso a nuestros servidores de Discord, servidores de ER:LC y sitios web oficiales. Los usuarios que participen en servidores incluidos en la lista negra pueden enfrentar medidas en su cuenta, que pueden incluir prohibiciones permanentes en todos los servicios de ContentLTD.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11.2 Prohibiciones de SHR y administración:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> todos los miembros de alto rango (SHR) o de administración de servidores incluidos en la lista negra pueden estar sujetos a prohibiciones inmediatas en todos los servicios de ContentLTD, incluidos Discord y los servidores ER:LC, independientemente de las acciones individuales, para mantener la integridad de nuestra comunidad.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11.3 Apelaciones y carácter definitivo:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Las apelaciones por prohibiciones asociadas con servidores incluidos en listas negras solo podrán considerarse a criterio exclusivo de ContentLTD. Las decisiones relacionadas con las listas negras son definitivas y vinculantes.</font></font></p>
+    
+    <br><br><br><h2 id="ugc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12. Contenido generado por el usuario (CGU)</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12.1 Responsabilidad por el contenido generado por el usuario:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> todo el contenido publicado o compartido dentro de nuestros Servicios, incluidos, entre otros, los mensajes de chat, las cargas y los envíos, se clasifica como contenido generado por el usuario (CGU). ContentLTD no reclama la propiedad del CGU, pero se reserva el derecho de eliminar el contenido que infrinja estos Términos o las leyes aplicables.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12.2 Responsabilidad por el contenido generado por el usuario:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ContentLTD no es responsable de ninguna infracción de derechos de autor ni de ningún problema legal que surja del contenido generado por el usuario publicado por los usuarios. Al utilizar nuestros Servicios, usted reconoce que todo el contenido generado por el usuario representa las opiniones y acciones de sus creadores y no de ContentLTD.</font></font></p>
+    
+    <br><br><br><h2 id="common"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13. Cláusula de sentido común</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13.1 Uso del sentido común:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Se espera que los usuarios utilicen el sentido común al participar en nuestros Servicios. Esto incluye:</font></font></p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Utilizar el juicio racional para interpretar y seguir las reglas.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evitar intentos de eludir, manipular o explotar reglas, políticas o limitaciones del sistema.</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13.2 Definición de sentido común:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> "Sentido común" se define como el uso del razonamiento práctico y el buen juicio para cumplir tanto con la letra como con el espíritu de estos Términos. Algunos ejemplos de infracciones incluyen, entre otros:</font></font></p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Probar intencionalmente los límites de las reglas.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Explotar la redacción ambigua de las políticas.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intentar justificar un comportamiento que es claramente perturbador o dañino.</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13.3 Cumplimiento:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> No ejercer el sentido común puede dar lugar a sanciones que van desde advertencias hasta prohibiciones permanentes.</font></font></p>
+        
+
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style><div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net"><font style="vertical-align: inherit;"></font></a><a href="https://contentltd.net/credits"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créditos </font></font></a><font style="vertical-align: inherit;"><a href="mailto://info@contentltd.net"><font style="vertical-align: inherit;">de soporte </font></a></font><a href="https://contentltd.net/sources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Activos utilizados</font></font></a></div>
+
+<br>
+
+<br> <br> <br><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Privacidad</font></font></a>
+    <a href="https://contentltd.net/terms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos</font></font></a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de elección de ACRP</font></font></a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ContenidoLTD</font></font></p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¡Síganos!</font></font></h2><br><div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a>
+    <a href="https://contentltd.bsky.social" title="cielo" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a></div>
+    </div>
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="mobile">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="Logotipo de ContentLTD"></div></a>
+        <a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ÚNETE A OKRP</font></font></button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <br><br><div style=" ;"> 
+    <div style="" class="tos">
+    <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Condiciones de servicio de ContentLTD (TOS)</font></font></h1>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fecha de entrada en vigor:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 23/11/24</font></font></p>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Última actualización:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 23/11/24</font></font></p><br>
+
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bienvenido a ContentLTD. Estos Términos de servicio (“Términos”) rigen su acceso y uso de los servicios de ContentLTD, incluidos los servidores de Roblox de Emergency Response: Liberty County (ER:LC), los servidores de Discord asociados y los sitios web oficiales (en conjunto, los “Servicios”). Al acceder o utilizar nuestros Servicios, usted acepta estos Términos. Si no los acepta, no podrá utilizar nuestros Servicios.</font></font></p>
+
+    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Este Acuerdo cumple con </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">el Reglamento General de Protección de Datos (RGPD)</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> para los usuarios del Espacio Económico Europeo (EEE) y considera los requisitos de edad locales para el acceso y la participación.</font></font></p>
+
+    <br><br><br><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tabla de contenido</font></font></h2>
+    <br><ol>
+        <li><a href="#agreement-and-acceptance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acuerdo y aceptación</font></font></a></li>
+        <li><a href="#age-requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Requisitos de edad</font></font></a></li>
+        <li><a href="#gdpr-and-parental-consent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RGPD y consentimiento parental</font></font></a></li>
+        <li><a href="#ownership-and-intellectual-property"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Titularidad y propiedad intelectual</font></font></a></li>
+        <li><a href="#user-conduct"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Conducta del usuario</font></font></a></li>
+        <li><a href="#data-collection-and-privacy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recopilación de datos y privacidad</font></font></a></li>
+        <li><a href="#arbitration-and-dispute-resolution"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arbitraje y resolución de disputas</font></font></a></li>
+        <li><a href="#termination-of-service"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Terminación del servicio</font></font></a></li>
+        <li><a href="#contact-information"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información del contacto</font></font></a></li>
+        <li><a href="#additional-notes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notas adicionales</font></font></a></li>
+    <li><a href="#bklst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Servidores y SHR incluidos en la lista negra</font></font></a></li><li><a href="#ugc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contenido generado por el usuario (UGC)</font></font></a></li><li><a href="#common"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cláusula de sentido común</font></font></a></li></ol>
+
+    <br><br><br><h2 id="agreement-and-acceptance"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. Acuerdo y aceptación</font></font></h2><br>
+    <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.1 Acuerdo legal vinculante:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Estos Términos constituyen un acuerdo vinculante entre usted (“usted”, “su”) y ContentLTD (“nosotros”, “nos”, “nuestro”). Al acceder o utilizar nuestros Servicios, usted afirma que:</font></font></p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tienes al menos la </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">edad mínima para usar los Servicios</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> en tu país (consulta la Sección 2 para conocer los requisitos específicos por edad).</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tiene al menos 18 años o ha alcanzado la </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mayoría de edad</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> en su país, o un padre o tutor legal ha revisado y aceptado estos Términos en su nombre.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ha leído, comprendido y acepta estos Términos y cualquier término de terceros aplicable a los Servicios (por ejemplo, </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Roblox</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Discord</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de Bloxlink</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ).</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.2 Acuerdo de uso:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Al acceder a nuestros servidores ER:LC Roblox, participar en servidores Discord asociados o utilizar nuestros Servicios en cualquier capacidad, usted confirma su aceptación de estos Términos.</font></font></p>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.3 Responsabilidad de los padres:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> si usted es menor de 18 años o la mayoría de edad aplicable en su país, su padre o tutor debe aceptar estos Términos en su nombre. Ellos son responsables de supervisar su uso de los Servicios y garantizar el cumplimiento de estos Términos.</font></font></p>
+
+    <br><br><br><h2 id="age-requirements"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2. Requisitos de edad</font></font></h2>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.1 Edad mínima de uso:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Para utilizar nuestros Servicios, debe cumplir con los requisitos de edad mínima para su país, como se detalla a continuación:</font></font></p>
+    <table>
+        <tbody><tr>
+            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">País</font></font></th>
+            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edad mínima</font></font></th>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estados Unidos</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reino Unido</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Francia</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alemania</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16</font></font></td>
+        </tr>
+        <tr>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Otros países</font></font></td>
+            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verías</font></font></td>
+        </tr><!-- Add more rows as needed -->
+    </tbody></table>
+    <p><strong>2.2 Legal Compliance:</strong> By using the Services, you confirm that your participation complies with the minimum age requirements in your jurisdiction. If you are below the required age, you must not use the Services.</p>
+
+    <br><br><br><h2 id="gdpr-and-parental-consent">3. GDPR and Parental Consent</h2>
+    <br><p><strong>3.1 For Users in the EEA:</strong> If you are under 16 years old in the EEA, you may not use the Services unless your parent or guardian consents to these Terms on your behalf.</p>
+    <br><p><strong>3.2 Data Protection Compliance:</strong> ContentLTD complies with GDPR regulations. Any personal data collected from users will be processed lawfully, transparently, and for specific, legitimate purposes as detailed in our Privacy Policy.</p>
+
+    <br><br><br><h2 id="ownership-and-intellectual-property">4. Ownership and Intellectual Property</h2>
+    <br><p><strong>4.1 Our Intellectual Property:</strong> All content, including website code, server assets, designs, trademarks, and other materials, is the exclusive property of ContentLTD and protected by intellectual property laws.</p>
+    <br><p><strong>4.2 Restricted Use:</strong> You may not copy, modify, distribute, or reverse-engineer our Services without explicit written permission. Violations may result in immediate suspension and legal action.</p>
+
+    <br><br><br><h2 id="user-conduct">5. User Conduct</h2>
+    <br><p><strong>5.1 Compliance with Rules:</strong> You agree to comply with all rules and guidelines outlined in our Discord servers and ER:LC servers.</p>
+    <br><p><strong>5.2 Prohibited Activities:</strong> You must not:</p>
+    <ul>
+        <li>Engage in harassment, hate speech, or discriminatory behavior.</li><br>
+        <li>Use cheats, exploits, or hacks.</li>
+        <br><li>Impersonate ContentLTD staff or other users.</li>
+        <br><li>Violate applicable laws or third-party terms (e.g., Roblox Terms of Service).</li>
+    </ul>
+    <br><p><strong>5.3 Enforcement:</strong> Violations may result in warnings, suspensions, or permanent bans, which may extend across all ContentLTD servers.</p>
+
+    <br><br><br><h2 id="data-collection-and-privacy">6. Data Collection and Privacy</h2>
+    <br><p><strong>6.1 Message Logging:</strong> All messages in Discord servers, including posted, edited, and deleted messages, are logged for moderation and security purposes.</p>
+    <br><p><strong>6.2 Privacy Expectations:</strong> Tickets and communications within our Discord servers are not private. By using our Services, you consent to message logging and review by staff.</p>
+    <br><p><strong>6.3 GDPR Rights:</strong> Users in the EEA have the right to request access, correction, deletion, or restriction of their personal data in accordance with GDPR. For details, see our Privacy Policy.</p>
+
+    <br><br><br><h2 id="arbitration-and-dispute-resolution">7. Arbitration and Dispute Resolution</h2>
+    <br><p><strong>7.1 Binding Arbitration:</strong> Disputes will be resolved through final and binding arbitration in Pennsylvania, USA, in accordance with applicable laws.</p>
+    <br><p><strong>7.2 Class Action Waiver:</strong> You waive the right to participate in any class or collective legal actions. Disputes must be resolved on an individual basis.</p>
+    <br><p><strong>7.3 Exceptions:</strong> You or ContentLTD may pursue claims in small claims court or seek injunctive relief for intellectual property violations.</p>
+
+    <br><br><br><h2 id="termination-of-service">8. Termination of Service</h2>
+    <br><p><strong>8.1 Termination by Us:</strong> We may terminate or suspend access to our Services at our discretion, including for violations of these Terms or applicable laws.</p>
+    <br><p><strong>8.2 Termination by You:</strong> You may terminate your use of the Services at any time by ceasing participation in our Discord servers and ER:LC servers.</p>
+
+    <br><br><br><h2 id="contact-information">9. Contact Information</h2>
+    <br><p>If you have questions about these Terms or our Services, please contact:</p>
+    <p><strong>Email:</strong> info@contentltd.net</p>
+
+    <br><br><br><h2 id="additional-notes">10. Additional Notes</h2>
+    <br><p><strong>10.1 Acknowledgment of Agreement:</strong> By using our Services, you affirm that you have read, understood, and agreed to these Terms.</p>
+    <br><p><strong>10.2 International Users:</strong> Users from different countries must adhere to local age and data protection laws.</p>
+
+    <p>Thank you for being part of ContentLTD.</p>
+
+<br><br><br>  <h2 id="bklst">11. Blacklisted Servers and SHRs</h2>
+    <br><p><strong>11.1 Blacklisted Servers:</strong> Servers blacklisted by ContentLTD are prohibited from engaging with our Services. This includes, but is not limited to, access to our Discord servers, ER:LC servers, and official websites. Users found to be participating in blacklisted servers may face account action, up to and including permanent bans across all ContentLTD services.</p>
+    <br><p><strong>11.2 SHR and Management Bans:</strong> All Senior High Ranks (SHRs) or management members of blacklisted servers may be subject to immediate bans across all ContentLTD services, including Discord and ER:LC servers, regardless of individual actions, to maintain the integrity of our community.</p>
+    <br><p><strong>11.3 Appeals and Finality:</strong> Appeals for bans associated with blacklisted servers may only be considered at the sole discretion of ContentLTD. Decisions regarding blacklists are final and binding.</p>
+    
+    <br><br><br><h2 id="ugc">12. User-Generated Content (UGC)</h2>
+    <br><p><strong>12.1 Responsibility for UGC:</strong> All content posted or shared within our Services, including but not limited to chat messages, uploads, and submissions, is classified as User-Generated Content (UGC). ContentLTD does not claim ownership of UGC but reserves the right to remove content that violates these Terms or applicable laws.</p>
+    <br><p><strong>12.2 Liability for UGC:</strong> ContentLTD is not responsible for any copyright infringement or legal issues arising from UGC posted by users. By using our Services, you acknowledge that all UGC represents the views and actions of its creators and not ContentLTD.</p>
+    
+    <br><br><br><h2 id="common">13. Common Sense Clause</h2>
+    <br><p><strong>13.1 Use of Common Sense:</strong> Users are expected to use common sense while participating in our Services. This includes:</p>
+    <ul>
+        <li>Using rational judgment to interpret and follow the rules.</li>
+        <li>Avoiding attempts to bypass, manipulate, or exploit rules, policies, or system limitations.</li>
+    </ul>
+    <br><p><strong>13.2 Definition of Common Sense:</strong> "Common sense" is defined as the use of practical reasoning and sound judgment to comply with both the letter and spirit of these Terms. Examples of violations include, but are not limited to:</p>
+    <ul>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Probar intencionalmente los límites de las reglas.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Explotar la redacción ambigua de las políticas.</font></font></li>
+        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intentar justificar un comportamiento que es claramente perturbador o dañino.</font></font></li>
+    </ul>
+    <br><p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13.3 Cumplimiento:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> No ejercer el sentido común puede dar lugar a sanciones que van desde advertencias hasta prohibiciones permanentes.</font></font></p>
+        
+
+    </div>
+
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style>
+
+
+
+</div>
+        <div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net"><font style="vertical-align: inherit;"></font></a><a href="https://contentltd.net/credits"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créditos </font></font></a><font style="vertical-align: inherit;"><a href="mailto://info@contentltd.net"><font style="vertical-align: inherit;">de soporte </font></a></font><a href="https://contentltd.net/sources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Activos utilizados</font></font></a></div><div class="divider-mobile"></div>
+
+
+
+ <div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a><a href="https://contentltd.bsky.social" title="cielo" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a>
+    </div> <div class="divider-mobile"></div><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Privacidad</font></font></a>
+    <a href="https://contentltd.net/terms"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos</font></font></a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de elección de ACRP</font></font></a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ContenidoLTD</font></font></p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
