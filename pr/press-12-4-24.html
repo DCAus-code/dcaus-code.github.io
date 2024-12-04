@@ -1,0 +1,931 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+
+        @font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Display Thin */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Text Black */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Text Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Text Heavy */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Text Light */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Text Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Text Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+    :root {
+    --font-size-1: 0.75rem;
+    --font-size-2: 0.75rem;
+    --font-size-3: 1rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 2rem;
+    --font-size-7: 2.5rem;
+    --font-size-8: 3rem;
+    --font-size-9: 4rem;
+    --font-size-10: 5rem;
+    --base-pixel-size: 12px;
+    --grey: #111;
+    --yellow-action: #ffbb00;
+    --white: #FFF;
+    --image-margin-bottom: inherit;
+    --image-rounding: 0px;
+    --image-rounding-static: 16px;
+    --image-rounding-static-sm: 8px;
+    --image-rounding-static-xs: 4px;
+    --grid-gap-static-xs: 0.5rem;
+    --grid-gap-static-sm: 1rem;
+    --grid-gap-static-md: 2rem;
+    --grid-gap-static-lg: 4rem;
+    --grid-gap-static-xl: 8rem;
+    --max-width-static: 640px;
+        
+}
+.breadcrumb{
+    font-size: var(--font-size-2);
+    font-weight: 700;
+}
+ @media (max-width: 768px) {
+    .pc{
+    display: none;
+        transition: display 0.03s;
+    }
+    .mobile{
+        display: show;
+        transition: display 0.03s;
+    }
+        
+    } 
+@media (min-width: 770px) {
+  .pc{
+    display: show;
+      transition: display 0.03s;
+
+}
+.mobile{
+    display: none;
+    transition: display 0.03s;
+}
+    
+}
+
+
+    
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content-left {
+            flex: 2;
+            position: relative;
+        }
+
+        .content-left img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-right button {
+background-color: transparent;
+            color: #FFF;
+            border-color: #FFF;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 245.31px;
+            height: 62.22px;
+        }
+
+        .content-right button:hover {
+            background-color: #FFF;
+            color: #000;
+            border-color: #000;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 80px;
+        display: flex;
+            font-size: 14px;
+        }
+    </style><style>
+.newswire-img { 
+  width: 100%;         /* Ensures the container spans the full width of the screen */
+  overflow: hidden; 
+     display: flex;          /* Enables Flexbox */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center;/* Prevents any overflow of the image */
+}
+
+.newswire-img img { 
+  width: 100%;         /* Makes the image adjust to the container's width */
+  height: 290px;       /* Fixes the height to 290px */
+  object-fit: cover;   /* Ensures the image scales proportionally, covering the area */
+}
+
+    .newswire-img {
+    --badge-position-bottom: 0;
+    height: fit-content;
+    max-width: var(--image-with-badge-max-width);
+    overflow: hidden;
+    position: relative;
+    width: var(--image-with-badge-width);
+    box-sizing: border-box;
+}
+
+.newswire-img {
+    --image-rounding-dynamic: 0;
+}
+
+.newswire-img[data-context="newswire-article"] {
+    --grid-gap-dynamic: var(--grid-gap-static-md);
+}
+
+@media (min-width: 768px) {
+    .newswire-img {
+        --header-numerator: 23.4;
+    }
+}
+
+@media (min-width: 0px) {
+    .newswire-img {
+        --header-numerator: 20.8;
+    }
+}
+
+:root * {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+ .newswire-img .newswire-img {
+    --image-rounding-dynamic: 0;
+}
+[data-context=newswire-article] .newswire-img * {
+    box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+    .newswire-img {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+:root * {
+    box-sizing: border-box;
+}
+.newswire-img {
+    display: block;
+    unicode-bidi: isolate;
+}
+@media (min-width: 1024px) {
+    .newswire-img {
+        --grid-gap-dynamic: var(--grid-gap-static-lg);
+    }
+}
+.newswire-img {
+    --grid-gap-dynamic: var(--grid-gap-static-md);
+}
+@media (min-width: 1024px) {
+    .newswire-img {
+        --header-numerator: 26;
+    }
+}
+@media (min-width: 768px) {
+    .newswire-img {
+        --header-numerator: 23.4;
+    }
+}
+@media (min-width: 0px) {
+:root .newswire-img {
+        --header-numerator: 20.8;
+    }
+}
+   .banner-img {
+    --padding-t: initial;
+    --padding-b: initial;
+    --padding-dynamic: initial;
+    --padding-dynamic-tb: initial;
+    margin: 0 auto;
+    max-width: calc(var(--max-width-dynamic, 1000000px) + var(--padding-dynamic, 0px)* 2) !important;
+    padding: var(--padding-t, var(--padding-dynamic-tb, 0)) var(--padding-dynamic, 0) var(--padding-b, var(--padding-dynamic-tb, 0)) var(--padding-dynamic, 0);
+    width: 100%;
+}
+    .nolinebreak {
+   white-space: normal;
+}
+
+    .newswire-body{
+        padding: 72px;
+    }
+    .breadcrumb-img{
+        background-image: url(https://raw.githubusercontent.com/lostinfinite/media/0999f474d1df4cbf12b467e022ecd1a99c42eec5/breadcrumb-sep.svg);
+    content: "";
+    display: inline-block;
+    filter: var(--breadcrumb-separator-filter-invert, invert(1));
+    height: 24px;
+    margin: 0 .5rem;
+    position: static;
+    vertical-align: middle;
+    width: 7px;
+}
+    }
+   .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+   .btn-main-img-cont {
+    margin-left: 0 !important;
+    align-self: flex-start !important; /* Overrides alignment within flex containers */
+    text-align:  !important; /* Ensures the text inside aligns left */
+    float: left; /* Aligns the element to the left within its container */
+}
+
+
+    
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "SF Pro", sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+           background-color: rgba(0, 0, 0, .65);
+    backdrop-filter: blur(25px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .header .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .get-launcher {
+            background-color: #ffbb00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .get-launcher:hover {
+            background-color: #111;
+            color: #ffbb00;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 50px;
+            flex-grow: 1;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Newswire Cards */
+        .news-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .news-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: scale(1.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-card-content {
+            padding: 15px;
+        }
+
+        .news-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-card-meta {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* Featured Games Section */
+        .featured-games {
+            padding: 50px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .featured-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .main-banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .view-more {
+            margin-top: 20px;
+        }
+
+        .view-more a {
+            color: #ffbb00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-more a:hover {
+            color: #ffcc33;
+        }
+
+        /* Detailed Footer */
+        .detailed-footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px 50px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .detailed-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .detailed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-top,
+        .footer-middle,
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-top a {
+            margin: 0 15px;
+        }
+
+        .footer-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-language {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-social a img {
+            width: 24px;
+            height: 24px;
+            filter: invert(100%);
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style><script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ4JTIyJTNBMC4zMzQ4MTM4NDQxNzM4NDYyJTJDJTIydyUyMiUzQTE1MzYlMkMlMjJoJTIyJTNBODY0JTJDJTIyaiUyMiUzQTY5NSUyQyUyMmUlMjIlM0E4NjQlMkMlMjJsJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZjb250ZW50bHRkLm5ldCUyRm5ld3N3aXJlcyUyRm9rcnAtY29udGVudGx0ZCUyMiUyQyUyMnIlMjIlM0ElMjJodHRwcyUzQSUyRiUyRmNvbnRlbnRsdGQubmV0JTJGJTIyJTJDJTIyayUyMiUzQTI0JTJDJTIybiUyMiUzQSUyMlVURi04JTIyJTJDJTIybyUyMiUzQTMwMCUyQyUyMnElMjIlM0ElNUIlNUQlN0Q="></script><script type="text/javascript" src="https://contentltd.net/gXX8dHLj1IsJIG2hclnMh1Tfft2MIzS_MKWNQL_WmaS-Fhpkas4aEiHTSUgAIkwikmzJVlYGr2ABIBI6zqvt3w=="></script><style type="text/css" id="operaUserStyle"></style><script data-cfasync="false" nonce="35c6b389-d27e-4251-94f3-9e9abdafd943">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5828";j.zaraz._n="35c6b389-d27e-4251-94f3-9e9abdafd943";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce(((u,v)=>({...u[1],...v[1]})),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter((z=>z.startsWith("_zaraz_"))).forEach((y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}}));r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async mY=>new Promise((mZ=>{if(mY){mY.e&&mY.e.forEach((m$=>{try{const na=d.querySelector("script[nonce]"),nb=na?.nonce||na?.getAttribute("nonce"),nc=d.createElement("script");nb&&(nc.nonce=nb);nc.innerHTML=m$;nc.onload=()=>{d.head.removeChild(nc)};d.head.appendChild(nc)}catch(nd){console.error(`Error executing script: ${m$}\n`,nd)}}));Promise.allSettled((mY.f||[]).map((ne=>fetch(ne[0],ne[1]))))}mZ()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script><script>(function(w,d){})(window,document)</script><style type="text/css"></style><script>(function(w,d){;w.zarazData.executed.push("Pageview");})(window,document)</script><script>(function(w,d){})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script><script>(function(w,d){{(function(w,d){zaraz.__zarazMCListeners={"google-analytics_v4_OVCU":["visibilityChange"],"google-analytics_v4_rocc":["visibilityChange"]};})(window,document);}})(window,document)</script></head><body>
+<div class="pc">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <nav class="menu">
+            <a href="https://contentltd.net/products">Products</a>
+            
+            <a href="https://contentltd.net/credits">Credits</a>
+            <a href="https://contentltd.net/sources">Assets Used</a>
+            
+            <a href="mailto:info@contentltd.net">Support</a>
+        </nav><a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN OKRP</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <br><div><div class="newswire-img"><img src="https://cdn.contentltd.net/okrp-banner.png" style="height: 290px; align: center; item-align: center; text-align: center;"></div><div class="newswire-body"> <a class="breadcrumb">Newswire</a><img class="breadcrumb-img" src="">
+<a class="breadcrumb">PR Statements</a><img class="breadcrumb-img" src=""><a class="breadcrumb">Addressing Recent Misconduct and Apologies to the Community</a><br><br><br><h1 class="title">Addressing Recent Misconduct and Apologies to the Community</h1><div>        
+        <p>
+            Dear <span class="community">Community,
+        </span></p>
+        <br><p>
+            At ContentLTD, we hold ourselves accountable to the highest standards of integrity, transparency, and professionalism. It is with regret that I address a recent situation involving Oklahoma's Finest Roleplay (OKRP) and allegations made against members of another server, Mississippi State Roleplay (MSRP).
+        </p>
+        <br><p>
+            A series of claims and actions have caused undue conflict and stress within our community. As the leader of ContentLTD, I take full responsibility for not addressing this matter sooner and for allowing the situation to escalate to its current state.
+        </p>
+        <br><p>
+            We acknowledge that missteps were made, particularly by individuals under the ContentLTD brand, and we are taking immediate actions to rectify the harm caused. To those affected, especially Jay and the members of MSRP, please accept our sincerest apologies for the actions and behaviors that have led to this fallout.
+        </p>
+        <br> <p>
+            Moving forward, ContentLTD is committed to fostering collaboration and respect across all partnerships and affiliates. We will be implementing stricter guidelines and oversight to ensure incidents like this do not occur in the future.
+        </p>
+        <br><p>
+            Thank you for your understanding as we take steps to rebuild trust.
+        </p>
+        <br><p>
+            Sincerely,<br>
+            Content<br>
+            Director, ContentLTD
+        </p></div></div>
+    <!--<div class="disclaim"><p>Some of the games below may cover disturbing themes or topics. Player's discretion is advised!</p></div>--> 
+
+    <!--<div class="featured-games">
+        <h2 class="featured-title">Featured Games</h2>
+        <div class="main-banner">
+            <img src="banner-image.png" alt="GTA VI Coming Soon">
+        </div>
+        <div class="game-thumbnails">
+            <div class="game-card">
+                <img src="game1.png" alt="Grand Theft Auto V">
+            </div>
+            <div class="game-card">
+                <img src="game2.png" alt="Grand Theft Auto Online">
+            </div>
+            <div class="game-card">
+                <img src="game3.png" alt="Red Dead Redemption II">
+            </div>
+            <div class="game-card">
+                <img src="game4.png" alt="Red Dead Redemption">
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#">View More</a>
+        </div>
+    </div>--><!-- Footer -->
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+        white-space: nowrap; /* Prevent wrapping */
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+
+    @media (max-width: 768px;){
+        <style>
+    .socials{
+        background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    height: calc(var(--base-pixel-size)* 2);
+    width: calc(var(--base-pixel-size)* 2);
+}
+
+}
+    
+    .x-logo{
+       background-image: url("https://lostinfinite.github.io/media/x-logo.svg");
+    }
+    
+    .spacer-container-xl{
+ height: 118px;
+opacity: 0%;
+    color: transparent
+    
+}  
+    .nav-mid a:hover, .nav-top a:hover{
+     color:    #FFBB00;            opacity: 100%;
+     transition: color 0.3s; 
+    }
+    .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin: 0 15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+
+    
+} .content-left-footer {
+    flex: 0 0 70%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 70% */
+   
+}
+
+/* Right content takes 30% */
+.content-right-footer {
+    flex: 0 0 30%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 30% */
+ 
+    
+}
+.nav-mid a{
+        font-size: var(--font-size-1); 
+    opacity: .65;
+    margin-left: 15px;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    color: white;
+    text-decoration: none; 
+    display: block;
+    margin-bottom: 20px;
+}
+    .footer-nav-bottom p{
+    align-self: auto; /* Exempts from parent alignment rules */
+font-size: 75%;
+        text-decoration: bold;
+            font-weight: 700;
+}
+.divider-widest{
+     width: 242px; /* Set the width to 242px */
+    height: auto; /* Default height, adjust if necessary */
+    color: transparent;
+    opacity: 0%;
+}
+    .divider-mobile{
+        width: 110px;
+        height: 75px;
+        color: transparent;
+        opacity: 0%;
+    }
+
+@media (max-width: 768px){
+     .nav-top a{
+color: white;
+text-decoration: none;
+font-size: 1.25rem;
+margin:  15px;
+margin-left: 15px;
+text-align: left;
+align-content: left;
+align-items: left; 
+         display: block;
+}
+</style><div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div>
+
+<br>
+
+<br> <br> <br><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Follow us!</h2><br><div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a>
+    <a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a></div>
+    </div>
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="mobile">
+    <!-- Header -->
+    <header class="header">
+        <a href="https://contentltd.net"><div class="logo">
+            <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+        <a href="https://discord.gg/wPphV2aknN" class=""><button class="get-launcher">JOIN NOW</button></a>
+        
+    </header>
+
+    <!-- Main Content -->
+                        
+
+    <div>
+    
+
+    <div class="newswire-img"><img src="https://cdn.contentltd.net/okrp-banner.png" style="height: 290px; align: center; item-align: center; text-align: center;"></div><div class="newswire-body"> <a class="breadcrumb">Newswire</a><img class="breadcrumb-img" src="">
+<a class="breadcrumb">PR Statements</a><img class="breadcrumb-img" src=""><a class="breadcrumb">Addressing Recent Misconduct and Apologies to the Community</a><br><br><br><h1 class="title">Addressing Recent Misconduct and Apologies to the Community</h1><div>        
+        <p>
+            Dear <span class="community">Community,
+        </span></p>
+        <br><p>
+            At ContentLTD, we hold ourselves accountable to the highest standards of integrity, transparency, and professionalism. It is with regret that I address a recent situation involving Oklahoma's Finest Roleplay (OKRP) and allegations made against members of another server, Mississippi State Roleplay (MSRP).
+        </p>
+        <br><p>
+            A series of claims and actions have caused undue conflict and stress within our community. As the leader of ContentLTD, I take full responsibility for not addressing this matter sooner and for allowing the situation to escalate to its current state.
+        </p>
+        <br><p>
+            We acknowledge that missteps were made, particularly by individuals under the ContentLTD brand, and we are taking immediate actions to rectify the harm caused. To those affected, especially Jay and the members of MSRP, please accept our sincerest apologies for the actions and behaviors that have led to this fallout.
+        </p>
+        <br> <p>
+            Moving forward, ContentLTD is committed to fostering collaboration and respect across all partnerships and affiliates. We will be implementing stricter guidelines and oversight to ensure incidents like this do not occur in the future.
+        </p>
+        <br><p>
+            Thank you for your understanding as we take steps to rebuild trust.
+        </p>
+        <br><p>
+            Sincerely,<br>
+            Content<br>
+            Director, ContentLTD
+        </p></div></div><!-- Footer -->
+        <div class="footer">
+        <div class="content-left-footer"><div class="nav-top">
+<a href="mailto://info@contentltd.net">Support</a><a href="https://contentltd.net/credits">Credits</a><a href="https://contentltd.net/sources">Assets Used</a></div><div class="divider-mobile"></div>
+
+
+
+ <div class="socials">
+     <a href="https://www.youtube.com/@ContentLTD_rblx" title="YouTube" target="_blank" aria-label="" class="" data-testid="youtubeLink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg"> </a><a href="https://contentltd.bsky.social" title="bsky" target="_blank" aria-label="" class="" data-testid="bskylink"><img href="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" src="https://cdn.contentltd.net/bsky.png" scr="https://raw.githubusercontent.com/lostinfinite/media/bae7dca4ba9221fe1a7cae70d61699f34f2d9298/yt.svg" style="height: 24px; width: 24px;"> </a>
+    </div> <div class="divider-mobile"></div><div class="nav-mid">
+    <!--<a>Corprate</a>-->
+    <a href="https://contentltd.net/privacy">Privacy</a>
+    <a href="https://contentltd.net/terms">Terms</a>
+    <a href="https://contentltd.net/elections/acrp
+/policies.html">ACRP Election Terms</a>
+    
+    
+</div>
+<div class="spacer-container-xl"></div><div class="footer-nav-bottom"><p>ContentLTD</p><div class="divider-widest"></div></div></div><div class="content-right-footer">
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
