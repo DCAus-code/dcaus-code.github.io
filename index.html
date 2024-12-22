@@ -1,5 +1,5 @@
 <html lang="en"><head>
-    <script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyQ29udGVudExURCUyMiUyQyUyMnglMjIlM0EwLjE3NjIzNTk4ODQ0Nzc1NTM0JTJDJTIydyUyMiUzQTE1MzYlMkMlMjJoJTIyJTNBODY0JTJDJTIyaiUyMiUzQTY3MyUyQyUyMmUlMjIlM0E0OTMlMkMlMjJsJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZjb250ZW50bHRkLm5ldCUyRiUyMiUyQyUyMnIlMjIlM0ElMjIlMjIlMkMlMjJrJTIyJTNBMjQlMkMlMjJuJTIyJTNBJTIyVVRGLTglMjIlMkMlMjJvJTIyJTNBMzAwJTJDJTIycSUyMiUzQSU1QiU1RCU3RA=="></script><script type="text/javascript" src="https://contentltd.net/i5hUoDvna1BO2Ppzb8Cs8mSjdbrI8QGNKrsgicdyQYpwdNF31dHRhiKTawPgj-88Hmm7_wR0rgO6Lgbu84Cs4w=="></script><script src="//code.tidio.co/gcsghp24hnn6hlbju9xagkndviby0dl5.js" async=""></script>
+    <script src="//code.tidio.co/gcsghp24hnn6hlbju9xagkndviby0dl5.js" async=""></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -7,6 +7,13 @@
         @font-face {
   font-family: "SF Pro";
   src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+     @font-face {
+  font-family: "Doors";
+  src: url('https://cdn.contentltd.net/DOORSFONTV2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -83,6 +90,91 @@
     --white: #FFF;
         
         
+}
+       .date1 {
+    font-family: Doors, 'Doors'; /* Font style */
+    font-size: 100px; /* Set the font size to 100px */
+    text-align: center; /* Centers the text horizontally */
+    color: #FFF; /* Text color */
+    position: relative; /* For positioning pseudo-elements */
+    animation: glitch 2s infinite; /* Overall glitch animation */
+}
+
+/* Pseudo-elements for glitch effect */
+.date1::before,
+.date1::after {
+    content: attr(data-text); /* Copies the text from the main element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FF00FF; /* Purple for ::before */
+    background: transparent;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    animation: glitch-effect 2s infinite;
+}
+
+.date1::after {
+    color: #FF1493; /* Pink for ::after */
+    animation-delay: 0.2s; /* Adds delay for a more realistic glitch */
+}
+
+/* Keyframes for glitch animations */
+@keyframes glitch-effect {
+    0% {
+        clip-path: inset(0 0 50% 0);
+        transform: translate(5px, -5px);
+    }
+    25% {
+        clip-path: inset(50% 0 0 0);
+        transform: translate(-5px, 5px);
+    }
+    50% {
+        clip-path: inset(0 0 20% 0);
+        transform: translate(5px, 0);
+    }
+    75% {
+        clip-path: inset(30% 0 10% 0);
+        transform: translate(-5px, -5px);
+    }
+    100% {
+        clip-path: inset(10% 0 40% 0);
+        transform: translate(0, 5px);
+    }
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: none;
+    }
+    20% {
+        transform: translate(-3px, 3px);
+    }
+    40% {
+        transform: translate(3px, -3px);
+    }
+    60% {
+        transform: translate(-3px, -3px);
+    }
+    80% {
+        transform: translate(3px, 3px);
+    }
+}
+
+.date {
+    font-family: Doors, 'Doors'; /* Font style */
+    font-size: 100px; /* Set the font size to 100px */
+    text-align: center; /* Centers the text horizontally */
+    color: #FFF; /* Text color */
+    position: fixed; /* Keeps the element in a fixed position on the screen */
+    top: 50%; /* Moves the text 50% down the viewport */
+    left: 50%; /* Moves the text 50% from the left of the viewport */
+    transform: translate(-50%, -50%); /* Centers the element both horizontally and vertically */
+    z-index: -1; /* Places the element behind other content */
+    opacity: 0.1; /* Reduces visibility for a subtle effect */
+    pointer-events: none; /* Prevents the element from blocking interactions */
 }
 
  @media (max-width: 768px) {
@@ -460,7 +552,7 @@ background-color: transparent;
         }
     </style><title>ContentLTD</title>
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json">
-<script>(function(w,d){})(window,document)</script></head><body>
+<script>(function(w,d){})(window,document)</script><script data-cfasync="false" nonce="ff3e9391-d200-42f1-878c-3353db43d43a">try{(function(w,d){!function(a,b,c,d){if(a.zaraz)console.error("zaraz is loaded twice");else{a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz._v="5848";a.zaraz._n="ff3e9391-d200-42f1-878c-3353db43d43a";a.zaraz.q=[];a.zaraz._f=function(e){return async function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const k of Object.entries(Object.entries(dataLayer).reduce(((l,m)=>({...l[1],...m[1]})),{})))zaraz.set(k[0],k[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const n=a.zaraz.q.shift();a[c].q.push(n)}i.defer=!0;for(const o of[localStorage,sessionStorage])Object.keys(o||{}).filter((q=>q.startsWith("_zaraz_"))).forEach((p=>{try{a[c]["z_"+p.slice(7)]=JSON.parse(o.getItem(p))}catch{a[c]["z_"+p.slice(7)]=o.getItem(p)}}));i.referrerPolicy="origin";i.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bs=>new Promise((bt=>{if(bs){bs.e&&bs.e.forEach((bu=>{try{const bv=d.querySelector("script[nonce]"),bw=bv?.nonce||bv?.getAttribute("nonce"),bx=d.createElement("script");bw&&(bx.nonce=bw);bx.innerHTML=bu;bx.onload=()=>{d.head.removeChild(bx)};d.head.appendChild(bx)}catch(by){console.error(`Error executing script: ${bu}\n`,by)}}));Promise.allSettled((bs.f||[]).map((bz=>fetch(bz[0],bz[1]))))}bt()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script><script>(function(w,d){})(window,document)</script><script>(function(w,d){})(window,document)</script></head><body>
 <div class="pc">
     <!-- Header -->
     <header class="header">
@@ -494,13 +586,13 @@ background-color: transparent;
             
             <a href="https://discord.gg/wPphV2aknN"><button class="btn-main-img-cont">JOIN NOW</button></a>
         </div>
-    </div></div><div class="container"><h1>Why hello there!</h1>
+    </div></div><h1 class="date">1/25/25</h1><div class="container"><h1>Why hello there!</h1>
 <br>
 <p>Hello there, I am ContentLTD (AKA Content AKA ContentDeleted). You can call me content. I am a website designer and ER;LC server owner.</p>
 <br>
 <p>Stay Tuned. Something's Happening...</p>
 
-</div><br><div style=" ;"> <h1 class="title" style="text-align: center;">Newswire</h1><div class="container">
+</div><br><div style=" ;"> <h1 class="title" style="text-align: center;">Newswire</h1><h1 class="date1">1/25/25</h1><div class="container">
         
         <div class="news-grid">
             <!-- News Card 1 -->
@@ -555,7 +647,7 @@ a{
                 <img src="https://cdn.contentltd.net/acrp.png" alt="Allegheny County Roleplay logo">
             </div></a>
             <a href="https://discord.gg/wPphV2aknN"><div class="game-card">
-                <img src="https://github.com/lostinfinite/media/blob/main/image0.png?raw=true" alt="California State Roleplay Logo">
+                <img src="https://cdn.contentltd.net/okrp.png" alt="California State Roleplay Logo">
             </div></a><a href="https://discord.gg/B2uUbWG97A"><div class="game-card">
                 <img src="https://github.com/lostinfinite/media/blob/main/lcrp.png?raw=true" alt="Lake County Roleplay Logo">
             </div></a>
@@ -808,13 +900,13 @@ align-items: left;
             
             <a href="https://discord.gg/wPphV2aknN"><button class="btn-main-img-cont">JOIN NOW</button></a>
         </div>
-    </div></div><p style="font-size: 0.75 rem;">Rendered for mobile</p><div class=""><h1>Why hello there!</h1>
+    </div></div><h1 class="date">1/25/25</h1><p style="font-size: 0.75 rem;">Rendered for mobile</p><div class=""><h1>Why hello there!</h1>
 <br>
 <p>Hello there, I am ContentLTD (AKA Content AKA ContentDeleted). You can call me content. I am a website designer and ER;LC server owner.</p>
 <br>
 <p>Stay Tuned. Something's Happening...</p>
 
-</div><br><br><div><h1 class="title">Newswire</h1><div class="container">
+</div><br><br><div><h1 class="title">Newswire</h1><h1 class="date1">1/25/25</h1><div class="container">
         
         <div class="news-grid">
             <!-- News Card 1 -->
@@ -853,7 +945,7 @@ a{
                 <img src="https://cdn.contentltd.net/acrp.png" alt="Allegheny County Roleplay logo">
             </div></a>
             <a href="https://discord.gg/wPphV2aknN"><div class="game-card">
-                <img src="https://github.com/lostinfinite/media/blob/main/image0.png?raw=true" alt="California State Roleplay Logo">
+                <img src="https://cdn.contentltd.net/okrp.png" alt="California State Roleplay Logo">
             </div></a>
             
             
@@ -938,4 +1030,5 @@ a{
                   <body  class=&quot;awesome-iframe&quot;>
                     <div></div>
                   </body>
-                  " style="display: block; border: none; position: fixed; inset: auto 9px 35px auto; width: 94px; height: 94px; opacity: 1; color-scheme: none; background: none transparent !important; margin: 0px; max-height: 100vh; max-width: 100vw; transform: translateY(0px); transition: none !important; visibility: visible; z-index: 999999999 !important; border-radius: 47px 30px 47px 47px;"></iframe></div></body></html>
+                  " style="display: block; border: none; position: fixed; inset: auto 9px 35px auto; width: 94px; height: 94px; opacity: 1; color-scheme: none; background: none transparent !important; margin: 0px; max-height: 100vh; max-width: 100vw; transform: translateY(0px); transition: none !important; visibility: visible; z-index: 999999999 !important; border-radius: 47px 30px 47px 47px;"></iframe></div><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8f5ee46e6ea14bd2',t:'MTczNDg1NzcyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
