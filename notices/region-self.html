@@ -1,0 +1,590 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+ 
+         @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+      @font-face {
+   font-family: "Doors";
+   src: url('https://cdn.contentltd.net/DOORSFONTV2.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+ /* Display Thin */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Display-Thin.otf') format('opentype');
+   font-weight: 100;
+   font-style: normal;
+ }
+ 
+ /* Text Black */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Black.otf') format('opentype');
+   font-weight: 900;
+   font-style: normal;
+ }
+ 
+ /* Text Bold */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Bold.otf') format('opentype');
+   font-weight: bold;
+   font-style: normal;
+ }
+ 
+ /* Text Heavy */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Heavy.otf') format('opentype');
+   font-weight: 800;
+   font-style: normal;
+ }
+ 
+ /* Text Light */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Light.otf') format('opentype');
+   font-weight: 300;
+   font-style: normal;
+ }
+ 
+ /* Text Medium */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Medium.otf') format('opentype');
+   font-weight: 500;
+   font-style: normal;
+ }
+ 
+ /* Text Regular */
+ @font-face {
+   font-family: "SF Pro";
+   src: url('https://contentltd.net/sites/SF-Pro-Text-Regular.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+ }
+     :root {
+     --font-size-1: 0.75rem;
+     --font-size-2: 0.75rem;
+     --font-size-3: 1rem;
+     --font-size-4: 1.25rem;
+     --font-size-5: 1.5rem;
+     --font-size-6: 2rem;
+     --font-size-7: 2.5rem;
+     --font-size-8: 3rem;
+     --font-size-9: 4rem;
+     --font-size-10: 5rem;
+     --base-pixel-size: 12px;
+     --grey: #111;
+     --yellow-action: #ffbb00;
+     --white: #FFF;
+         
+         
+ }
+        .date1 {
+     font-family: Doors, 'Doors'; /* Font style */
+     font-size: 100px; /* Set the font size to 100px */
+     text-align: center; /* Centers the text horizontally */
+     color: #FFF; /* Text color */
+     position: relative; /* For positioning pseudo-elements */
+     animation: glitch 2s infinite; /* Overall glitch animation */
+ }
+ .err {
+    
+   justify-content: center; /* Centers horizontally */
+   align-items: center;    /* Centers vertically */
+   height: 100vh;
+   padding: 50px;
+ }
+ /* Pseudo-elements for glitch effect */
+ .date1::before,
+ .date1::after {
+     content: attr(data-text); /* Copies the text from the main element */
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     color: #FF00FF; /* Purple for ::before */
+     background: transparent;
+     overflow: hidden;
+     clip-path: inset(0 0 0 0);
+     animation: glitch-effect 2s infinite;
+ }
+ 
+ .date1::after {
+     color: #FF1493; /* Pink for ::after */
+     animation-delay: 0.2s; /* Adds delay for a more realistic glitch */
+ }
+ 
+ /* Keyframes for glitch animations */
+ @keyframes glitch-effect {
+     0% {
+         clip-path: inset(0 0 50% 0);
+         transform: translate(5px, -5px);
+     }
+     25% {
+         clip-path: inset(50% 0 0 0);
+         transform: translate(-5px, 5px);
+     }
+     50% {
+         clip-path: inset(0 0 20% 0);
+         transform: translate(5px, 0);
+     }
+     75% {
+         clip-path: inset(30% 0 10% 0);
+         transform: translate(-5px, -5px);
+     }
+     100% {
+         clip-path: inset(10% 0 40% 0);
+         transform: translate(0, 5px);
+     }
+ }
+ 
+ @keyframes glitch {
+     0%, 100% {
+         transform: none;
+     }
+     20% {
+         transform: translate(-3px, 3px);
+     }
+     40% {
+         transform: translate(3px, -3px);
+     }
+     60% {
+         transform: translate(-3px, -3px);
+     }
+     80% {
+         transform: translate(3px, 3px);
+     }
+ }
+ 
+ .date {
+     font-family: Doors, 'Doors'; /* Font style */
+     font-size: 100px; /* Set the font size to 100px */
+     text-align: center; /* Centers the text horizontally */
+     color: #FFF; /* Text color */
+     position: fixed; /* Keeps the element in a fixed position on the screen */
+     top: 50%; /* Moves the text 50% down the viewport */
+     left: 50%; /* Moves the text 50% from the left of the viewport */
+     transform: translate(-50%, -50%); /* Centers the element both horizontally and vertically */
+     z-index: -1; /* Places the element behind other content */
+     opacity: 0.1; /* Reduces visibility for a subtle effect */
+     pointer-events: none; /* Prevents the element from blocking interactions */
+ }
+ 
+ 
+ 
+     
+        
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         body {
+             font-family: Arial, sans-serif;
+             background-color: #1d1d1d;
+             color: #fff;
+         }
+ 
+         .container {
+             display: flex;
+             justify-content: space-between;
+             padding: 20px;
+         }
+ 
+         .content-left {
+             flex: 2;
+             position: relative;
+         }
+ 
+         .content-left img {
+             width: 100%;
+             border-radius: 5px;
+         }
+ 
+         .content-right {
+             flex: 1;
+             text-align: center;
+             padding: 20px;
+         }
+ 
+         .content-right h2 {
+             font-size: 24px;
+             margin-bottom: 20px;
+         }
+ 
+         .content-right button {
+ background-color: transparent;
+             color: #FFF;
+             border-color: #FFF;
+             border-radius: 5px;
+             padding: 10px 20px;
+             font-weight: bold;
+             cursor: pointer;
+             transition: background-color 0.3s;
+             width: 245.31px;
+             height: 62.22px;
+         }
+ 
+         .content-right button:hover {
+             background-color: #FFF;
+             color: #000;
+             border-color: #000;
+         }
+ 
+         .footer {
+             background-color: #000;
+             padding: 80px;
+         display: flex;
+             font-size: 14px;
+         }
+     </style><style>
+    .warn{
+        background-color: rgba(255, 0, 0, 0.75);
+        color: white;
+        white-space: nowrap;
+        position: sticky;
+        z-index: 100;
+        top: 70;
+    }
+     .menu {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+ }
+ 
+    .btn-main-img-cont {
+     margin-left: 0 !important;
+     align-self: flex-start !important; /* Overrides alignment within flex containers */
+     text-align: center !important; /* Ensures the text inside aligns left */
+     float: left; /* Aligns the element to the left within its container */
+ }
+ 
+ 
+     
+     * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         body {
+             font-family: "SF Pro", sans-serif;
+             background-color: #111;
+             color: #fff;
+             display: flex;
+             flex-direction: column;
+             min-height: 100vh;
+         }
+ 
+         /* Sticky Header */
+         .header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: 20px 50px;
+             background-color: rgba(0,0,0,.85);
+             backdrop-filter: blur(25px);
+             position: sticky;
+             top: 0;
+             z-index: 99;
+         }
+ 
+         .header a {
+             color: #fff;
+             text-decoration: none;
+             font-size: 14px;
+             margin: 0 15px;
+         }
+ 
+         .header a:hover {
+             text-decoration: underline;
+         }
+ 
+         .logo {
+             font-size: 24px;
+             font-weight: bold;
+             display: flex;
+             align-items: center;
+         }
+ 
+         .logo img {
+             height: 25px;
+             margin-right: 10px;
+         }
+ 
+         .header .menu {
+             display: flex;
+             gap: 20px;
+         }
+ 
+         .get-launcher {
+             background-color: #ffbb00;
+             color: #000;
+             border: none;
+             border-radius: 5px;
+             padding: 10px 20px;
+             font-weight: bold;
+             cursor: pointer;
+             transition: background-color 0.3s;
+         }
+ 
+         .get-launcher:hover {
+             background-color: #111;
+             color: #ffbb00;
+         }
+ 
+         /* Main Content */
+         .container {
+             padding: 50px;
+             flex-grow: 1;
+         }
+ 
+         .title {
+             font-size: 36px;
+             margin-bottom: 20px;
+         }
+ 
+         /* Newswire Cards */
+ .news-grid {
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+     justify-content: center; /* Centers the items horizontally */
+     text-align: center; /* Ensures that the text inside the items is centered */
+ }
+ 
+ .news-grid > * {
+     display: block; /* Makes each item behave like a block element, which forces them to take up full width and stack on new lines */
+     width: 100%; /* Optional: Ensures each item takes up the full width of the container */
+ }
+ 
+         .news-card {
+             background-color: #1a1a1a;
+             border-radius: 10px;
+             overflow: hidden;
+             width: 100%;
+             max-width: 300px;
+             text-align: center;
+             transition: transform 0.3s;
+         }
+ 
+         .news-card:hover {
+             transform: scale(1.05);
+         }
+ 
+         .news-card img {
+             width: 100%;
+             height: auto;
+         }
+ 
+         .news-card-content {
+             padding: 15px;
+         }
+ 
+         .news-card-title {
+             font-size: 18px;
+             font-weight: bold;
+             margin-bottom: 10px;
+         }
+ 
+         .news-card-meta {
+             font-size: 14px;
+             color: #ccc;
+         }
+ 
+         /* Featured Games Section */
+         .featured-games {
+             padding: 50px;
+             text-align: center;
+             background-color: #111;
+             color: #fff;
+         }
+ 
+         .featured-title {
+             font-size: 32px;
+             margin-bottom: 20px;
+         }
+ 
+         .main-banner {
+             width: 100%;
+             max-width: 800px;
+             margin: 0 auto 30px auto;
+         }
+ 
+         .main-banner img {
+             width: 100%;
+             border-radius: 10px;
+         }
+ 
+         .game-thumbnails {
+             display: flex;
+             justify-content: center;
+             gap: 20px;
+             flex-wrap: wrap;
+             margin-top: 20px;
+         }
+ 
+         .game-card {
+             width: 100%;
+             max-width: 150px;
+             transition: transform 0.3s;
+         }
+ 
+         .game-card img {
+             width: 100%;
+             border-radius: 10px;
+         }
+ 
+         .game-card:hover {
+             transform: scale(1.05);
+         }
+ 
+         .view-more {
+             margin-top: 20px;
+         }
+ 
+         .view-more a {
+             color: #ffbb00;
+             text-decoration: none;
+             font-size: 16px;
+             font-weight: bold;
+         }
+ 
+         .view-more a:hover {
+             color: #ffcc33;
+         }
+ 
+         /* Detailed Footer */
+         .detailed-footer {
+             background-color: #000;
+             color: #fff;
+             padding: 30px 50px;
+             font-size: 14px;
+             text-align: center;
+         }
+ 
+         .detailed-footer a {
+             color: #fff;
+             text-decoration: none;
+             margin: 0 10px;
+             font-size: 14px;
+         }
+ 
+         .detailed-footer a:hover {
+             text-decoration: underline;
+         }
+ 
+         .footer-top,
+         .footer-middle,
+         .footer-bottom {
+             margin-bottom: 20px;
+         }
+ 
+         .footer-top a {
+             margin: 0 15px;
+         }
+ 
+         .footer-middle {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             flex-wrap: wrap;
+         }
+ 
+         .footer-links {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 15px;
+             justify-content: center;
+         }
+ 
+         .footer-language {
+             font-size: 14px;
+         }
+ 
+         .footer-bottom {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+ 
+         .footer-social {
+             display: flex;
+             gap: 15px;
+             margin-bottom: 10px;
+         }
+ 
+         .footer-social a img {
+             width: 24px;
+             height: 24px;
+             filter: invert(100%);
+         }
+ 
+         .footer-info p {
+             margin: 5px 0;
+             font-size: 14px;
+         }
+     </style><title>ContentLTD</title>
+     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://contentltd.net/json/cnt/oembed.json">
+     <!-- Header -->
+     <header class="header">
+         <a href="https://contentltd.net"><div class="logo">
+             <img src="https://yt3.googleusercontent.com/fm3EfAme--1R-AXyYk9fhrEFybJOB_tqX_hQ7jNDazZR3tpevPTX1JINsk6DlDFplngz67Xz=s176-c-k-c0x00ffffff-no-rj" alt="ContentLTD Logo"></div></a>
+         
+ 
+         
+     </header>
+ 
+     <div class="warn"></div><!-- Main Content -->
+                         
+ 
+     <div class="err"><h1>ContentLTD is not available in your region.</h1><br><p>This service is currently unavailable in your area. We’re working to expand our reach and appreciate your patience.</p><br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+<br>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</body></html>
